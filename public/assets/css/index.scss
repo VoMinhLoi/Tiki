@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f5f5f9;
+}
+
+// .over-layer {
+//     position: fixed;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     background-color: rgba(0, 0, 0, 0.5);
+//     z-index: 1;
+// }
+
+// .has-overlayer-search {
+//     z-index: 1000;
+//     position: absolute;
+//     top: 96px;
+//     width: 100%;
+//     height: 100%;
+//     opacity: 0;
+// }
+// .has-overlayer-search:checked ~ #over-layer-search {
+//     display: none;
+// }
+@import 'Home/variable';
+@import 'Home/header';
+@import 'Home/container'

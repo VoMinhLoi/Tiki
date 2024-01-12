@@ -1,0 +1,177 @@
+.main {
+    width: 1440px;
+    padding: 16px 24px 0px;
+    margin: $header-height auto 0;
+    .side-bar {
+        min-width: 230px;
+        max-width: 230px;
+        background-color: white;
+        border-radius: 8px;
+        padding: 12px;
+        margin-right: 24px;
+        position: sticky;
+        top: calc(16px + $header-height);
+        height: fit-content;
+        overflow-y: scroll;
+        max-height: 100vh;
+        .side-bar__header {
+            font-size: 14px;
+            margin:0px 0px 8px 12px;
+        }
+        .side-bar__item {
+            .side-bar-item__link {
+                padding: 7px 16px;
+                font-size: 14px;
+                color: #616164;
+                border-radius: 8px;
+                transition: all linear 0.1s;
+                .side-bar-item-link__img {
+                    width: 32px;
+                    margin-right: 8px;
+                }
+            }
+            .side-bar-item__link:hover {
+                background-color: #27272a1f;
+            }
+        }
+    }
+    /* Ẩn thanh cuộn trên Chrome và Safari */
+    .side-bar::-webkit-scrollbar {
+        display: none;
+    }
+
+    
+    .contain {
+        .item-product {
+            background-color: white;
+            border-radius: 4px;
+            transition: all linear 0.1s;
+            // .item-product__img {
+            //     // background-image: url('assets/img/iPAD.png');
+            //     // padding-top: 100%;
+            // }
+            .item-product__infor {
+                padding: 4px 8px;
+                .item-product-infor__auth {
+                    color: #0057e0;
+                    background-color: #f2f7ff;
+                    width: 100px;
+                    font-size: 12px;
+                    font-weight: bold;
+                    border-radius: 33px;
+                    padding: 0 4px;
+                }
+                .item-product-infor__desc-evaluate {
+                    height: 72px;
+                    .item-product-infor__desc {
+                        font-size: 12px;
+                        max-width: 167px;
+                        max-height: 54px;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 3;
+                        overflow: hidden;
+                    }
+                    .item-product-infor__evaluate {
+                        height: 15px;
+                        .item-product-infor-evaluate__star {
+                            width: 12px;
+                            color: #fcc629;
+                            scale: 0.55;
+                        }
+                        .item-product-infor-evaluate__saled {
+                            color: #aeaeb4;
+                            font-size: 10px;
+                            padding-left: 4px;
+                            border-left: 1px solid #f2f2f5;
+                            margin-left: 4px;
+                        }
+                    }
+                    
+                }
+                .item-product-infor__price {
+                    font-size: 17px;
+                    font-weight: 500;
+                    color: rgb(39, 39, 42);
+                    position: relative;
+                    text-align: left;
+                    margin-bottom: 8px;
+                }
+                .item-product-infor__price::after {
+                    content: "-47%";
+                    font-size: 12px;
+                    height: 18px;
+                    line-height: 18px;
+                    background-color: #f5f5fa;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    // right: 0;
+                    padding: 0 4px;
+                    border-radius: 20px;
+                    color: rgb(39, 39, 42);
+                    font-weight: 500;
+                    margin-left: 4px;
+                }
+                .item-product-infor__receiving-date {
+                    color: rgb(128, 128, 137);
+                    font-size: 12px;
+                    border-top: 1px solid #f6f6f8;
+                    padding: 8px 0;
+
+                }
+            }
+        }
+        .item-product:hover {
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;
+            z-index: 1;
+        }
+        .contain__extra {
+            width: 240px;
+            padding: 8px 12px;
+            margin-top: 12px;
+            border-radius: 8px;
+            border: 1px solid #4785fe;
+            color:#4785fe;
+            margin-bottom: 48px;
+        }
+        .contain__extra:hover {
+            background-color: #dbe2fb;
+            transition: all linear 0.1s;
+        }
+        .footer {
+            .footer__list {
+                padding: 16px;
+                .footer-item__header {
+                    font-weight: bold;
+                    font-size: 16px;
+                    color: #38383D;
+                    margin-bottom: 12px;
+                    
+                }
+                .footer-item__link {
+                    font-weight: 500;
+                    font-size: 12px;
+                    color: #a0a0a7;
+                    margin-bottom: 8px;
+                    .footer-item-link__img {
+                        width: 32px;
+                    }
+                }
+                .footer-item__link-svg {
+                    margin: 0 8px 8px 0;
+                }
+                .footer-item__link:hover {
+                    text-decoration: underline;
+                }
+                .footer-item__link--disable:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        .item {
+            background-color: orange;
+            height: 100%;
+        }
+    }
+}
