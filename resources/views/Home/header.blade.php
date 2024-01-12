@@ -1,15 +1,15 @@
 <div class="bg-white">
-    <header class="header d-flex justify-content-between">
+    <header class="header">
         <a href="#" class="header__link">
             <img src="assets/img/logo_tiki.png" alt="logo" class="header-link__img">
         </a>
-        <div class="d-flex flex-column justify-content-between header__search flex-grow-1">
-            <div class=" d-flex header-search__bar align-items-center">
+        <div class="header__search">
+            <div class="header-search__bar ">
                 {{-- <i class="fa-solid fa-magnifying-glass"></i> --}}
                 <img src="assets/img/icon_search.png" alt="iconSearch" class="header-search-bar__icon">
                 <input type="text" class="header-search-bar__input flex-grow-1" placeholder="Điện tử: coupon 2 triệu">
 
-                <div class="search d-none">
+                <div class="search">
                     <h1 class="search__header">Tìm kiếm mới nhất</h1>
                     <ul class="search__list">
                         <li class="search__item">
@@ -35,7 +35,7 @@
                 <button class="header-search-bar__button">Tìm kiếm</button>
             </div>
             <nav class="header__nav">
-                <ul class=" d-flex header-nav__list">
+                <ul class="header-nav__list">
                     <li class="header-nav__item">
                         <a href="#" class="header-nav-item__link">
                             12.12 Sale Sinh Nhật
@@ -79,22 +79,22 @@
                 </ul>
             </nav>
         </div>
-        <div class="header__private d-flex flex-column justify-content-between align-items-end">
-            <ul class="header-private__list d-flex">
+        <div class="header__private">
+            <ul class="header-private__list">
                 <li class="header-private__item">
-                    <a href="#" class="header-private-item__link d-flex header-private-item__link--blue">
+                    <a href="#" class="header-private-item__link header-private-item__link--blue">
                         <i class="fa-solid fa-house header-private-item-link__icon "></i>
                         Trang chủ
                     </a>
                 </li>
-                <li class="header-private__item me-right me-4">
-                    <a href="#" class="header-private-item__link d-flex">
+                <li class="header-private__item">
+                    <a href="#" class="header-private-item__link">
                         <i class="fa-regular fa-face-smile header-private-item-link__icon"></i>
                         Tài khoản
                     </a>
                 </li>
                 <li class="header-private__item">
-                    <a href="#" class="header-private-item__link d-flex header-private-item__link--blue header-private-item__link-quantity">
+                    <a href="#" class="header-private-item__link header-private-item__link--blue header-private-item__link-quantity">
                         <i class="fa-solid fa-cart-shopping header-private-item-link__icon "></i>
                     </a>
                 </li>

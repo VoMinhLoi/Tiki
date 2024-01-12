@@ -1,7 +1,8 @@
 .main {
-    width: 1440px;
+    max-width: 1440px;
     padding: 16px 24px 0px;
     margin: $header-height auto 0;
+    display: flex;
     .side-bar {
         min-width: 230px;
         max-width: 230px;
@@ -25,6 +26,9 @@
                 color: #616164;
                 border-radius: 8px;
                 transition: all linear 0.1s;
+                display: flex;
+                justify-content: start;
+                align-items: center;
                 .side-bar-item-link__img {
                     width: 32px;
                     margin-right: 8px;
@@ -46,6 +50,7 @@
             background-color: white;
             border-radius: 4px;
             transition: all linear 0.1s;
+            display: block;
             // .item-product__img {
             //     // background-image: url('assets/img/iPAD.png');
             //     // padding-top: 100%;
@@ -74,6 +79,9 @@
                     }
                     .item-product-infor__evaluate {
                         height: 15px;
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
                         .item-product-infor-evaluate__star {
                             width: 12px;
                             color: #fcc629;
@@ -139,39 +147,6 @@
             background-color: #dbe2fb;
             transition: all linear 0.1s;
         }
-        .footer {
-            .footer__list {
-                padding: 16px;
-                .footer-item__header {
-                    font-weight: bold;
-                    font-size: 16px;
-                    color: #38383D;
-                    margin-bottom: 12px;
-                    
-                }
-                .footer-item__link {
-                    font-weight: 500;
-                    font-size: 12px;
-                    color: #a0a0a7;
-                    margin-bottom: 8px;
-                    .footer-item-link__img {
-                        width: 32px;
-                    }
-                }
-                .footer-item__link-svg {
-                    margin: 0 8px 8px 0;
-                }
-                .footer-item__link:hover {
-                    text-decoration: underline;
-                }
-                .footer-item__link--disable:hover {
-                    text-decoration: none;
-                }
-            }
-        }
-        .item {
-            background-color: orange;
-            height: 100%;
-        }
+
     }
 }

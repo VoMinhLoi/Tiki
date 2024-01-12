@@ -1,120 +1,120 @@
 
-    <div class="main d-flex">
+    <div class="main">
         <div class="side-bar">
             <h1 class="side-bar__header fw-bold">Danh mục</h1>
             <ul class="side-bar__list">
                 <li class="side-bar__item">
-                    <a href="#" class="side-bar-item__link d-flex align-items-center justify-content-start">
+                    <a href="#" class="side-bar-item__link">
                         <img src="assets/img/Catalog.jpg" alt="Image Catalog" class="side-bar-item-link__img">
                         Thiết bị điện tử</a>
                 </li>
                 <li class="side-bar__item">
-                    <a href="#" class="side-bar-item__link d-flex align-items-center justify-content-start">
+                    <a href="#" class="side-bar-item__link">
                         <img src="assets/img/Catalog.jpg" alt="Image Catalog" class="side-bar-item-link__img">
                         Sản phẩm tài chính - Bảo hiểm</a>
                 </li>
                 <li class="side-bar__item">
-                    <a href="#" class="side-bar-item__link d-flex align-items-center justify-content-start">
+                    <a href="#" class="side-bar-item__link">
                         <img src="assets/img/Catalog.jpg" alt="Image Catalog" class="side-bar-item-link__img">
                         Thiết bị điện tử</a>
                 </li>
                 <li class="side-bar__item">
-                    <a href="#" class="side-bar-item__link d-flex align-items-center justify-content-start">
+                    <a href="#" class="side-bar-item__link">
                         <img src="assets/img/Catalog.jpg" alt="Image Catalog" class="side-bar-item-link__img">
                         Thiết bị điện tử</a>
                 </li>
                 <li class="side-bar__item">
-                    <a href="#" class="side-bar-item__link d-flex align-items-center justify-content-start">
+                    <a href="#" class="side-bar-item__link">
                         <img src="assets/img/Catalog.jpg" alt="Image Catalog" class="side-bar-item-link__img">
                         Thiết bị điện tử</a>
                 </li>
                 <li class="side-bar__item">
-                    <a href="#" class="side-bar-item__link d-flex align-items-center justify-content-start">
+                    <a href="#" class="side-bar-item__link">
                         <img src="assets/img/Catalog.jpg" alt="Image Catalog" class="side-bar-item-link__img">
                         Thiết bị điện tử</a>
                 </li>
                 <li class="side-bar__item">
-                    <a href="#" class="side-bar-item__link d-flex align-items-center justify-content-start">
+                    <a href="#" class="side-bar-item__link">
                         <img src="assets/img/Catalog.jpg" alt="Image Catalog" class="side-bar-item-link__img">
                         Thiết bị điện tử</a>
                 </li>
                 <li class="side-bar__item">
-                    <a href="#" class="side-bar-item__link d-flex align-items-center justify-content-start">
+                    <a href="#" class="side-bar-item__link">
                         <img src="assets/img/Catalog.jpg" alt="Image Catalog" class="side-bar-item-link__img">
                         Thiết bị điện tử</a>
                 </li>
                 <li class="side-bar__item">
-                    <a href="#" class="side-bar-item__link d-flex align-items-center justify-content-start">
+                    <a href="#" class="side-bar-item__link">
                         <img src="assets/img/Catalog.jpg" alt="Image Catalog" class="side-bar-item-link__img">
                         Thiết bị điện tử</a>
                 </li>
                 <li class="side-bar__item">
-                    <a href="#" class="side-bar-item__link d-flex align-items-center justify-content-start">
+                    <a href="#" class="side-bar-item__link">
                         <img src="assets/img/Catalog.jpg" alt="Image Catalog" class="side-bar-item-link__img">
                         Thiết bị điện tử</a>
                 </li>
                 <li class="side-bar__item">
-                    <a href="#" class="side-bar-item__link d-flex align-items-center justify-content-start">
+                    <a href="#" class="side-bar-item__link">
                         <img src="assets/img/Catalog.jpg" alt="Image Catalog" class="side-bar-item-link__img">
                         Thiết bị điện tử</a>
                 </li>
                 <li class="side-bar__item">
-                    <a href="#" class="side-bar-item__link d-flex align-items-center justify-content-start">
+                    <a href="#" class="side-bar-item__link">
                         <img src="assets/img/Catalog.jpg" alt="Image Catalog" class="side-bar-item-link__img">
                         Thiết bị điện tử</a>
                 </li>
                 <li class="side-bar__item">
-                    <a href="#" class="side-bar-item__link d-flex align-items-center justify-content-start">
+                    <a href="#" class="side-bar-item__link">
                         <img src="assets/img/Catalog.jpg" alt="Image Catalog" class="side-bar-item-link__img">
                         Thiết bị điện tử</a>
                 </li>
                 <li class="side-bar__item">
-                    <a href="#" class="side-bar-item__link d-flex align-items-center justify-content-start">
+                    <a href="#" class="side-bar-item__link">
                         <img src="assets/img/Catalog.jpg" alt="Image Catalog" class="side-bar-item-link__img">
                         Thiết bị điện tử</a>
                 </li>
                 <li class="side-bar__item">
-                    <a href="#" class="side-bar-item__link d-flex align-items-center justify-content-start">
+                    <a href="#" class="side-bar-item__link">
                         <img src="assets/img/Catalog.jpg" alt="Image Catalog" class="side-bar-item-link__img">
                         Thiết bị điện tử</a>
                 </li>
                 <li class="side-bar__item">
-                    <a href="#" class="side-bar-item__link d-flex align-items-center justify-content-start">
+                    <a href="#" class="side-bar-item__link">
                         <img src="assets/img/Catalog.jpg" alt="Image Catalog" class="side-bar-item-link__img">
                         Thiết bị điện tử</a>
                 </li>
                 <li class="side-bar__item">
-                    <a href="#" class="side-bar-item__link d-flex align-items-center justify-content-start">
+                    <a href="#" class="side-bar-item__link">
                         <img src="assets/img/Catalog.jpg" alt="Image Catalog" class="side-bar-item-link__img">
                         Thiết bị điện tử</a>
                 </li>
                 <li class="side-bar__item">
-                    <a href="#" class="side-bar-item__link d-flex align-items-center justify-content-start">
+                    <a href="#" class="side-bar-item__link">
                         <img src="assets/img/Catalog.jpg" alt="Image Catalog" class="side-bar-item-link__img">
                         Thiết bị điện tử</a>
                 </li>
                 <li class="side-bar__item">
-                    <a href="#" class="side-bar-item__link d-flex align-items-center justify-content-start">
+                    <a href="#" class="side-bar-item__link">
                         <img src="assets/img/Catalog.jpg" alt="Image Catalog" class="side-bar-item-link__img">
                         Thiết bị điện tử</a>
                 </li>
                 <li class="side-bar__item">
-                    <a href="#" class="side-bar-item__link d-flex align-items-center justify-content-start">
+                    <a href="#" class="side-bar-item__link">
                         <img src="assets/img/Catalog.jpg" alt="Image Catalog" class="side-bar-item-link__img">
                         Thiết bị điện tử</a>
                 </li>
                 <li class="side-bar__item">
-                    <a href="#" class="side-bar-item__link d-flex align-items-center justify-content-start">
+                    <a href="#" class="side-bar-item__link">
                         <img src="assets/img/Catalog.jpg" alt="Image Catalog" class="side-bar-item-link__img">
                         Thiết bị điện tử</a>
                 </li>
                 <li class="side-bar__item">
-                    <a href="#" class="side-bar-item__link d-flex align-items-center justify-content-start">
+                    <a href="#" class="side-bar-item__link">
                         <img src="assets/img/Catalog.jpg" alt="Image Catalog" class="side-bar-item-link__img">
                         Thiết bị điện tử</a>
                 </li>
                 <li class="side-bar__item">
-                    <a href="#" class="side-bar-item__link d-flex align-items-center justify-content-start">
+                    <a href="#" class="side-bar-item__link">
                         <img src="assets/img/Catalog.jpg" alt="Image Catalog" class="side-bar-item-link__img">
                         Thiết bị điện tử</a>
                 </li>
@@ -124,8 +124,8 @@
         <div class="contain flex-grow-1">
             <div class="grid wide">
                 <div class="row">
-                    <div class="col c-2">
-                        <a href="#" class="item-product d-block">
+                    <div class="col l-2 m-4 c-12">
+                        <a href="#" class="item-product">
                             <img src="assets/img/iPAD.png" alt="" class="item-product__img">
                             {{-- <img src="" alt="" class="item-product__img"> --}}
                             <div class="item-product__infor">
@@ -137,30 +137,25 @@
                                     <p class="item-product-infor__desc">
                                         Apple iPad 10.2-inch (9th Gen) Wi-Fi 2021 được tích hợp con chip A15 - con chíp được cho là thế hệ đời mới với nhiều luồng,
                                     </p>
-                                    <ul class="item-product-infor__evaluate d-flex align-items-center justify-content-start">
+                                    <ul class="item-product-infor__evaluate">
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__saled flex-grow-1">Đã bán 999</li>
@@ -171,8 +166,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col c-2">
-                        <a href="#" class="item-product d-block">
+                    <div class="col l-2 m-4 c-12">
+                        <a href="#" class="item-product">
                             <img src="assets/img/iPAD.png" alt="" class="item-product__img">
                             {{-- <img src="" alt="" class="item-product__img"> --}}
                             <div class="item-product__infor">
@@ -184,30 +179,25 @@
                                     <p class="item-product-infor__desc">
                                         Apple iPad 10.2-inch (9th Gen) Wi-Fi 2021 được tích hợp con chip A15 - con chíp được cho là thế hệ đời mới với nhiều luồng,
                                     </p>
-                                    <ul class="item-product-infor__evaluate d-flex align-items-center justify-content-start">
+                                    <ul class="item-product-infor__evaluate">
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__saled flex-grow-1">Đã bán 999</li>
@@ -218,8 +208,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col c-2">
-                        <a href="#" class="item-product d-block">
+                    <div class="col l-2 m-4 c-12">
+                        <a href="#" class="item-product">
                             <img src="assets/img/iPAD.png" alt="" class="item-product__img">
                             {{-- <img src="" alt="" class="item-product__img"> --}}
                             <div class="item-product__infor">
@@ -231,30 +221,25 @@
                                     <p class="item-product-infor__desc">
                                         Apple iPad 10.2-inch (9th Gen) Wi-Fi 2021 được tích hợp con chip A15 - con chíp được cho là thế hệ đời mới với nhiều luồng,
                                     </p>
-                                    <ul class="item-product-infor__evaluate d-flex align-items-center justify-content-start">
+                                    <ul class="item-product-infor__evaluate">
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__saled flex-grow-1">Đã bán 999</li>
@@ -265,8 +250,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col c-2">
-                        <a href="#" class="item-product d-block">
+                    <div class="col l-2 m-4 c-12">
+                        <a href="#" class="item-product">
                             <img src="assets/img/iPAD.png" alt="" class="item-product__img">
                             {{-- <img src="" alt="" class="item-product__img"> --}}
                             <div class="item-product__infor">
@@ -278,30 +263,25 @@
                                     <p class="item-product-infor__desc">
                                         Apple iPad 10.2-inch (9th Gen) Wi-Fi 2021 được tích hợp con chip A15 - con chíp được cho là thế hệ đời mới với nhiều luồng,
                                     </p>
-                                    <ul class="item-product-infor__evaluate d-flex align-items-center justify-content-start">
+                                    <ul class="item-product-infor__evaluate">
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__saled flex-grow-1">Đã bán 999</li>
@@ -312,8 +292,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col c-2">
-                        <a href="#" class="item-product d-block">
+                    <div class="col l-2 m-4 c-12">
+                        <a href="#" class="item-product">
                             <img src="assets/img/iPAD.png" alt="" class="item-product__img">
                             {{-- <img src="" alt="" class="item-product__img"> --}}
                             <div class="item-product__infor">
@@ -325,30 +305,25 @@
                                     <p class="item-product-infor__desc">
                                         Apple iPad 10.2-inch (9th Gen) Wi-Fi 2021 được tích hợp con chip A15 - con chíp được cho là thế hệ đời mới với nhiều luồng,
                                     </p>
-                                    <ul class="item-product-infor__evaluate d-flex align-items-center justify-content-start">
+                                    <ul class="item-product-infor__evaluate">
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__saled flex-grow-1">Đã bán 999</li>
@@ -359,8 +334,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col c-2">
-                        <a href="#" class="item-product d-block">
+                    <div class="col l-2 m-4 c-12">
+                        <a href="#" class="item-product">
                             <img src="assets/img/iPAD.png" alt="" class="item-product__img">
                             {{-- <img src="" alt="" class="item-product__img"> --}}
                             <div class="item-product__infor">
@@ -372,30 +347,25 @@
                                     <p class="item-product-infor__desc">
                                         Apple iPad 10.2-inch (9th Gen) Wi-Fi 2021 được tích hợp con chip A15 - con chíp được cho là thế hệ đời mới với nhiều luồng,
                                     </p>
-                                    <ul class="item-product-infor__evaluate d-flex align-items-center justify-content-start">
+                                    <ul class="item-product-infor__evaluate">
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__saled flex-grow-1">Đã bán 999</li>
@@ -408,8 +378,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col c-2">
-                        <a href="#" class="item-product d-block">
+                    <div class="col l-2 m-4 c-12">
+                        <a href="#" class="item-product">
                             <img src="assets/img/iPAD.png" alt="" class="item-product__img">
                             {{-- <img src="" alt="" class="item-product__img"> --}}
                             <div class="item-product__infor">
@@ -421,30 +391,25 @@
                                     <p class="item-product-infor__desc">
                                         Apple iPad 10.2-inch (9th Gen) Wi-Fi 2021 được tích hợp con chip A15 - con chíp được cho là thế hệ đời mới với nhiều luồng,
                                     </p>
-                                    <ul class="item-product-infor__evaluate d-flex align-items-center justify-content-start">
+                                    <ul class="item-product-infor__evaluate">
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__saled flex-grow-1">Đã bán 999</li>
@@ -455,8 +420,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col c-2">
-                        <a href="#" class="item-product d-block">
+                    <div class="col l-2 m-4 c-12">
+                        <a href="#" class="item-product">
                             <img src="assets/img/iPAD.png" alt="" class="item-product__img">
                             {{-- <img src="" alt="" class="item-product__img"> --}}
                             <div class="item-product__infor">
@@ -468,30 +433,25 @@
                                     <p class="item-product-infor__desc">
                                         Apple iPad 10.2-inch (9th Gen) Wi-Fi 2021 được tích hợp con chip A15 - con chíp được cho là thế hệ đời mới với nhiều luồng,
                                     </p>
-                                    <ul class="item-product-infor__evaluate d-flex align-items-center justify-content-start">
+                                    <ul class="item-product-infor__evaluate">
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__saled flex-grow-1">Đã bán 999</li>
@@ -502,8 +462,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col c-2">
-                        <a href="#" class="item-product d-block">
+                    <div class="col l-2 m-4 c-12">
+                        <a href="#" class="item-product">
                             <img src="assets/img/iPAD.png" alt="" class="item-product__img">
                             {{-- <img src="" alt="" class="item-product__img"> --}}
                             <div class="item-product__infor">
@@ -515,30 +475,25 @@
                                     <p class="item-product-infor__desc">
                                         Apple iPad 10.2-inch (9th Gen) Wi-Fi 2021 được tích hợp con chip A15 - con chíp được cho là thế hệ đời mới với nhiều luồng,
                                     </p>
-                                    <ul class="item-product-infor__evaluate d-flex align-items-center justify-content-start">
+                                    <ul class="item-product-infor__evaluate">
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__saled flex-grow-1">Đã bán 999</li>
@@ -549,8 +504,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col c-2">
-                        <a href="#" class="item-product d-block">
+                    <div class="col l-2 m-4 c-12">
+                        <a href="#" class="item-product">
                             <img src="assets/img/iPAD.png" alt="" class="item-product__img">
                             {{-- <img src="" alt="" class="item-product__img"> --}}
                             <div class="item-product__infor">
@@ -562,30 +517,25 @@
                                     <p class="item-product-infor__desc">
                                         Apple iPad 10.2-inch (9th Gen) Wi-Fi 2021 được tích hợp con chip A15 - con chíp được cho là thế hệ đời mới với nhiều luồng,
                                     </p>
-                                    <ul class="item-product-infor__evaluate d-flex align-items-center justify-content-start">
+                                    <ul class="item-product-infor__evaluate">
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__saled flex-grow-1">Đã bán 999</li>
@@ -596,8 +546,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col c-2">
-                        <a href="#" class="item-product d-block">
+                    <div class="col l-2 m-4 c-12">
+                        <a href="#" class="item-product">
                             <img src="assets/img/iPAD.png" alt="" class="item-product__img">
                             {{-- <img src="" alt="" class="item-product__img"> --}}
                             <div class="item-product__infor">
@@ -609,30 +559,25 @@
                                     <p class="item-product-infor__desc">
                                         Apple iPad 10.2-inch (9th Gen) Wi-Fi 2021 được tích hợp con chip A15 - con chíp được cho là thế hệ đời mới với nhiều luồng,
                                     </p>
-                                    <ul class="item-product-infor__evaluate d-flex align-items-center justify-content-start">
+                                    <ul class="item-product-infor__evaluate">
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__saled flex-grow-1">Đã bán 999</li>
@@ -643,8 +588,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col c-2">
-                        <a href="#" class="item-product d-block">
+                    <div class="col l-2 m-4 c-12">
+                        <a href="#" class="item-product">
                             <img src="assets/img/iPAD.png" alt="" class="item-product__img">
                             {{-- <img src="" alt="" class="item-product__img"> --}}
                             <div class="item-product__infor">
@@ -656,30 +601,25 @@
                                     <p class="item-product-infor__desc">
                                         Apple iPad 10.2-inch (9th Gen) Wi-Fi 2021 được tích hợp con chip A15 - con chíp được cho là thế hệ đời mới với nhiều luồng,
                                     </p>
-                                    <ul class="item-product-infor__evaluate d-flex align-items-center justify-content-start">
+                                    <ul class="item-product-infor__evaluate">
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__saled flex-grow-1">Đã bán 999</li>
@@ -692,8 +632,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col c-2">
-                        <a href="#" class="item-product d-block">
+                    <div class="col l-2 m-4 c-12">
+                        <a href="#" class="item-product">
                             <img src="assets/img/iPAD.png" alt="" class="item-product__img">
                             {{-- <img src="" alt="" class="item-product__img"> --}}
                             <div class="item-product__infor">
@@ -705,30 +645,25 @@
                                     <p class="item-product-infor__desc">
                                         Apple iPad 10.2-inch (9th Gen) Wi-Fi 2021 được tích hợp con chip A15 - con chíp được cho là thế hệ đời mới với nhiều luồng,
                                     </p>
-                                    <ul class="item-product-infor__evaluate d-flex align-items-center justify-content-start">
+                                    <ul class="item-product-infor__evaluate">
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__saled flex-grow-1">Đã bán 999</li>
@@ -739,8 +674,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col c-2">
-                        <a href="#" class="item-product d-block">
+                    <div class="col l-2 m-4 c-12">
+                        <a href="#" class="item-product">
                             <img src="assets/img/iPAD.png" alt="" class="item-product__img">
                             {{-- <img src="" alt="" class="item-product__img"> --}}
                             <div class="item-product__infor">
@@ -752,30 +687,25 @@
                                     <p class="item-product-infor__desc">
                                         Apple iPad 10.2-inch (9th Gen) Wi-Fi 2021 được tích hợp con chip A15 - con chíp được cho là thế hệ đời mới với nhiều luồng,
                                     </p>
-                                    <ul class="item-product-infor__evaluate d-flex align-items-center justify-content-start">
+                                    <ul class="item-product-infor__evaluate">
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__saled flex-grow-1">Đã bán 999</li>
@@ -786,8 +716,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col c-2">
-                        <a href="#" class="item-product d-block">
+                    <div class="col l-2 m-4 c-12">
+                        <a href="#" class="item-product">
                             <img src="assets/img/iPAD.png" alt="" class="item-product__img">
                             {{-- <img src="" alt="" class="item-product__img"> --}}
                             <div class="item-product__infor">
@@ -799,30 +729,25 @@
                                     <p class="item-product-infor__desc">
                                         Apple iPad 10.2-inch (9th Gen) Wi-Fi 2021 được tích hợp con chip A15 - con chíp được cho là thế hệ đời mới với nhiều luồng,
                                     </p>
-                                    <ul class="item-product-infor__evaluate d-flex align-items-center justify-content-start">
+                                    <ul class="item-product-infor__evaluate">
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__saled flex-grow-1">Đã bán 999</li>
@@ -833,8 +758,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col c-2">
-                        <a href="#" class="item-product d-block">
+                    <div class="col l-2 m-4 c-12">
+                        <a href="#" class="item-product">
                             <img src="assets/img/iPAD.png" alt="" class="item-product__img">
                             {{-- <img src="" alt="" class="item-product__img"> --}}
                             <div class="item-product__infor">
@@ -846,30 +771,25 @@
                                     <p class="item-product-infor__desc">
                                         Apple iPad 10.2-inch (9th Gen) Wi-Fi 2021 được tích hợp con chip A15 - con chíp được cho là thế hệ đời mới với nhiều luồng,
                                     </p>
-                                    <ul class="item-product-infor__evaluate d-flex align-items-center justify-content-start">
+                                    <ul class="item-product-infor__evaluate">
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__saled flex-grow-1">Đã bán 999</li>
@@ -880,8 +800,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col c-2">
-                        <a href="#" class="item-product d-block">
+                    <div class="col l-2 m-4 c-12">
+                        <a href="#" class="item-product">
                             <img src="assets/img/iPAD.png" alt="" class="item-product__img">
                             {{-- <img src="" alt="" class="item-product__img"> --}}
                             <div class="item-product__infor">
@@ -893,30 +813,25 @@
                                     <p class="item-product-infor__desc">
                                         Apple iPad 10.2-inch (9th Gen) Wi-Fi 2021 được tích hợp con chip A15 - con chíp được cho là thế hệ đời mới với nhiều luồng,
                                     </p>
-                                    <ul class="item-product-infor__evaluate d-flex align-items-center justify-content-start">
+                                    <ul class="item-product-infor__evaluate">
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__saled flex-grow-1">Đã bán 999</li>
@@ -927,8 +842,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col c-2">
-                        <a href="#" class="item-product d-block">
+                    <div class="col l-2 m-4 c-12">
+                        <a href="#" class="item-product">
                             <img src="assets/img/iPAD.png" alt="" class="item-product__img">
                             {{-- <img src="" alt="" class="item-product__img"> --}}
                             <div class="item-product__infor">
@@ -940,30 +855,25 @@
                                     <p class="item-product-infor__desc">
                                         Apple iPad 10.2-inch (9th Gen) Wi-Fi 2021 được tích hợp con chip A15 - con chíp được cho là thế hệ đời mới với nhiều luồng,
                                     </p>
-                                    <ul class="item-product-infor__evaluate d-flex align-items-center justify-content-start">
+                                    <ul class="item-product-infor__evaluate">
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular d-none fa-star"></i>
                                             
                                         </li>
                                         <li class="item-product-infor-evaluate__saled flex-grow-1">Đã bán 999</li>

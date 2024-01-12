@@ -33,4 +33,10 @@ body {
 // }
 @import 'Home/variable';
 @import 'Home/header';
-@import 'Home/container'
+@import 'Home/container';
+@import 'Home/footer';
+@media (max-width: 1238px) {
+    .side-bar {
+        display: none;
+    }
+}
