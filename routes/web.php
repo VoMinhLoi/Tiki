@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CatalogController;
+use App\Models\Catalog;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [CatalogController::class,'index'])->name('catalogs.index');
+
+
