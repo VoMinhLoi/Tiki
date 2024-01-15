@@ -1,7 +1,7 @@
 <footer class="footer ">
     <div class="grid wide">
         <div class="row bg-white">
-            <div class="col l-2-4 m-2-4 c-12">
+            <div class="col l-2-4 m-6 c-12">
                 <ul class="footer__list">
                     <li class="footer__item">
                         <h3 class="footer-item__header">Hỗ trợ khách hàng </h3>
@@ -43,7 +43,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col l-2-4 m-2-4 c-12">
+            <div class="col l-2-4 m-6 c-12">
                 <ul class="footer__list">
                     <li class="footer__item">
                         <h3 class="footer-item__header">Về Tiki</h3>
@@ -86,7 +86,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col l-2-4 m-2-4 c-12">
+            <div class="col l-2-4 m-6 c-12">
                 <ul class="footer__list">
                     <li class="footer__item">
                         <h3 class="footer-item__header">Hợp tác và liên kết</h3>
@@ -189,7 +189,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col l-2-4 m-2-4 c-12">
+            <div class="col l-2-4 m-6 c-12">
                 <ul class="footer__list">
                     <li class="footer__item">
                         <h3 class="footer-item__header">Phương thức thanh toán</h3>
@@ -244,7 +244,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col l-2-4 m-2-4 c-12">
+            <div class="col l-2-4 m-6 c-12">
                 <ul class="footer__list">
                     <li class="footer__item">
                         <h3 class="footer-item__header">Kết nối với chúng tôi </h3>

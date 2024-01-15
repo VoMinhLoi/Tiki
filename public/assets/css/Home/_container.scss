@@ -50,7 +50,8 @@
             background-color: white;
             border-radius: 4px;
             transition: all linear 0.1s;
-            display: block;
+            display: flex;
+            flex-direction: column;
             // .item-product__img {
             //     // background-image: url('assets/img/iPAD.png');
             //     // padding-top: 100%;
@@ -76,6 +77,7 @@
                         -webkit-box-orient: vertical;
                         -webkit-line-clamp: 3;
                         overflow: hidden;
+                        text-align: justify;
                     }
                     .item-product-infor__evaluate {
                         height: 15px;
