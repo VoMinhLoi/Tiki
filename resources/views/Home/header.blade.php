@@ -89,7 +89,7 @@
                 </li>
                 <li class="header-private__item d-none-l">
                     <label for="show-menu-mobile"  href="#" class="header-private-item__link header-private-item__link--blue margin-0">
-                        <i class="fa-solid fa-list header-private-item-link__icon"></i>
+                        <i class="fa-solid fa-list header-private-item-link__icon margin-0"></i>
                     </label>
                     
                 </li>

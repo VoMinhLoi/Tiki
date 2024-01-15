@@ -1,6 +1,6 @@
 .main {
     max-width: 1440px;
-    padding: 16px 24px 0px;
+    padding: 0px 24px;
     margin: $header-height auto 0;
     display: flex;
     .side-bar {
@@ -107,7 +107,7 @@
                     text-align: left;
                     margin-bottom: 8px;
                 }
-                .item-product-infor__price::after {
+                .item-product-infor__price-has-discount::after {
                     content: "-47%";
                     font-size: 12px;
                     height: 18px;
