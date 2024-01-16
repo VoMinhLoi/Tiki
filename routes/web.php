@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\CatalogController;
+use App\Http\Controllers\CatalogProductController;
+use App\Http\Controllers\ProductController;
 use App\Models\Catalog;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [CatalogController::class,'index'])->name('catalogs.index');
 
 
+Route::group(['prefix'=>'/'],function(){
+});
+Route::get('/', [CatalogController::class,'index']);

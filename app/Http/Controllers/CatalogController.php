@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Catalog;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class CatalogController extends Controller
@@ -17,6 +18,9 @@ class CatalogController extends Controller
     //
     public function index(){
         $catalog = Catalog::all();
-        return view('welcome',['catalog'=>$catalog]);
+        // dd($catalog);
+        $product = Product::all();
+        // dd($product);
+        return view('welcome',['catalog'=>$catalog, 'product'=> $product]);
     }
 }
