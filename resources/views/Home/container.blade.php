@@ -12,7 +12,7 @@
                 @endforeach
             </ul>
         </div>
-        <div class="contain flex-grow-1">
+        <div class="contain">
             <div class="grid wide ">
                 <?php
                     // Tìm sản phẩm cuối cùng

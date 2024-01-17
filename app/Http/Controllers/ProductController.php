@@ -10,12 +10,15 @@ class ProductController extends Controller
 {
     //
     protected $product;
-    protected function __construct(Product $products)
+    public function __construct(Product $products)
     {
         $this->product = $products;
     }
     public function index(){
-        // $product = Product::all();
-        // return view('welcome',['product'=>$product]);
+        $product = Product::all();
+        return view('welcome',['product'=>$product]);
+    }
+    public function detail(){
+        return view('DetailProduct.container');
     }
 }

@@ -18,9 +18,8 @@ class CatalogController extends Controller
     //
     public function index(){
         $catalog = Catalog::all();
-        // dd($catalog);
         $product = Product::all();
-        // dd($product);
+
         return view('welcome',['catalog'=>$catalog, 'product'=> $product]);
     }
 }
