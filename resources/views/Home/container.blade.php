@@ -1,4 +1,3 @@
-
     <div class="main">
         <div class="side-bar">
             <h1 class="side-bar__header fw-bold">Danh mục</h1>
@@ -21,13 +20,15 @@
                     $arrayProduct = array($product);
                     $keyLastElement = sizeof($arrayProduct[0]) - 1;
                     $lastElement = $arrayProduct[0][$keyLastElement];
+                    // $arrayLastElement = array($lastElement); cách cast kiểu này thì vẫn là object
+                    $arrayLastElement = $lastElement->toArray();
                     $temporary = null;
                     // Render tất cả sản phẩm
                     foreach ($product as $item) {
-                        // if để cho 1 dòng chỉ chứa 6 sản phẩm
+                        // if để Mở dòng mới chứa 6 sản phẩm
                         if ($dem == 0){
                             echo    '
-                                    <div class="row margin-top-16">
+                                    <div class="row">
                                         <div class="col l-2 m-4 c-12">
                                             <a href="#" class="item-product">
                                                 <img src="assets/img/' . $item->image . '" alt="" class="item-product__img">
@@ -120,18 +121,18 @@
                                         </div>
                                     ';
                             $dem++;
-                            if($lastElement == $item){
-                               echo '</div>';
-                            }
                         // Đủ 6 sản phẩm thì cho ngắt
                             if($dem == 6){
                                $dem = 0;
                                echo '</div>';
                             }
                         }
-                        $temporary = $item;
+                        // Dò xem đó phải phần tử cuối để đóng row khi dòng chưa chứa đủ 6 sản phẩm đã hết.
+                        $arrayItem = $item->toArray();
+                        if($arrayLastElement['id'] == $arrayItem['id']){
+                            echo '</div>';
+                        }
                     }
-                    dd($lastElement,3, $item);
                 ?>
                 <div class="row">
                     <div class="col c-12 text-center">

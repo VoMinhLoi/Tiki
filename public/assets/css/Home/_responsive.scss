@@ -34,12 +34,18 @@
     .d-none-c-m {
         display: none !important;
     }
-
+    .col {
+        margin-top: 16px;
+    }
 }
 
 @media (min-width: 1024px) {
     .d-none-l {
         display: none;
+    }
+
+    .row:first-child {
+        margin-top: 16px;
     }
 }
 
