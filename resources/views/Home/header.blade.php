@@ -1,4 +1,3 @@
-<div class="bg-white">
     <header class="header">
         <a href="#" class="header__link">
             <img src="assets/img/logo_tiki.png" alt="logo" class="header-link__img">
@@ -115,6 +114,3 @@
             </li>
         </ul>
     </header>
-</div>
-{{-- <input type="checkbox" class="has-overlayer-search" id="over-layer-search">
-<div class="over-layer" id="over-layer-search"> </div> --}}

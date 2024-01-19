@@ -1,20 +1,4 @@
-    <div class="main">
-        <div class="side-bar">
-            <h1 class="side-bar__header fw-bold">Danh mục</h1>
-            <ul class="side-bar__list">
-                @foreach ($catalog as $item)
-                    <li class="side-bar__item">
-                        <a href="#" class="side-bar-item__link">
-                            <img src="assets/img/{{ $item->img }}" alt="Image Catalog" class="side-bar-item-link__img">
-                            {{ $item->name}}
-                        </a>
-                    </li>
-                @endforeach
-            </ul>
-        </div>
-        <div class="contain">
-            <div class="grid wide ">
-                <?php
+<?php
                     // Tìm sản phẩm cuối cùng
                     $dem = 0;
                     $arrayProduct = array($product);
@@ -111,7 +95,7 @@
                                                                 <i class="fa-solid fa-star"></i>
                                                                 
                                                             </li>
-                                                            <li class="item-product-infor-evaluate__saled flex-grow-1">Đã bán 999</li>
+                                                            <li class="item-product-infor-evaluate__saled">Đã bán 999</li>
                                                         </ul>
                                                     </div>
                                                     <p class="item-product-infor__price item-product-infor__price-has-discount">' . $item->price . '<sup>₫</sup></p>
@@ -134,15 +118,10 @@
                         }
                     }
                 ?>
-                <div class="row">
+                {{-- <div class="row">
                     <div class="col c-12 text-center">
                         <button class="contain__extra">
                             Xem thêm
                         </button>
                     </div>
-                </div>
-
-            </div>
-            @include('Home.footer')
-        </div>
-    </div>
+                </div> --}}
