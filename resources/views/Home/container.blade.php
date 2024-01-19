@@ -14,7 +14,7 @@
                             echo    '
                                     <div class="row">
                                         <div class="col l-2 m-4 c-12">
-                                            <a href="#" class="item-product">
+                                            <a href="'. route('product.detail',  $item->id) .'" class="item-product">
                                                 <img src="assets/img/' . $item->image . '" alt="" class="item-product__img">
                                                 {{-- <img src="" alt="" class="item-product__img"> --}}
                                                 <div class="item-product__infor">
@@ -62,7 +62,7 @@
                         // Thêm sản phẩm vào dòng
                             echo    '
                                         <div class="col l-2 m-4 c-12">
-                                            <a href="#" class="item-product">
+                                            <a href="'. route('product.detail',$item->id) .'" class="item-product">
                                                 <img src="assets/img/' . $item->image . '" alt="" class="item-product__img">
                                                 {{-- <img src="" alt="" class="item-product__img"> --}}
                                                 <div class="item-product__infor">

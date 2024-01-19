@@ -30,7 +30,7 @@
                             </a>
                             <span> > </span> 
                             <a href="#" class="breadcrumb__title-link">
-                                Tên sản phẩm
+                                {{ $product->name }}
                             </a>
                         </h1>
                     </div>
@@ -38,22 +38,15 @@
                         <div class="col l-4 m-4 c-6">
                             <div class="image-description">
                                 <a href="#" class="image-product-cover">
-                                    <img class="image-product" src="assets/img/iphone15Promax.png" alt="15 Pro max">
+                                    <img class="image-product" src="assets/img/{{ $product->image }}" alt="15 Pro max">
                                 </a>
                                 <div class="description">
                                     <h1 class="description-title">Đặc điểm nổi bật</h1>
                                     <ul class="description-list">
                                         <li class="description-item">
                                             <i class="fa-solid fa-circle-check description-item__icon"></i>
-                                            Thiết kế titan nhẹ và bền chắc, mặt sau bằng kính nhám và mặt trước Ceramic Shield chống tia nước, chống nước và chống bụi.
-                                        </li>
-                                        <li class="description-item">
-                                            <i class="fa-solid fa-circle-check description-item__icon"></i>
-                                            Thiết kế titan nhẹ và bền chắc, mặt sau bằng kính nhám và mặt trước Ceramic Shield chống tia nước, chống nước và chống bụi.
-                                        </li>
-                                        <li class="description-item">
-                                            <i class="fa-solid fa-circle-check description-item__icon"></i>
-                                            Thiết kế titan nhẹ và bền chắc, mặt sau bằng kính nhám và mặt trước Ceramic Shield chống tia nước, chống nước và chống bụi.
+                                            {{-- Thiết kế titan nhẹ và bền chắc, mặt sau bằng kính nhám và mặt trước Ceramic Shield chống tia nước, chống nước và chống bụi. --}}
+                                            {{ $product->desc }}
                                         </li>
                                     </ul>
                                 </div>
@@ -72,7 +65,7 @@
                                             <a href="#" class="product__brand-link">Apple</a>
                                         </span>
                                     </div>
-                                    <h1 class="product__name">App iPhone 15 Pro Max</h1>
+                                    <h1 class="product__name">{{ $product->name }}</h1>
                                     <ul class="item-product-infor__evaluate">
                                         <li class="item-product-infor-evaluate__star">
                                             <i class="fa-solid fa-star"></i>
@@ -96,7 +89,7 @@
                                         </li>
                                         <li class="item-product-infor-evaluate__saled">Đã bán 999</li>
                                     </ul>
-                                    <p class="product__price product__price-has-discount">19.000.000<sup>₫</sup></p>
+                                    <p class="product__price product__price-has-discount">{{ $product->price }}<sup>₫</sup></p>
                                 </div>
                                 <div class="address">
                                     <h1 class="address-title">Thông tin vận chuyển</h1>
@@ -308,7 +301,8 @@
                                             Tạm tính
                                         </h1>
                                         <div class="price__total">
-                                            31.900.000<sup>₫</sup>
+                                            {{ $product->price }}
+                                            <sup>₫</sup>
                                         </div>
                                     </div>
                                     <div class="action">

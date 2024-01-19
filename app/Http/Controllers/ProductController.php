@@ -18,7 +18,7 @@ class ProductController extends Controller
         $product = Product::all();
         return view('welcome',['product'=>$product]);
     }
-    public function detail(){
-        return view('DetailProduct.container');
+    public function detail(Product $product){
+        return view('DetailProduct.container',['product'=> $product]);
     }
 }

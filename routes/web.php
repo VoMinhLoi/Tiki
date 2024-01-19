@@ -23,4 +23,5 @@ Route::group(['prefix'=>'/'],function(){
     Route::get('', [CatalogController::class,'index']);
     // Route::get('', [ProductController::class,'index']); không thể 
 });
-Route::get('/detail', [ProductController::class,'detail'])->name('product.detail');
+Route::get('/detail/{product}', [ProductController::class,'detail'])->name('product.detail');
+// Route::get('/detail/', [ProductController::class,'detail'])->name('product.detail');
