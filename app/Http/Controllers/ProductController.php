@@ -21,4 +21,8 @@ class ProductController extends Controller
     public function detail(Product $product){
         return view('DetailProduct.container',['product'=> $product]);
     }
+    // public function login(Product $product){
+    //     return view('DetailProduct.login',['product'=> $product]);
+    // }
+    
 }

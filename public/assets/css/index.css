@@ -9,6 +9,7 @@
 
 body {
   background-color: #f5f5f9;
+  position: relative;
 }
 
 @-webkit-keyframes FadeIn {

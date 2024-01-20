@@ -14,6 +14,7 @@
         </style>
         <link rel="stylesheet" href="assets/css/index.css">
         <link rel="stylesheet" href="assets/css/Detail/container.css">
+        
     </head>
     <body>
             <div class="grid wide">
@@ -306,13 +307,13 @@
                                         </div>
                                     </div>
                                     <div class="action">
-                                        <button class="action__pay">
+                                        <button class="action__pay" onclick="showLogin()">
                                             Mua ngay
                                         </button>
-                                        <button class="action__cart">
+                                        <button class="action__cart" onclick="showLogin()">
                                             Thêm vào giỏ
                                         </button>
-                                        <button class="action__buy">
+                                        <button class="action__buy"  onclick="showLogin()">
                                             Mua trả góp - trả sau
                                         </button>
                                     </div>
@@ -328,5 +329,8 @@
                     <i class="fa-solid fa-arrow-up"></i>
                 </a>
             </div>
+            {{-- <input type="checkbox" id="show-login" style="opacity: 0"> --}}
+            @include('DetailProduct.login')
+            <script src="assets/js/form.js"></script>
     </body>
 </html>
