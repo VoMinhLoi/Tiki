@@ -82,7 +82,7 @@
                     </a>
                 </li>
                 <li class="header-private__item d-none-c">
-                    <a href="#" class="header-private-item__link header-private-item__link--blue header-private-item__link-quantity margin-0">
+                    <a onclick="showLogin()" href="#" class="header-private-item__link header-private-item__link--blue header-private-item__link-quantity margin-0">
                         <i class="fa-solid fa-cart-shopping header-private-item-link__icon "></i>
                     </a>
                 </li>
@@ -90,7 +90,6 @@
                     <label for="show-menu-mobile"  href="#" class="header-private-item__link header-private-item__link--blue margin-0">
                         <i class="fa-solid fa-list header-private-item-link__icon margin-0"></i>
                     </label>
-                    
                 </li>
             </ul>
             <div class="header-private__address d-none-c-m">

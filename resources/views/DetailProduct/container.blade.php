@@ -14,7 +14,11 @@
         </style>
         <link rel="stylesheet" href="assets/css/index.css">
         <link rel="stylesheet" href="assets/css/Detail/container.css">
-        
+        <style>
+            .alert-danger {
+                color: red;
+            }
+        </style>
     </head>
     <body>
             <div class="grid wide">
@@ -313,9 +317,9 @@
                                         <button class="action__cart" onclick="showLogin()">
                                             Thêm vào giỏ
                                         </button>
-                                        <button class="action__buy"  onclick="showLogin()">
+                                        {{-- <button class="action__buy"  onclick="showLogin()">
                                             Mua trả góp - trả sau
-                                        </button>
+                                        </button> --}}
                                     </div>
                                 </div>
                             </div>
@@ -330,7 +334,7 @@
                 </a>
             </div>
             {{-- <input type="checkbox" id="show-login" style="opacity: 0"> --}}
-            @include('DetailProduct.login')
+            @include('login')
             <script src="assets/js/form.js"></script>
     </body>
 </html>
