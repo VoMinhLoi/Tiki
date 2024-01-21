@@ -24,7 +24,13 @@ class RegisterRequest extends FormRequest
         return [
             'name' => 'required',
             'email' => 'required',
-            'password' => 'required'
+            'password' => 'required | min:6'
+        ];
+    }
+    public function messages()
+    {
+        return [
+            'name.required' => 'Không được bỏ trống'
         ];
     }
 }

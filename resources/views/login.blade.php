@@ -17,8 +17,9 @@
             @error('password')
                 <div class="alert-danger">{{ $message }}</div>
             @enderror
-            {{-- <button class="auth__button-login">Đăng nhập</button> --}}
-            <input type="submit" class="auth__button-login" value = 'Đăng nhập'>
+            <button class="auth__button-login">Đăng nhập</button>
+            {{-- <input type="submit" class="auth__button-login" value = 'Đăng nhập'> --}}
+            <a href="{{ route('formRegister') }}" class ="auth__button-login">Đăng ký</a>
         </div>
         <div class="login__img-cover">
             <img class="login__img" src="assets/img/tiki_login.png" alt="tiki trade" style="width: 203px">

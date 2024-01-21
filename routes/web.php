@@ -30,5 +30,5 @@ Route::group(['prefix'=>'/detail/{product}'],function(){
     Route::post('/login', [AuthController::class,'login'])->name('login');
 });
 
-Route::get('/register',[AuthController::class,'formRegister']);
+Route::get('/register',[AuthController::class,'formRegister'])->name('formRegister');
 Route::post('/register',[AuthController::class,'register'])->name('register');

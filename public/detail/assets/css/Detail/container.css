@@ -390,6 +390,7 @@ body {
   font-size: 24px;
   outline: none;
   width: 100%;
+  margin-top: 8px;
 }
 
 .auth__button-login {
@@ -403,6 +404,9 @@ body {
   border: none;
   font-size: 20px;
   cursor: pointer;
+  display: block;
+  text-align: center;
+  text-align: center;
 }
 
 .login__img-cover {

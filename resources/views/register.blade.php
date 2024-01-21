@@ -23,6 +23,10 @@
                 <div class="alert-danger">{{ $message }}</div>
             @enderror
             <input class="auth__button-login" type="Submit" value="Đăng ký">
+
+        </div>
+        <div class="login__img-cover">
+            <img class="login__img" src="assets/img/tiki_login.png" alt="tiki trade" style="width: 203px">
         </div>
     </form>
 </div>
