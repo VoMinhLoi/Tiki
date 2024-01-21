@@ -32,9 +32,9 @@ Route::group(['prefix'=>'/detail/{product}'],function(){
     Route::post('/login', [AuthController::class,'login'])->name('login');
 });
 
-Route::group(['middleware' => 'userLogin'], function() {
+// Route::group(['middleware' => 'userLogin'], function() {
     Route::get('/cart',[CartController::class,'cart'])->name('cart');
-});
+// });
 
 
 

@@ -1,0 +1,109 @@
+.breadcrumb {
+  margin-top: 96px;
+  font-size: 14px;
+  height: 40px;
+}
+
+.breadcrumb__title {
+  line-height: 40px;
+  color: #808089;
+}
+
+.trade, .all-product, .all-product-detail {
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.trade-action__name {
+  display: flex;
+  align-items: center;
+}
+
+.trade-action {
+  padding-top: 16px;
+  border-top: 1px solid #ededf1;
+}
+
+.trade-action__name-img {
+  width: 40px;
+  height: 40px;
+}
+
+.price {
+  margin-top: 16px;
+}
+
+.price__title {
+  font-weight: bold;
+}
+
+.price__total {
+  font-size: 24px;
+  color: #ff424e;
+}
+
+.action {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.action__pay {
+  padding: 8px;
+  height: 40px;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-top: 8px;
+  background-color: #ff424e;
+  color: white;
+  border: none;
+}
+
+.all-product {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #787878;
+}
+
+.all-product ~ .all-product {
+  margin-top: 8px;
+}
+
+.all-product__title {
+  margin-left: 8px;
+}
+
+.all-product__first, .all-product__second {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.all-product__second {
+  justify-content: space-around;
+}
+
+.all-product-detail {
+  margin-top: 8px;
+}
+
+.product {
+  width: 100%;
+  display: flex;
+}
+
+.product-infor, .product-pay {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.product-infor__img {
+  width: 80px;
+}
+
+.product-pay {
+  justify-content: space-around;
+}/*# sourceMappingURL=cart.css.map */
