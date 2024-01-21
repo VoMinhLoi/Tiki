@@ -14,7 +14,7 @@ class AuthController extends Controller
     public function login(AuthRequest $request){
         if (Auth::attempt($request->validated())) {
             $request->session()->regenerate();
-            return redirect()->route('home');
+            return redirect()->route('cart');
         }
         return redirect()->back()->with([
             'fail' => 'Sai password hoac email'
@@ -34,5 +34,10 @@ class AuthController extends Controller
             return redirect()->route('home');
         }
         return redirect()->back()->with(['message'=>'Dang ky that bai']);
+    }
+
+    public function logout(){
+        Auth::logout();
+        return view('register');
     }
 }
