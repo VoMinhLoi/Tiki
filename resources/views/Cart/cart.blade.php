@@ -20,9 +20,9 @@
                     <h1 class="all-product__title">Tất cả ($allproduct)</h1>
                 </div>
                 <div class="all-product__second">
-                    <p class="all-product__price">Đơn giá</p>
-                    <p class="all-product__quantity">Số lượng</p>
-                    <p class="all-product__money">Thành tiền</p>
+                    <p class="">Đơn giá</p>
+                    <p class="">Số lượng</p>
+                    <p class="">Thành tiền</p>
                     <a href="#"><i class="fa-solid fa-trash-can"></i></a>
                 </div>
             </div>
@@ -33,13 +33,19 @@
                         <img class="product-infor__img" src="assets/img/AcerNitro5.jpg" alt="">
                         <div class="name-desc">
                             <h1 class="name">$product->name</h1>
-                            <p class="desc">$product->desc</p>
+                            <p class="desc">$product->desc $product->desc $product->desc $product->desc $product->desc</p>
                         </div>
                     </div>
                     <div class="product-pay">
-                        <p class="all-product__price">$product->price</p>
-                        <p class="all-product__quantity">$product->quantiy</p>
-                        <p class="all-product__money">$product->money</p>
+                        <p class="product__price">$product->price</p>
+                        <div class="product__quantity">
+                            <button class="product__quantity-descrease">-</button>
+                            <input class="product__quantity-number" type="text" value="1">
+                            <button class="product__quantity-increase">+</button>
+                        </div>
+                        <p class="product__money">$product->money
+                            <sup>₫</sup>
+                        </p>
                         <a href="#"><i class="fa-solid fa-trash-can"></i></a>
                     </div>
                 </div>
@@ -53,9 +59,15 @@
                         </div>
                     </div>
                     <div class="product-pay">
-                        <p class="all-product__price">$product->price</p>
-                        <p class="all-product__quantity">$product->quantiy</p>
-                        <p class="all-product__money">$product->money</p>
+                        <p class="product__price">$product->price</p>
+                        <div class="product__quantity">
+                            <button class="product__quantity-descrease">-</button>
+                            <input class="product__quantity-number" type="text" value="1">
+                            <button class="product__quantity-increase">+</button>
+                        </div>
+                        <p class="product__money">$product->money
+                            <sup>₫</sup>
+                        </p>
                         <a href="#"><i class="fa-solid fa-trash-can"></i></a>
                     </div>
                 </div>
@@ -69,9 +81,15 @@
                         </div>
                     </div>
                     <div class="product-pay">
-                        <p class="all-product__price">$product->price</p>
-                        <p class="all-product__quantity">$product->quantiy</p>
-                        <p class="all-product__money">$product->money</p>
+                        <p class="product__price">$product->price</p>
+                        <div class="product__quantity">
+                            <button class="product__quantity-descrease">-</button>
+                            <input class="product__quantity-number" type="text" value="1">
+                            <button class="product__quantity-increase">+</button>
+                        </div>
+                        <p class="product__money">$product->money
+                            <sup>₫</sup>
+                        </p>
                         <a href="#"><i class="fa-solid fa-trash-can"></i></a>
                     </div>
                 </div>

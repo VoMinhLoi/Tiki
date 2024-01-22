@@ -311,12 +311,26 @@
                                         </div>
                                     </div>
                                     <div class="action">
-                                        <button class="action__pay" onclick="showLogin()">
-                                            Mua ngay
-                                        </button>
-                                        <button class="action__cart" onclick="showLogin()">
-                                            Thêm vào giỏ
-                                        </button>
+                                        <?php
+                                            if(Auth::check()){
+                                                echo
+                                                    '<button class="action__pay" >
+                                                            Mua ngay
+                                                    </button>
+                                                    <button class="action__cart" >
+                                                        Thêm vào giỏ
+                                                    </button>';
+                                            }
+                                            else {
+                                                echo
+                                                '<button class="action__pay" onclick="showLogin()">
+                                                    Mua ngay
+                                                </button>
+                                                <button class="action__cart" onclick="showLogin()">
+                                                    Thêm vào giỏ
+                                                </button>';
+                                            }
+                                        ?>
                                         {{-- <button class="action__buy"  onclick="showLogin()">
                                             Mua trả góp - trả sau
                                         </button> --}}

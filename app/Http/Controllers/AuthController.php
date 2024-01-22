@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\AuthRequest;
 use App\Http\Requests\Auth\RegisterRequest;
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
@@ -19,6 +20,11 @@ class AuthController extends Controller
         return redirect()->back()->with([
             'fail' => 'Sai password hoac email'
         ]);
+    }
+
+    public function formLogin(Request $request){
+        if($request->route()->getName()=='formLogin'){}
+        return view('login');
     }
 
     public function formRegister(){

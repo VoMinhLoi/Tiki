@@ -70,7 +70,7 @@
         <div class="header__private">
             <ul class="header-private__list">
                 <li class="header-private__item">
-                    <a href="#" class="header-private-item__link d-none-c-m header-private-item__link--blue">
+                    <a href="/" class="header-private-item__link d-none-c-m header-private-item__link--blue">
                         <i class="fa-solid fa-house header-private-item-link__icon "></i>
                         Trang chủ
                     </a>
@@ -97,9 +97,22 @@
                      ?>
                 </li>
                 <li class="header-private__item d-none-c">
-                    <a onclick="showLogin()" href="#" class="header-private-item__link header-private-item__link--blue header-private-item__link-quantity margin-0">
-                        <i class="fa-solid fa-cart-shopping header-private-item-link__icon "></i>
-                    </a>
+                    <?php
+                        if(Auth::check()){
+                            echo    '
+                                <a href="/cart" class="header-private-item__link header-private-item__link--blue header-private-item__link-quantity margin-0">
+                                    <i class="fa-solid fa-cart-shopping header-private-item-link__icon "></i>
+                                </a>   
+                                ';
+                        }
+                        else {
+                            echo    '
+                                <a href="/formLogin" class="header-private-item__link header-private-item__link--blue header-private-item__link-quantity margin-0">
+                                    <i class="fa-solid fa-cart-shopping header-private-item-link__icon "></i>
+                                </a>   
+                                ';
+                        }
+                    ?>
                 </li>
                 <li class="header-private__item d-none-l">
                     <label for="show-menu-mobile"  href="#" class="header-private-item__link header-private-item__link--blue margin-0">
