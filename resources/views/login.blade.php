@@ -1,7 +1,6 @@
 <div class="wrapper">
     {{-- <label class="over-layer" for="show-login"></label> --}}
     <button class="over-layer" onclick="hiddenLogin()">
-        <a class="auth__button-login" href="{{ route('logout') }}">Dang xuat </a>
     </button>
     <form class="login"  action="{{ route('login',$product->id) }}" method="post">
         {{-- Đảm bảo rằng bạn đã bao gồm CSRF token trong mọi yêu cầu POST của bạn. Token này cần được gửi đi như một trường ẩn trong mẫu HTML hoặc thông qua các tiêu đề HTTP. --}}
@@ -22,6 +21,7 @@
             <button class="auth__button-login">Đăng nhập</button>
             {{-- <input type="submit" class="auth__button-login" value = 'Đăng nhập'> --}}
             <a href="{{ route('formRegister') }}" class ="auth__button-login">Đăng ký</a>
+
         </div>
         <div class="login__img-cover">
             <img class="login__img" src="assets/img/tiki_login.png" alt="tiki trade" style="width: 203px">

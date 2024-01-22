@@ -75,11 +75,26 @@
                         Trang chủ
                     </a>
                 </li>
-                <li class="header-private__item">
+                <li class="header-private__item header-private__item-has-menu-user">
                     <a href="#" class="header-private-item__link d-none-c-m">
                         <i class="fa-regular fa-face-smile header-private-item-link__icon"></i>
                         Tài khoản
                     </a>
+                    <?php
+                    if (Auth::check()) {
+                        echo    '<ul class="menu-user">
+                                    <li class="menu-user__item">
+                                        <a href="#" class="menu-user__item-link">Thông tin tài khoản</a></li>
+                                    <li class="menu-user__item">
+                                        <a href="#" class="menu-user__item-link">Đơn hàng của tôi</a></li>
+                                    <li class="menu-user__item">
+                                        <a href="#" class="menu-user__item-link">Trung tâm hỗ trợ</a></li>
+                                    <li class="menu-user__item">
+                                        <a href="'. route('logout') .'" class="menu-user__item-link">Đăng xuất</a></li>
+                                </ul>
+                                ';
+                        }
+                     ?>
                 </li>
                 <li class="header-private__item d-none-c">
                     <a onclick="showLogin()" href="#" class="header-private-item__link header-private-item__link--blue header-private-item__link-quantity margin-0">
