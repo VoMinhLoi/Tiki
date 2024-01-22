@@ -24,7 +24,7 @@
                         {{-- <label class="over-layer" for="show-login"></label> --}}
                         <button class="over-layer" onclick="hiddenLogin()">
                         </button>
-                        <form class="login"  action="" method="post">
+                        <form class="login"  action="'. route('loginNoProduct') .'" method="post">
                         
                 ';
     }

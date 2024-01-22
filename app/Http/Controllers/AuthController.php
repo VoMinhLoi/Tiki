@@ -37,7 +37,7 @@ class AuthController extends Controller
         $dataShow = User::create($data);
         if($dataShow){
             // return view('welcome');
-            return redirect()->route('home');
+            return redirect()->route('formLogin');
         }
         return redirect()->back()->with(['message'=>'Dang ky that bai']);
     }

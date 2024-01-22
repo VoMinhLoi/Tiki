@@ -1,4 +1,9 @@
 <link rel="stylesheet" href="detail/assets/css/Detail/container.css">
+<style>
+    a {
+        text-decoration: none;
+    }
+</style>
 <div class="wrapper" style="display: flex">
     {{-- <label class="over-layer" for="show-login"></label> --}}
     <button class="over-layer"></button>
@@ -23,7 +28,7 @@
                 <div class="alert-danger">{{ $message }}</div>
             @enderror
             <input class="auth__button-login" type="Submit" value="Đăng ký">
-
+            <a href="{{ route('formLogin') }}" class ="auth__button-login">Đăng nhập</a>
         </div>
         <div class="login__img-cover">
             <img class="login__img" src="assets/img/tiki_login.png" alt="tiki trade" style="width: 203px">

@@ -33,6 +33,7 @@ Route::group(['prefix'=>'/detail/{product}'],function(){
 });
 
 Route::get('/formLogin', [AuthController::class,'formLogin'])->name('formLogin');
+Route::post('/formLogin', [AuthController::class,'login'])->name('loginNoProduct');
 
 Route::group(['middleware' => 'userLogin'], function() {
     Route::get('/cart',[CartController::class,'cart'])->name('cart');
