@@ -37,9 +37,8 @@
                 ';
     }
 ?>
+                            {{-- Đảm bảo rằng bạn đã bao gồm CSRF token trong mọi yêu cầu POST của bạn. Token này cần được gửi đi như một trường ẩn trong mẫu HTML hoặc thông qua các tiêu đề HTTP. --}}
                         {{-- <form class="login"  action="'. route('loginNoProduct') .'" method="post"> --}}
-
-                        {{-- Đảm bảo rằng bạn đã bao gồm CSRF token trong mọi yêu cầu POST của bạn. Token này cần được gửi đi như một trường ẩn trong mẫu HTML hoặc thông qua các tiêu đề HTTP. --}}
                         @csrf 
                         <div class="auth">
                             <h1 class="auth__hello">Xin chào,</h1>
@@ -55,7 +54,7 @@
                                 <div class="alert-danger">{{ $message }}</div>
                             @enderror
                             <div class="remember" style="    margin-top: 12px; display: flex; justify-content: center;">
-                                <input class="remember__checkbox" type="checkbox" id="remember"  name="remember">
+                                <input class="remember__checkbox" type="checkbox" id="remember"  name="remember" {{ old('remember') ? 'checked' : '' }}>
                                 <label class="remember__label" for="remember"> Nhớ mật khẩu</label>
                             </div>
                             <button class="auth__button-login">Đăng nhập</button>
