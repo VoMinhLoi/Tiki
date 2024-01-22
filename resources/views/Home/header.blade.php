@@ -107,9 +107,9 @@
                         }
                         else {
                             echo    '
-                                <a href="/formLogin" class="header-private-item__link header-private-item__link--blue header-private-item__link-quantity margin-0">
+                                <button onclick="showLogin()" class="header-private-item__link header-private-item__link--blue header-private-item__link-quantity margin-0">
                                     <i class="fa-solid fa-cart-shopping header-private-item-link__icon "></i>
-                                </a>   
+                                </button>   
                                 ';
                         }
                     ?>

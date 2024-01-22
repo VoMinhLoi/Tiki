@@ -13,10 +13,15 @@ class AuthController extends Controller
 {
 
     public function login(AuthRequest $request){
-        if (Auth::attempt($request->validated())) {
+        $remember = $request->has('remember');
+        // if (Auth::attempt($request->validated(),$remember)) {
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password],$remember)) {
             $request->session()->regenerate();
-            return redirect()->route('cart');
+            // return redirect()->route('cart');
+            // Intend chuyển trang đang đứng.
+            redirect()->intended('/dashboard');
         }
+        back()->withInput($request->only('email', 'password', 'remember'))->withErrors(['password' => 'Thông tin đăng nhập không đúng']);
         return redirect()->back()->with([
             'fail' => 'Sai password hoac email'
         ]);

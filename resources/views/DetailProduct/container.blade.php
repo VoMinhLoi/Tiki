@@ -350,5 +350,6 @@
             {{-- <input type="checkbox" id="show-login" style="opacity: 0"> --}}
             @include('login')
             <script src="assets/js/form.js"></script>
+
     </body>
 </html>

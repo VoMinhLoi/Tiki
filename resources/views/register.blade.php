@@ -14,16 +14,16 @@
             <h1 class="auth__hello">Xin chào,</h1>
             <p class="auth__title">Tạo tài khoản</p>
             {{-- <label for="">Số điện thoại</label> --}}
-            <input type="text" name="name" class="auth__input" placeholder="Họ và tên">
+            <input type="text" name="name" class="auth__input" placeholder="Họ và tên" required>
             @error('name')
                 <div class="alert-danger">{{ $message }}</div>
             @enderror
-            <input type="text" name="email" class="auth__input" placeholder="Số điện thoại">
+            <input type="text" name="email" class="auth__input" placeholder="Số điện thoại" required>
             @error('email')
                 <div class="alert-danger">{{ $message }}</div>
             @enderror
             {{-- <label for="">Mật khẩu</label> --}}
-            <input type="password" name="password" class="auth__input" placeholder="Mật khẩu">
+            <input type="password" name="password" class="auth__input" placeholder="Mật khẩu" required>
             @error('password')
                 <div class="alert-danger">{{ $message }}</div>
             @enderror
