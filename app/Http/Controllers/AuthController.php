@@ -8,6 +8,7 @@ use App\Http\Requests\Auth\RegisterRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cookie;
 
 class AuthController extends Controller
 {
@@ -17,9 +18,16 @@ class AuthController extends Controller
         // if (Auth::attempt($request->validated(),$remember)) {
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password],$remember)) {
             $request->session()->regenerate();
-            // return redirect()->route('cart');
+            //Dùng cookie lưu mật khẩu
+            $email = $request->input('email');
+            $password = $request->input('password');
+            $remember = $request->input('remember');
+            Cookie::queue('remember_email', $email, 60 * 24 * 30); // Thời gian sống: 30 ngày
+            Cookie::queue('remember_password', $password, 60 * 24 * 30);
+            Cookie::queue('remember_remember', $remember, 60 * 24 * 30);
             // Intend chuyển trang đang đứng.
             redirect()->intended('/dashboard');
+            // return redirect()->route('cart');
         }
         back()->withInput($request->only('email', 'password', 'remember'))->withErrors(['password' => 'Thông tin đăng nhập không đúng']);
         return redirect()->back()->with([
