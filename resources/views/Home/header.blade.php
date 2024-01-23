@@ -98,7 +98,7 @@
                      ?>
                 </li>
                 <li class="header-private__item d-none-c">
-                    <?php
+                     <?php 
                         if(Auth::check()){
                             echo    '
                                 <a href="/cart" class="header-private-item__link header-private-item__link--blue header-private-item__link-quantity margin-0">
@@ -113,7 +113,17 @@
                                 </button>   
                                 ';
                         }
+                        //dd(Auth::user()); //null
                     ?>
+                    {{-- @if (!Auth::user()->id)
+                        <button onclick="showLogin()" class="header-private-item__link header-private-item__link--blue header-private-item__link-quantity margin-0">
+                            <i class="fa-solid fa-cart-shopping header-private-item-link__icon "></i>
+                        </button>   
+                    @else
+                        <a href="/cart" class="header-private-item__link header-private-item__link--blue header-private-item__link-quantity margin-0">
+                            <i class="fa-solid fa-cart-shopping header-private-item-link__icon "></i>
+                        </a>   
+                    @endif --}}
                 </li>
                 <li class="header-private__item d-none-l">
                     <label for="show-menu-mobile"  href="#" class="header-private-item__link header-private-item__link--blue margin-0">
