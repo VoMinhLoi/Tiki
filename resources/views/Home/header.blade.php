@@ -70,7 +70,8 @@
         <div class="header__private">
             <ul class="header-private__list">
                 <li class="header-private__item">
-                    <a href="/" class="header-private-item__link d-none-c-m header-private-item__link--blue">
+                    {{-- <a href="/" class="header-private-item__link d-none-c-m header-private-item__link--blue"> --}}
+                    <a href="{{ url('/') }}" class="header-private-item__link d-none-c-m header-private-item__link--blue">
                         <i class="fa-solid fa-house header-private-item-link__icon "></i>
                         Trang chủ
                     </a>
