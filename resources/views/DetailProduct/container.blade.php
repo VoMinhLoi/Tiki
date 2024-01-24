@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
+        <title>Tiki</title>
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="assets/font/fontawesome-free-6.5.1-web/css/all.min.css">
@@ -14,6 +14,8 @@
         </style>
         <link rel="stylesheet" href="assets/css/index.css">
         <link rel="stylesheet" href="assets/css/Detail/container.css">
+        <link rel="icon" href="assets/img/tiki_trade.png" type="image/icon type">
+
         <style>
             .alert-danger {
                 color: red;
@@ -67,7 +69,10 @@
                                         </p>
                                         <span class="warranty__item-value product__brand">
                                             Thương hiệu: 
-                                            <a href="#" class="product__brand-link">Apple</a>
+                                            <a href="#" class="product__brand-link">
+                                                <?php ?>
+                                                {{ $brandName }}
+                                            </a>
                                         </span>
                                     </div>
                                     <h1 class="product__name">{{ $product->name }}</h1>

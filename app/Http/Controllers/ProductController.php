@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Brand;
 use App\Models\Product;
 
 
@@ -19,9 +20,7 @@ class ProductController extends Controller
         return view('welcome',['product'=>$product]);
     }
     public function detail(Product $product){
-        return view('DetailProduct.container',['product'=> $product]);
+        $brand = Brand::where('id', $product->brand_id)->get();
+        return view('DetailProduct.container',['product'=> $product, 'brandName'=> $brand->toArray()[0]['name']]);
     }
-
-
-    
 }
