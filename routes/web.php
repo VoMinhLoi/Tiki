@@ -43,3 +43,8 @@ Route::group(['middleware' => 'userLogin'], function() {
 
 Route::get('/register',[AuthController::class,'formRegister'])->name('formRegister');
 Route::post('/register',[AuthController::class,'register'])->name('register');
+
+
+Route::get('/auth/google',[AuthController::class,'redirectToGoogle']);
+// Route::get('/auth/google/callback', 'AuthController@handleGoogleCallback');
+Route::get('/auth/google/callback', [AuthController::class,'handleGoogleCallback']);
