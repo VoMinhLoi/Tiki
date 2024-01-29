@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\CatalogProductController;
+use App\Http\Controllers\ManageController;
 use App\Http\Controllers\ProductController;
 use App\Models\Catalog;
 use Illuminate\Support\Facades\Route;
@@ -48,3 +49,7 @@ Route::post('/register',[AuthController::class,'register'])->name('register');
 Route::get('/auth/google',[AuthController::class,'redirectToGoogle']);
 // Route::get('/auth/google/callback', 'AuthController@handleGoogleCallback');
 Route::get('/auth/google/callback', [AuthController::class,'handleGoogleCallback']);
+
+
+//Admin
+Route::get('/admin',[ManageController::class,'index']);
