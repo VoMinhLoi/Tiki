@@ -28,9 +28,15 @@ class AuthController extends Controller
             Cookie::queue('remember_password', $password, 60 * 24 * 30);
             Cookie::queue('remember_remember', $remember, 60 * 24 * 30);
             // Intend chuyển trang đang đứng.
+            echo '<script>';
+            echo 'alert("Đăng nhập thành công.");';
+            echo '</script>';
             redirect()->intended('/dashboard');
             // return redirect()->route('cart');
         }
+        echo '<script>';
+        echo 'alert("Đăng nhập thất bại.");';
+        echo '</script>';
         back()->withInput($request->only('email', 'password', 'remember'))->withErrors(['password' => 'Thông tin đăng nhập không đúng']);
         return redirect()->back()->with([
             'fail' => 'Sai password hoac email'
