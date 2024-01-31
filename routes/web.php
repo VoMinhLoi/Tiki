@@ -53,3 +53,4 @@ Route::get('/auth/google/callback', [AuthController::class,'handleGoogleCallback
 
 //Admin
 Route::get('/admin',[ManageController::class,'index']);
+Route::post('/admin',[ManageController::class,'insert'])->name('addBrand');

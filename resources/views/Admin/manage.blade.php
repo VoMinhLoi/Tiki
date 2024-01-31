@@ -116,6 +116,12 @@
             line-height: 40px;
             width: 20%;
             display: inline-block;
+            position: relative;
+        }
+
+        .add-ingredient__name-label::first-letter {
+            /* text-transform: capitalize; */
+            text-transform: uppercase;
         }
 
         .add-ingredient__name-input {
@@ -221,16 +227,21 @@
                             <h1 class="add-title">
                                 Thêm thương hiệu:
                             </h1>
-                            <form class="add-ingredient">
+                            <form  action="{{ route('addBrand') }}" class="add-ingredient" method="post">
+                                @csrf
                                 <div class="add-ingredient__name">
-                                    <label class="add-ingredient__name-label" for="name">Tên thương hiệu</label>
-                                    <input class="add-ingredient__name-input" type="text" id="name">
+                                    <label class="add-ingredient__name-label" for="name">tên thương hiệu:</label>
+                                    <input class="add-ingredient__name-input" name="name" type="text" id="name" required>
                                 </div>
                                 <div class="add-ingredient__name">
-                                    <label class="add-ingredient__name-label" for="desc">Mô tả</label>
-                                    <input class="add-ingredient__name-input"  type="text" id="desc">
+                                    <label class="add-ingredient__name-label" for="desc">mô tả:</label>
+                                    <input class="add-ingredient__name-input" name="desc"  type="text" id="desc" required>
                                 </div>
-                                <input class="add-ingredient__submit" type="submit" value="Thêm">
+                                <div class="add-ingredient__name">
+                                    <label class="add-ingredient__name-label" for="status">trạng thái:</label>
+                                    <input class="add-ingredient__name-input" name="status"  type="text" id="status" required>
+                                </div>
+                                <input class="add-ingredient__submit" type="Submit" value="Thêm">
                             </form>
                         </div>
                         <div class="show-list">
