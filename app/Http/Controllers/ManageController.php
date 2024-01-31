@@ -20,6 +20,11 @@ class ManageController extends Controller
             redirect()->intended('/dashboard');
         }
         return redirect()->back()->with(['message'=>'Dang ky that bai']);
+    }
 
+    public function delete(string $id){
+        $brand = Brand::where('id', $id)->firstOrFail();
+        $brand->delete();
+        return redirect()->route('admin');
     }
 }

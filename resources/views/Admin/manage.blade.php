@@ -254,6 +254,7 @@
                                         <th>name</th>
                                         <th>desc</th>
                                         <th>status</th>
+                                        <th>action</th>
                                     </tr>
                                 </thead>
                             
@@ -264,6 +265,9 @@
                                         <td> {{ $item->name }}</td>
                                         <td> {{ $item->desc }}</td>
                                         <td> {{ $item->status }}</td>
+                                        <td style="text-align: center"> 
+                                            <a href="{{ route('delete', $item->id) }}" style="display: block; background-color:red; color:white; border-radius: 4px">Delete</a>
+                                        </td>
                                     </tr>
                                     @endforeach
                                 </tbody>
