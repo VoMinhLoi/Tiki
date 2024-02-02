@@ -15,6 +15,14 @@
         .side-bar {
             width: 300px;
             background: black;
+            position: fixed;
+            height: 100vh;
+            overflow-y: scroll;
+            top: 72px;
+            left: 0;
+        }
+        .side-bar::-webkit-scrollbar {
+        display: none;
         }
 
         .side-bar__item {
@@ -41,8 +49,14 @@
             display: block;
             text-transform: uppercase;
         }
+
+        .side-bar__item-link:hover {
+            background-color: #ccc;
+            color: black;
+        }
+
         .side-bar__item-link--clicked {
-            background-color: white;
+            background-color: white !important;
             color: black;
         }
 
@@ -51,7 +65,12 @@
             box-shadow: 0px 0px 2px black;
             display: flex;
             align-items: center;
-            
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            background: white;
+            z-index: 1;
         }
         .header-search__bar {
             padding-right: 16px;
@@ -87,6 +106,7 @@
 
         .container {
             height: 100vh;
+            margin-top: 74px;
         }
         
         .add {
@@ -173,54 +193,57 @@
     <div class="main">
         <div class="side-bar">
             <ul class="side-bar__list">
-                <li class="side-bar__item side-bar__item-title">
-                    <img src="assets/img/tiki_trade.png" alt="Tiki" style="width: 50px; height: 50px; margin-right: 0px;">
-                  <h1 class="side-bar__item-link">admin tiki</h1>   
+                <li class="side-bar__item">
+                    <a onclick="choosingItem(this)" href="#" class="side-bar__item-link side-bar__item-link--clicked">brand</a>   
                 </li>
                 <li class="side-bar__item">
-                  <a href="#" class="side-bar__item-link side-bar__item-link--clicked">brand</a>   
+                    <a onclick="choosingItem(this)" href="#" class="side-bar__item-link">catalog</a>   
                 </li>
                 <li class="side-bar__item">
-                  <a href="#" class="side-bar__item-link">catalog</a>   
+                    <a onclick="choosingItem(this)" href="#" class="side-bar__item-link">product</a>   
                 </li>
                 <li class="side-bar__item">
-                  <a href="#" class="side-bar__item-link">product</a>   
+                    <a onclick="choosingItem(this)" href="#" class="side-bar__item-link">user</a>   
                 </li>
                 <li class="side-bar__item">
-                  <a href="#" class="side-bar__item-link">user</a>   
+                    <a onclick="choosingItem(this)" href="#" class="side-bar__item-link">đăng xuất</a>   
                 </li>
-                <li class="side-bar__item">
-                    <a href="#" class="side-bar__item-link">đăng xuất</a>   
-                  </li>
             </ul>
         </div>
-        <div class="grid wide" style="max-width: none; flex: 1">
+        <div class="grid wide" style="max-width: none; flex: 1; margin-left: 300px">
             <div class="row no-gutters">
                 <div class="col l-12">
                     <header class="nav-admin row no-gutters">
-                        {{-- <div class="col l-6" style="display:flex; justify-content:center;"> --}}
-                        <div class="col l-6" style="">
-                            <div class="header-search__bar">
-                                <img src="assets/img/icon_search.png" alt="iconSearch" class="header-search-bar__icon" style="max-width: 40px;
-                                height: 20px;
-                                padding: 0 10px;">
-                                <input type="text" class="header-search-bar__input flex-grow-1 d-none-c" placeholder="Điện tử">
-                
-    
-                                <button class="header-search-bar__button d-none-c">
-                                    <span>
-                                        Tìm kiếm
-                                    </span>
-                                </button>
-                            </div>
+                        
+                        <div style="width: 300px" class="side-bar__item side-bar__item-title">
+                            <img src="assets/img/tiki_trade.png" alt="Tiki" style="width: 50px; height: 50px; margin-right: 0px;">
+                            <h1 class="side-bar__item-link">admin tiki</h1>   
                         </div>
-
-                        <ul class="col l-6 nav-admin__list">
-                            <li class="nav-admin__item"><a href="#" class="nav-admin__item-link">
-                                <img src="assets/img/tiki_login.png" alt="image admin" title="image admin" style="width: 40px; margin-right: 8px;">
-                                <h1 class="nav-admin__item-link-name">Vo Minh Loi</h1>
-                            </a></li>
-                        </ul>
+                        {{-- <div class="col l-6" style="display:flex; justify-content:center;"> --}}
+                        <div class="row" style="justify-content: space-between; flex: 1">
+                            <div class="col l-6" style="">
+                                <div class="header-search__bar">
+                                    <img src="assets/img/icon_search.png" alt="iconSearch" class="header-search-bar__icon" style="max-width: 40px;
+                                    height: 20px;
+                                    padding: 0 10px;">
+                                    <input type="text" class="header-search-bar__input flex-grow-1 d-none-c" placeholder="Điện tử">
+                    
+        
+                                    <button class="header-search-bar__button d-none-c">
+                                        <span>
+                                            Tìm kiếm
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+    
+                            <ul class="col l-6 nav-admin__list">
+                                <li class="nav-admin__item"><a href="#" class="nav-admin__item-link">
+                                    <img src="assets/img/tiki_login.png" alt="image admin" title="image admin" style="width: 40px; margin-right: 8px;">
+                                    <h1 class="nav-admin__item-link-name">Vo Minh Loi</h1>
+                                </a></li>
+                            </ul>
+                        </div>
                     </header>
                 </div>
             </div>
@@ -287,4 +310,13 @@
         </div>
     </div>
 </body>
+<script>
+    function choosingItem(clickedItem){
+        var items = document.querySelectorAll('.side-bar__item-link');
+        items.forEach(function(item) {
+            item.classList.remove('side-bar__item-link--clicked');
+        });
+        clickedItem.classList.toggle('side-bar__item-link--clicked');// toggle 1 cái hay là nếu chưa có class đó nó sẽ tự động thêm, nếu có rồi sẽ là xóa class
+    }
+</script>
 </html>
