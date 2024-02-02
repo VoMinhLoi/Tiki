@@ -163,6 +163,10 @@
             border: 1px solid black;
             
         }
+
+        th::first-letter {
+            text-transform: uppercase;
+        }
     </style>
 </head>
 <body>
@@ -244,7 +248,7 @@
                                         <option value="0">0</option>
                                     </select>
                                 </div>
-                                <input class="add-ingredient__submit" type="Submit" value="Thêm">
+                                <input class="add-ingredient__submit" type="Submit" value="Thêm" style="color: white;">
                             </form>
                         </div>
                         <div class="show-list">
@@ -254,23 +258,23 @@
                                 <thead>
                                     <tr>
                                         <th>id</th>
-                                        <th>name</th>
-                                        <th>desc</th>
-                                        <th>status</th>
-                                        <th>action</th>
+                                        <th>tên</th>
+                                        <th>mô tả</th>
+                                        <th>trạng thái</th>
+                                        <th>hành động</th>
                                     </tr>
                                 </thead>
                             
                                 <tbody>
                                     @foreach ($brand as $item)
                                     <tr>
-                                        <td> {{ $item->id }} </td>
-                                        <td> {{ $item->name }}</td>
+                                        <td style="text-align: center"> {{ $item->id }} </td>
+                                        <td style="text-align: center"> {{ $item->name }}</td>
                                         <td> {{ $item->desc }}</td>
-                                        <td> {{ $item->status }}</td>
+                                        <td style="text-align: center"> {{ $item->status }}</td>
                                         <td style="text-align: center">
-                                            <a href="{{ route('updateForm', $item->id) }} " style="display: block; background-color:green; color:white; border-radius: 4px">Update</a>
-                                            <a href="{{ route('delete', $item->id) }}" style="margin-top: 4px; display: block; background-color:red; color:white; border-radius: 4px">Delete</a>
+                                            <a href="{{ route('updateForm', $item->id) }} " style="display: block; background-color:green; color:white; border-radius: 4px">Cập nhật</a>
+                                            <a href="{{ route('delete', $item->id) }}" style="margin-top: 4px; display: block; background-color:red; color:white; border-radius: 4px">Xóa</a>
                                         </td>
                                     </tr>
                                     @endforeach
@@ -282,6 +286,5 @@
             </div>
         </div>
     </div>
-
 </body>
 </html>

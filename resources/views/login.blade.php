@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="detail/assets/css/Detail/login.css">
+<link rel="stylesheet" href="assets/css/login.css">
 
 <?php
     //Kiểm tra nếu có id product thì đăng nhập để thêm sản phẩm vào
@@ -73,4 +73,4 @@
 
                     </div>
                     
-            <script src="detail/assets/js/form.js"></script>
+            <script src="assets/js/form.js"></script>
