@@ -20,6 +20,7 @@ class ProductController extends Controller
         return view('welcome',['product'=>$product]);
     }
     public function detail(Product $product){
+
         $brand = Brand::where('id', $product->brand_id)->get();
         return view('DetailProduct.container',['product'=> $product, 'brandName'=> $brand->toArray()[0]['name']]);
     }

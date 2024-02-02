@@ -68,7 +68,7 @@
   width: 300px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   background-color: #dff0ff;
   flex-direction: column;
   border-top-right-radius: 4px;

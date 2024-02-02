@@ -10,16 +10,28 @@ use Illuminate\Http\Request;
 class ManageController extends Controller
 {
     public function index(){
-        $brand = Brand::all();
-        return view('Admin.manage',['brand' => $brand]);
+        return view('Admin.manage',['brand' => Brand::all()]);
     }
 
     public function insert(BrandRequest $request){
         $data = Brand::create($request->validated());
         if($data){
-            redirect()->intended('/dashboard');
+            return redirect()->route('admin');
         }
         return redirect()->back()->with(['message'=>'Dang ky that bai']);
+    }
+
+    // public function updateForm(string $id){
+    //     $brand = Brand::where('id', $id)->firstOrFail();
+    //     return view('Admin.update',['item'=> $brand, 'brand' => Brand::all()]);
+    // }
+
+    public function updateForm(Brand $brand){
+        return view('Admin.update',['item'=> $brand, 'brand' => Brand::all()]);
+    }
+
+    public function update(Brand $brand, BrandRequest $brandRequest){
+        dd($brand);
     }
 
     public function delete(string $id){

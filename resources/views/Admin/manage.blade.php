@@ -227,7 +227,7 @@
                             <h1 class="add-title">
                                 Thêm thương hiệu:
                             </h1>
-                            <form  action="{{ route('addBrand') }}" class="add-ingredient" method="post">
+                            <form  action="{{ route('add') }}" class="add-ingredient" method="post">
                                 @csrf
                                 <div class="add-ingredient__name">
                                     <label class="add-ingredient__name-label" for="name">tên thương hiệu:</label>
@@ -239,7 +239,10 @@
                                 </div>
                                 <div class="add-ingredient__name">
                                     <label class="add-ingredient__name-label" for="status">trạng thái:</label>
-                                    <input class="add-ingredient__name-input" name="status"  type="text" id="status" required>
+                                    <select class="add-ingredient__name-input"  name="status" id="status">
+                                        <option value="1">1</option>
+                                        <option value="0">0</option>
+                                    </select>
                                 </div>
                                 <input class="add-ingredient__submit" type="Submit" value="Thêm">
                             </form>
@@ -265,8 +268,9 @@
                                         <td> {{ $item->name }}</td>
                                         <td> {{ $item->desc }}</td>
                                         <td> {{ $item->status }}</td>
-                                        <td style="text-align: center"> 
-                                            <a href="{{ route('delete', $item->id) }}" style="display: block; background-color:red; color:white; border-radius: 4px">Delete</a>
+                                        <td style="text-align: center">
+                                            <a href="{{ route('updateForm', $item->id) }} " style="display: block; background-color:green; color:white; border-radius: 4px">Update</a>
+                                            <a href="{{ route('delete', $item->id) }}" style="margin-top: 4px; display: block; background-color:red; color:white; border-radius: 4px">Delete</a>
                                         </td>
                                     </tr>
                                     @endforeach
@@ -278,5 +282,6 @@
             </div>
         </div>
     </div>
+
 </body>
 </html>
