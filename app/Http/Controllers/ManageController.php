@@ -31,7 +31,8 @@ class ManageController extends Controller
     }
 
     public function update(Brand $brand, BrandRequest $brandRequest){
-        dd($brand);
+        $brand->update($brandRequest->validated());
+        return redirect()->route('admin');
     }
 
     public function delete(string $id){
