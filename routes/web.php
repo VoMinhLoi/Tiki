@@ -53,7 +53,7 @@ Route::get('/auth/google/callback', [AuthController::class,'handleGoogleCallback
 
 //Admin
 Route::get('/ad',[ManageController::class,'index'])->name('admin');
-Route::post('/admin',[ManageController::class,'insert'])->name('add');
+Route::post('/ad',[ManageController::class,'insert'])->name('add');
 Route::get('/admin/update/{brand}',[ManageController::class,'updateForm'])->name('updateForm');
 Route::post('/admin/update/{brand}',[ManageController::class,'update'])->name('update');
 Route::get('/admin/{brand}',[ManageController::class,'delete'])->name('delete');
