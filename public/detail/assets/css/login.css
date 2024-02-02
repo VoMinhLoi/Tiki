@@ -58,6 +58,9 @@
     border: none;
     font-size: 20px;
     cursor: pointer;
+    width: 100%;
+    display: block;
+    text-align: center;
   }
   
   .login__img-cover {
