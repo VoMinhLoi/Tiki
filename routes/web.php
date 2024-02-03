@@ -58,6 +58,7 @@ Route::group(['prefix'=>'/ad'],function(){
     Route::post('',[ManageController::class,'insertBrand'])->name('addBrand');
     Route::get('/catalog',[ManageController::class,'catalog'])->name('catalog');
     Route::post('/catalog',[ManageController::class,'insertCatalog'])->name('addCatalog');
+    Route::get('/catalog/{catalog}',[ManageController::class,'deleteCatalog'])->name('deleteCatalog');
 });
 
 Route::group(['prefix'=> '/admin'],function(){

@@ -58,4 +58,8 @@ class ManageController extends Controller
         }
         return redirect()->back()->with(['message'=>'Dang ky that bai']);
     }
+    public function deleteCatalog(Catalog $catalog){
+        $catalog->delete();
+        return redirect()->route('catalog');
+    }
 }
