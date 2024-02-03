@@ -31,7 +31,7 @@
                     Siêu ưu đãi mỗi ngày
                 </p>
             </div>
-            <a onclick="hiddenForm()" style=" position: absolute; right: 0; background: white; padding: 0px 8px;">X</a>
+            <a onclick="hiddenForm()" style=" position: absolute; right: 0; background: white; padding: 0px 8px; cursor: pointer;">X</a>
         </form>
 </div>
 <script src="detail/assets/js/form.js"></script>

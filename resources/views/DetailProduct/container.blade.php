@@ -20,6 +20,9 @@
         <link rel="icon" href="assets/img/tiki_trade.png" type="image/icon type">
 
         <style>
+            * {
+                scroll-behavior: smooth;
+            }
             .alert-danger {
                 color: red;
             }

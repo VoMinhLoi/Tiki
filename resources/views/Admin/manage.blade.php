@@ -220,7 +220,7 @@
                             <h1 class="side-bar__item-link">admin tiki</h1>   
                         </div>
                         {{-- <div class="col l-6" style="display:flex; justify-content:center;"> --}}
-                        <div class="row" style="justify-content: space-between; flex: 1">
+                        <div class="row" style="justify-content: space-between; flex: 1; display: flex;">
                             <div class="col l-6" style="">
                                 <div class="header-search__bar">
                                     <img src="assets/img/icon_search.png" alt="iconSearch" class="header-search-bar__icon" style="max-width: 40px;
