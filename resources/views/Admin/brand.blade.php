@@ -10,7 +10,7 @@
         <h1 class="add-title">
             Thêm thương hiệu:
         </h1>
-        <form  action="{{ route('add') }}" class="add-ingredient" method="post">
+        <form  action="{{ route('addBrand') }}" class="add-ingredient" method="post">
             @csrf
             <div class="add-ingredient__name">
                 <label class="add-ingredient__name-label" for="name">tên thương hiệu:</label>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\BrandRequest;
+use App\Http\Requests\CatalogRequest;
 use App\Models\Brand;
 use App\Models\Catalog;
 use App\Models\Product;
@@ -15,7 +16,7 @@ class ManageController extends Controller
         return view('Admin.brand',['brand' => Brand::all()]);
     }
 
-    public function insert(BrandRequest $request){
+    public function insertBrand(BrandRequest $request){
         $data = Brand::create($request->validated());
         if($data){
             return redirect()->route('admin');
@@ -47,5 +48,14 @@ class ManageController extends Controller
 
     public function catalog(){
         return view('Admin.catalog',['catalog' => Catalog::all()]);
+    }
+
+    
+    public function insertCatalog(CatalogRequest $request){
+        $data = Catalog::create($request->validated());
+        if($data){
+            return redirect()->route('catalog');
+        }
+        return redirect()->back()->with(['message'=>'Dang ky that bai']);
     }
 }

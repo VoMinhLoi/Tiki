@@ -10,7 +10,7 @@
         <h1 class="add-title">
             Thêm mục lục:
         </h1>
-        <form  action="{{ route('add') }}" class="add-ingredient" method="post">
+        <form  action="{{ route('addCatalog') }}" class="add-ingredient" method="post">
             @csrf
             <div class="add-ingredient__name">
                 <label class="add-ingredient__name-label" for="name">tên mục lục</label>
@@ -19,6 +19,10 @@
             <div class="add-ingredient__name">
                 <label class="add-ingredient__name-label" for="desc">mô tả:</label>
                 <input class="add-ingredient__name-input" name="desc"  type="text" id="desc" required>
+            </div>
+            <div class="add-ingredient__name">
+                <label class="add-ingredient__name-label" for="img">hình ảnh:</label>
+                <input class="" name="img"  type="file" id="img" required>
             </div>
             <div class="add-ingredient__name">
                 <label class="add-ingredient__name-label" for="status">trạng thái:</label>
@@ -39,6 +43,7 @@
                     <th>id</th>
                     <th>tên</th>
                     <th>mô tả</th>
+                    <th>hình ảnh</th>
                     <th>trạng thái</th>
                     <th>hành động</th>
                 </tr>
@@ -50,10 +55,11 @@
                     <td style="text-align: center"> {{ $item->id }} </td>
                     <td style="text-align: center"> {{ $item->name }}</td>
                     <td> {{ $item->desc }}</td>
+                    <td style="text-align: center"> <img src="assets/img/{{ $item->img }}" alt="{{ $item->img }}"> </td>
                     <td style="text-align: center"> {{ $item->status }}</td>
                     <td style="text-align: center">
-                        <a href="{{ route('updateForm', $item->id) }} " style="display: block; background-color:green; color:white; border-radius: 4px">Cập nhật</a>
-                        <a href="{{ route('delete', $item->id) }}" style="margin-top: 4px; display: block; background-color:red; color:white; border-radius: 4px">Xóa</a>
+                        <a href="" style="display: block; background-color:green; color:white; border-radius: 4px">Cập nhật</a>
+                        <a href="" style="margin-top: 4px; display: block; background-color:red; color:white; border-radius: 4px">Xóa</a>
                     </td>
                 </tr>
                 @endforeach

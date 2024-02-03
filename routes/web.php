@@ -55,12 +55,14 @@ Route::get('/auth/google/callback', [AuthController::class,'handleGoogleCallback
 
 Route::group(['prefix'=>'/ad'],function(){
     Route::get('',[ManageController::class,'index'])->name('admin');
-    Route::post('',[ManageController::class,'insert'])->name('add');
+    Route::post('',[ManageController::class,'insertBrand'])->name('addBrand');
     Route::get('/catalog',[ManageController::class,'catalog'])->name('catalog');
+    Route::post('/catalog',[ManageController::class,'insertCatalog'])->name('addCatalog');
 });
 
 Route::group(['prefix'=> '/admin'],function(){
     Route::get('/update/{brand}',[ManageController::class,'updateFormBrand'])->name('updateFormBrand');
     Route::post('/update/{brand}',[ManageController::class,'updateBrand'])->name('updateBrand');
     Route::get('/{brand}',[ManageController::class,'deleteBrand'])->name('deleteBrand');
+    
 });
