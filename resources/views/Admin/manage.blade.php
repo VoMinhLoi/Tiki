@@ -189,34 +189,31 @@
         }
     </style>
     
-<script>
-    function choosingItem(clickedItem){
-        var items = document.querySelectorAll('.side-bar__item-link');
-        items.forEach(function(item) {
-            item.classList.remove('side-bar__item-link--clicked');
-        });
-        clickedItem.classList.toggle('side-bar__item-link--clicked');// toggle 1 cái hay là nếu chưa có class đó nó sẽ tự động thêm, nếu có rồi sẽ là xóa class
-    }
-</script>
+
 </head>
 <body>
     <div class="main">
         <div class="side-bar">
             <ul class="side-bar__list">
                 <li class="side-bar__item">
-                    <a onclick="choosingItem(this)" href="{{ route('admin') }}" class="side-bar__item-link side-bar__item-link--clicked">brand</a>   
+                    {{-- <a onclick="choosingItem(this)" href="{{ route('admin') }}" class="side-bar__item-link">brand</a>    --}}
+                    <a href="{{ route('admin') }}" class="side-bar__item-link">brand</a>   
                 </li>
                 <li class="side-bar__item">
-                    <a onclick="choosingItem(this)" href="" class="side-bar__item-link">catalog</a>   
+                    {{-- <a onclick="choosingItem(this)" href="{{ route('catalog') }}" class="side-bar__item-link">catalog</a>    --}}
+                    <a href="{{ route('catalog') }}" class="side-bar__item-link">catalog</a>   
                 </li>
                 <li class="side-bar__item">
-                    <a onclick="choosingItem(this)" href="#" class="side-bar__item-link">product</a>   
+                    {{-- <a onclick="choosingItem(this)" href="#" class="side-bar__item-link">product</a>    --}}
+                    <a href="#" class="side-bar__item-link">product</a>   
                 </li>
                 <li class="side-bar__item">
-                    <a onclick="choosingItem(this)" href="#" class="side-bar__item-link">user</a>   
+                    {{-- <a onclick="choosingItem(this)" href="#" class="side-bar__item-link">user</a>    --}}
+                    <a href="#" class="side-bar__item-link">user</a>   
                 </li>
                 <li class="side-bar__item">
-                    <a onclick="choosingItem(this)" href="#" class="side-bar__item-link">đăng xuất</a>   
+                    {{-- <a onclick="choosingItem(this)" href="#" class="side-bar__item-link">đăng xuất</a>    --}}
+                    <a href="#" class="side-bar__item-link">đăng xuất</a>   
                 </li>
             </ul>
         </div>

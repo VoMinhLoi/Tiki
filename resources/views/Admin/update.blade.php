@@ -4,7 +4,7 @@
 @include ('Admin.brand')
 <div class="wrapper" style="display: flex;">
     <button class="over-layer" onclick=""></button>
-    <form class="login"  action="{{ route('update', $item->id) }}" method="post"> 
+    <form class="login"  action="{{ route('updateBrand', $item->id) }}" method="post"> 
                 {{-- Đảm bảo rằng bạn đã bao gồm CSRF token trong mọi yêu cầu POST của bạn. Token này cần được gửi đi như một trường ẩn trong mẫu HTML hoặc thông qua các tiêu đề HTTP. --}}
             {{-- <form class="login"  action="'. route('loginNoProduct') .'" method="post"> --}}
             @csrf 

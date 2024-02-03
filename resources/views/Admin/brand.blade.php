@@ -1,4 +1,10 @@
 @include('Admin.manage')
+<style>
+    li.side-bar__item:nth-child(1) .side-bar__item-link{
+        background-color: white !important;
+        color: black ;
+    }
+</style>
 <div class="container">
     <div class="add">
         <h1 class="add-title">
@@ -46,8 +52,8 @@
                     <td> {{ $item->desc }}</td>
                     <td style="text-align: center"> {{ $item->status }}</td>
                     <td style="text-align: center">
-                        <a href="{{ route('updateForm', $item->id) }} " style="display: block; background-color:green; color:white; border-radius: 4px">Cập nhật</a>
-                        <a href="{{ route('delete', $item->id) }}" style="margin-top: 4px; display: block; background-color:red; color:white; border-radius: 4px">Xóa</a>
+                        <a href="{{ route('updateFormBrand', $item->id) }} " style="display: block; background-color:green; color:white; border-radius: 4px">Cập nhật</a>
+                        <a href="{{ route('deleteBrand', $item->id) }}" style="margin-top: 4px; display: block; background-color:red; color:white; border-radius: 4px">Xóa</a>
                     </td>
                 </tr>
                 @endforeach

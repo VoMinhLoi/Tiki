@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\BrandRequest;
 use App\Models\Brand;
+use App\Models\Catalog;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ManageController extends Controller
@@ -26,18 +28,24 @@ class ManageController extends Controller
     //     return view('Admin.update',['item'=> $brand, 'brand' => Brand::all()]);
     // }
 
-    public function updateForm(Brand $brand){
+    public function updateFormBrand(Brand $brand){
         return view('Admin.update',['item'=> $brand, 'brand' => Brand::all()]);
     }
 
-    public function update(Brand $brand, BrandRequest $brandRequest){
+    public function updateBrand(Brand $brand, BrandRequest $brandRequest){
         $brand->update($brandRequest->validated());
         return redirect()->route('admin');
     }
 
-    public function delete(string $id){
+    public function deleteBrand(string $id){
         $brand = Brand::where('id', $id)->firstOrFail();
         $brand->delete();
         return redirect()->route('admin');
+    }
+
+    
+
+    public function catalog(){
+        return view('Admin.catalog',['catalog' => Catalog::all()]);
     }
 }

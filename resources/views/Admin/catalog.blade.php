@@ -1,13 +1,19 @@
 @include('Admin.manage')
+<style>
+    li.side-bar__item:nth-child(2) .side-bar__item-link{
+        background-color: white !important;
+        color: black ;
+    }
+</style>
 <div class="container">
     <div class="add">
         <h1 class="add-title">
-            Thêm thương hiệu:
+            Thêm mục lục:
         </h1>
         <form  action="{{ route('add') }}" class="add-ingredient" method="post">
             @csrf
             <div class="add-ingredient__name">
-                <label class="add-ingredient__name-label" for="name">tên thương hiệu:</label>
+                <label class="add-ingredient__name-label" for="name">tên mục lục</label>
                 <input class="add-ingredient__name-input" name="name" type="text" id="name" required>
             </div>
             <div class="add-ingredient__name">
@@ -25,7 +31,7 @@
         </form>
     </div>
     <div class="show-list">
-        <h1 class="show-list__title">danh sách thương hiệu</h1>
+        <h1 class="show-list__title">danh sách mục lục</h1>
         <table class="show-list__table">
             
             <thead>
@@ -39,7 +45,7 @@
             </thead>
         
             <tbody>
-                @foreach ($brand as $item)
+                @foreach ($catalog as $item)
                 <tr>
                     <td style="text-align: center"> {{ $item->id }} </td>
                     <td style="text-align: center"> {{ $item->name }}</td>
