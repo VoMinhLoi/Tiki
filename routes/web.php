@@ -52,8 +52,14 @@ Route::get('/auth/google/callback', [AuthController::class,'handleGoogleCallback
 
 
 //Admin
-Route::get('/ad',[ManageController::class,'index'])->name('admin');
-Route::post('/ad',[ManageController::class,'insert'])->name('add');
-Route::get('/admin/update/{brand}',[ManageController::class,'updateForm'])->name('updateForm');
-Route::post('/admin/update/{brand}',[ManageController::class,'update'])->name('update');
-Route::get('/admin/{brand}',[ManageController::class,'delete'])->name('delete');
+
+Route::group(['prefix'=>'/ad'],function(){
+    Route::get('',[ManageController::class,'index'])->name('admin');
+    Route::post('',[ManageController::class,'insert'])->name('add');
+});
+
+Route::group(['prefix'=> '/admin'],function(){
+    Route::get('/update/{brand}',[ManageController::class,'updateForm'])->name('updateForm');
+    Route::post('/update/{brand}',[ManageController::class,'update'])->name('update');
+    Route::get('/{brand}',[ManageController::class,'delete'])->name('delete');
+});

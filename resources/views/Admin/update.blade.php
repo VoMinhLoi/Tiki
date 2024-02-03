@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="detail/assets/css/Detail/login.css">
 <link rel="stylesheet" href="assets/css/grid_system.css">
 <link rel="stylesheet" href="assets/font/fontawesome-free-6.5.1-web/css/all.min.css">
-@include ('Admin.manage')
+@include ('Admin.brand')
 <div class="wrapper" style="display: flex;">
     <button class="over-layer" onclick=""></button>
     <form class="login"  action="{{ route('update', $item->id) }}" method="post"> 

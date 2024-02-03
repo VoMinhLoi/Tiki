@@ -188,16 +188,26 @@
             text-transform: uppercase;
         }
     </style>
+    
+<script>
+    function choosingItem(clickedItem){
+        var items = document.querySelectorAll('.side-bar__item-link');
+        items.forEach(function(item) {
+            item.classList.remove('side-bar__item-link--clicked');
+        });
+        clickedItem.classList.toggle('side-bar__item-link--clicked');// toggle 1 cái hay là nếu chưa có class đó nó sẽ tự động thêm, nếu có rồi sẽ là xóa class
+    }
+</script>
 </head>
 <body>
     <div class="main">
         <div class="side-bar">
             <ul class="side-bar__list">
                 <li class="side-bar__item">
-                    <a onclick="choosingItem(this)" href="#" class="side-bar__item-link side-bar__item-link--clicked">brand</a>   
+                    <a onclick="choosingItem(this)" href="{{ route('admin') }}" class="side-bar__item-link side-bar__item-link--clicked">brand</a>   
                 </li>
                 <li class="side-bar__item">
-                    <a onclick="choosingItem(this)" href="#" class="side-bar__item-link">catalog</a>   
+                    <a onclick="choosingItem(this)" href="" class="side-bar__item-link">catalog</a>   
                 </li>
                 <li class="side-bar__item">
                     <a onclick="choosingItem(this)" href="#" class="side-bar__item-link">product</a>   
@@ -249,74 +259,10 @@
             </div>
             <div class="row no-gutters" style="margin-top: 0px;">
                 <div class="col l-12">
-                    <div class="container">
-                        <div class="add">
-                            <h1 class="add-title">
-                                Thêm thương hiệu:
-                            </h1>
-                            <form  action="{{ route('add') }}" class="add-ingredient" method="post">
-                                @csrf
-                                <div class="add-ingredient__name">
-                                    <label class="add-ingredient__name-label" for="name">tên thương hiệu:</label>
-                                    <input class="add-ingredient__name-input" name="name" type="text" id="name" required>
-                                </div>
-                                <div class="add-ingredient__name">
-                                    <label class="add-ingredient__name-label" for="desc">mô tả:</label>
-                                    <input class="add-ingredient__name-input" name="desc"  type="text" id="desc" required>
-                                </div>
-                                <div class="add-ingredient__name">
-                                    <label class="add-ingredient__name-label" for="status">trạng thái:</label>
-                                    <select class="add-ingredient__name-input"  name="status" id="status">
-                                        <option value="1">1</option>
-                                        <option value="0">0</option>
-                                    </select>
-                                </div>
-                                <input class="add-ingredient__submit" type="Submit" value="Thêm" style="color: white;">
-                            </form>
-                        </div>
-                        <div class="show-list">
-                            <h1 class="show-list__title">danh sách thương hiệu</h1>
-                            <table class="show-list__table">
-                                
-                                <thead>
-                                    <tr>
-                                        <th>id</th>
-                                        <th>tên</th>
-                                        <th>mô tả</th>
-                                        <th>trạng thái</th>
-                                        <th>hành động</th>
-                                    </tr>
-                                </thead>
-                            
-                                <tbody>
-                                    @foreach ($brand as $item)
-                                    <tr>
-                                        <td style="text-align: center"> {{ $item->id }} </td>
-                                        <td style="text-align: center"> {{ $item->name }}</td>
-                                        <td> {{ $item->desc }}</td>
-                                        <td style="text-align: center"> {{ $item->status }}</td>
-                                        <td style="text-align: center">
-                                            <a href="{{ route('updateForm', $item->id) }} " style="display: block; background-color:green; color:white; border-radius: 4px">Cập nhật</a>
-                                            <a href="{{ route('delete', $item->id) }}" style="margin-top: 4px; display: block; background-color:red; color:white; border-radius: 4px">Xóa</a>
-                                        </td>
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+                {{-- Bổ sung: nội dung chuyển tùy theo chọn mennu --}}
+                {{-- </div>
             </div>
         </div>
     </div>
 </body>
-<script>
-    function choosingItem(clickedItem){
-        var items = document.querySelectorAll('.side-bar__item-link');
-        items.forEach(function(item) {
-            item.classList.remove('side-bar__item-link--clicked');
-        });
-        clickedItem.classList.toggle('side-bar__item-link--clicked');// toggle 1 cái hay là nếu chưa có class đó nó sẽ tự động thêm, nếu có rồi sẽ là xóa class
-    }
-</script>
-</html>
+</html> --}}
