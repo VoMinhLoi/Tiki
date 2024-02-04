@@ -62,4 +62,8 @@ class ManageController extends Controller
         $catalog->delete();
         return redirect()->route('catalog');
     }
+
+    public function product(){
+        return view('Admin.product',['product' => Product::all(), 'brand' => Brand::all(), 'catalog' => Catalog::all()]);
+    }
 }

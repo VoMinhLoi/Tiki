@@ -59,6 +59,9 @@ Route::group(['prefix'=>'/ad'],function(){
     Route::get('/catalog',[ManageController::class,'catalog'])->name('catalog');
     Route::post('/catalog',[ManageController::class,'insertCatalog'])->name('addCatalog');
     Route::get('/catalog/{catalog}',[ManageController::class,'deleteCatalog'])->name('deleteCatalog');
+
+
+    Route::get('/product',[ManageController::class,'product'])->name('product');
 });
 
 Route::group(['prefix'=> '/admin'],function(){
