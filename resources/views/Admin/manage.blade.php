@@ -209,7 +209,7 @@
                 </li>
                 <li class="side-bar__item">
                     {{-- <a onclick="choosingItem(this)" href="#" class="side-bar__item-link">user</a>    --}}
-                    <a href="#" class="side-bar__item-link">user</a>   
+                    <a href="{{ route('user') }}" class="side-bar__item-link">user</a>   
                 </li>
                 <li class="side-bar__item">
                     {{-- <a onclick="choosingItem(this)" href="#" class="side-bar__item-link">đăng xuất</a>    --}}

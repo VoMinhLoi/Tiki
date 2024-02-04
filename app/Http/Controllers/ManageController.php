@@ -9,6 +9,7 @@ use App\Http\Requests\ProductRequest;
 use App\Models\Brand;
 use App\Models\Catalog;
 use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ManageController extends Controller
@@ -75,5 +76,8 @@ class ManageController extends Controller
             return redirect()->route('product');
         }
         return redirect()->back()->with(['message'=>'Dang ky that bai']);
+    }
+    public function user(){
+        return view('Admin.user',['user' => User::all()]);
     }
 }

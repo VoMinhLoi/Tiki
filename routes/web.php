@@ -62,8 +62,8 @@ Route::group(['prefix'=>'/ad'],function(){
 
 
     Route::get('/product',[ManageController::class,'product'])->name('product');
-    Route::post('/product',[ManageController::class,'insertProduct'])->name('addProduct');
-
+    Route::post('/product',[ManageController::class,'product'])->name('addProduct');
+    Route::get('/user',[ManageController::class,'user'])->name('user');
 });
 
 Route::group(['prefix'=> '/admin'],function(){
