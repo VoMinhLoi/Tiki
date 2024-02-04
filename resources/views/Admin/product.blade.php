@@ -91,7 +91,7 @@
                     <td style="text-align: center"> {{ $item->status }}</td>
                     <td style="text-align: center">
                         <a href="" style="display: block; background-color:green; color:white; border-radius: 4px">Cập nhật</a>
-                        <a href="{{ route('deleteCatalog', $item->id) }}" style="margin-top: 4px; display: block; background-color:red; color:white; border-radius: 4px">Xóa</a>
+                        <a href="{{ route('deleteProduct', $item->id) }}" style="margin-top: 4px; display: block; background-color:red; color:white; border-radius: 4px">Xóa</a>
                     </td>
                 </tr>
                 @endforeach

@@ -78,6 +78,13 @@ class ManageController extends Controller
         }
         return redirect()->back()->with(['message'=>'Dang ky that bai']);
     }
+    public function deleteProduct(Product $product){
+        $product->delete();
+        return redirect()->route('product');
+    }
+
+
+
     public function user(){
         return view('Admin.user',['user' => User::all()]);
     }
@@ -90,5 +97,10 @@ class ManageController extends Controller
             return redirect()->route('user');
         }
         return redirect()->back()->with(['message'=>'Dang ky that bai']);
+    }
+
+    public function deleteUser(User $user){
+        $user->delete();
+        return redirect()->route('user');
     }
 }

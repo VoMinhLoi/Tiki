@@ -48,7 +48,7 @@
                     <td style="text-align: center"> {{ $item->email }}</td>
                     <td style="text-align: center">
                         <a href="{{ route('updateFormBrand', $item->id) }} " style="display: block; background-color:green; color:white; border-radius: 4px">Cập nhật</a>
-                        <a href="{{ route('deleteBrand', $item->id) }}" style="margin-top: 4px; display: block; background-color:red; color:white; border-radius: 4px">Xóa</a>
+                        <a href="{{ route('deleteUser', $item->id) }}" style="margin-top: 4px; display: block; background-color:red; color:white; border-radius: 4px">Xóa</a>
                     </td>
                 </tr>
                 @endforeach

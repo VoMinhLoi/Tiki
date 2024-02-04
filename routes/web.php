@@ -62,8 +62,10 @@ Route::group(['prefix'=>'/ad'],function(){
 
 
     Route::get('/product',[ManageController::class,'product'])->name('product');
+    Route::get('/product/{product}',[ManageController::class,'deleteProduct'])->name('deleteProduct');
     Route::post('/product',[ManageController::class,'insertProduct'])->name('addProduct');
     Route::get('/user',[ManageController::class,'user'])->name('user');
+    Route::get('/user/{user}',[ManageController::class,'deleteUser'])->name('deleteUser');
     Route::post('/user',[ManageController::class,'addUser'])->name('addUser');
 });
 
