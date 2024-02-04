@@ -10,28 +10,25 @@
         <h1 class="add-title">
             Thêm người dùng:
         </h1>
-        <form  action="{{ route('addBrand') }}" class="add-ingredient" method="post">
+        <form  action="{{ route('addUser') }}" class="add-ingredient" method="post">
             @csrf
             <div class="add-ingredient__name">
                 <label class="add-ingredient__name-label" for="name">tên người dùng:</label>
                 <input class="add-ingredient__name-input" name="name" type="text" id="name" required>
             </div>
             <div class="add-ingredient__name">
-                <label class="add-ingredient__name-label" for="desc">email:</label>
-                <input class="add-ingredient__name-input" name="desc"  type="text" id="desc" required>
+                <label class="add-ingredient__name-label" for="email">email:</label>
+                <input class="add-ingredient__name-input" name="email"  type="text" id="email" required>
             </div>
             <div class="add-ingredient__name">
-                <label class="add-ingredient__name-label" for="status">mật khẩu:</label>
-                <select class="add-ingredient__name-input"  name="status" id="status">
-                    <option value="1">1</option>
-                    <option value="0">0</option>
-                </select>
+                <label class="add-ingredient__name-label" for="password">mật khẩu:</label>
+                <input class="add-ingredient__name-input" name="password"  type="text" id="password" required>
             </div>
-            <input class="add-ingredient__submit" type="Submit" value="Thêm" style="color: white;">
+            <input class="add-ingredient__submit" type="submit" value="Thêm" style="color: white;">
         </form>
     </div>
     <div class="show-list">
-        <h1 class="show-list__title">danh sách thương hiệu</h1>
+        <h1 class="show-list__title">danh sách người dùng</h1>
         <table class="show-list__table">
             
             <thead>

@@ -59,7 +59,7 @@
         </form>
     </div>
     <div class="show-list">
-        <h1 class="show-list__title">danh sách mục lục</h1>
+        <h1 class="show-list__title">danh sách sản phẩm</h1>
         <table class="show-list__table">
             
             <thead>

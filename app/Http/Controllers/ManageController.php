@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Auth\RegisterRequest;
 use App\Http\Requests\BrandRequest;
 use App\Http\Requests\CatalogRequest;
 use App\Http\Requests\ProductRequest;
@@ -79,5 +80,15 @@ class ManageController extends Controller
     }
     public function user(){
         return view('Admin.user',['user' => User::all()]);
+    }
+    public function addUser(RegisterRequest $request){
+        $data = $request->validated();
+        $data['password'] = bcrypt($data['password']);
+        $dataShow = User::create($data);
+        if($dataShow){
+            // return view('welcome');
+            return redirect()->route('user');
+        }
+        return redirect()->back()->with(['message'=>'Dang ky that bai']);
     }
 }

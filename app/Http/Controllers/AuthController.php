@@ -53,12 +53,13 @@ class AuthController extends Controller
     }
 
     public function register(RegisterRequest $request){
+        dd(1);
         $data = $request->validated();
         $data['password'] = bcrypt($data['password']);
         $dataShow = User::create($data);
         if($dataShow){
             // return view('welcome');
-            return redirect()->route('formLogin');
+            return redirect()->intended('/dashboard');
         }
         return redirect()->back()->with(['message'=>'Dang ky that bai']);
     }
