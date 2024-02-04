@@ -10,7 +10,7 @@
         <h1 class="add-title">
             Thêm sản phẩm:
         </h1>
-        <form  action="{{ route('addCatalog') }}" class="add-ingredient" method="post">
+        <form  action="{{ route('addProduct') }}" class="add-ingredient" method="post">
             @csrf
             <div class="add-ingredient__name">
                 <label class="add-ingredient__name-label" for="catalog_id">id mục lục:</label>
@@ -46,7 +46,7 @@
             </div>
             <div class="add-ingredient__name">
                 <label class="add-ingredient__name-label" for="img">hình ảnh:</label>
-                <input class="" name="img"  type="file" id="img" required>
+                <input class="" name="image"  type="file" id="img" required>
             </div>
             <div class="add-ingredient__name">
                 <label class="add-ingredient__name-label" for="status">trạng thái:</label>

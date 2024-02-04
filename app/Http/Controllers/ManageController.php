@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\BrandRequest;
 use App\Http\Requests\CatalogRequest;
+use App\Http\Requests\ProductRequest;
 use App\Models\Brand;
 use App\Models\Catalog;
 use App\Models\Product;
@@ -65,5 +66,14 @@ class ManageController extends Controller
 
     public function product(){
         return view('Admin.product',['product' => Product::all(), 'brand' => Brand::all(), 'catalog' => Catalog::all()]);
+    }
+
+    public function insertProduct(ProductRequest $request){
+        dd($request);
+        $data = Product::create($request->validated());
+        if($data){
+            return redirect()->route('product');
+        }
+        return redirect()->back()->with(['message'=>'Dang ky that bai']);
     }
 }
