@@ -16,7 +16,7 @@
                 <label class="add-ingredient__name-label" for="catalog_id">id mục lục:</label>
                 <select class="add-ingredient__name-input"  name="catalog_id" id="catalog_id">
                     @foreach ($catalog as $item)
-                        <option value="{{ $item->id }}"> {{ $item->id }}</option>
+                        <option value="{{ $item->id }}"> {{ $item->name }}</option>
                     @endforeach
                 </select>
             </div>
@@ -24,7 +24,7 @@
                 <label class="add-ingredient__name-label" for="brand_id">id thương hiệu:</label>
                 <select class="add-ingredient__name-input"  name="brand_id" id="brand_id">
                     @foreach ($brand as $item)
-                        <option value="{{ $item->id }}"> {{ $item->id }}</option>
+                        <option value="{{ $item->id }}"> {{ $item->name }}</option>
                     @endforeach
                 </select>
             </div>
