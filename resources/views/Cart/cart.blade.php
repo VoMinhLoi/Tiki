@@ -27,72 +27,34 @@
                 </div>
             </div>
             <div class="all-product-detail">
+                @foreach ($cart as $item)
+                <?php 
+                    // $product = Product::where('id', $item->product__id)->firstOrFail();
+                ?>
                 <div class="product">
                     <div class="product-infor">
                         <input type="checkbox">
                         <img class="product-infor__img" src="assets/img/AcerNitro5.jpg" alt="">
                         <div class="name-desc">
-                            <h1 class="name">$product->name</h1>
-                            <p class="desc">$product->desc $product->desc $product->desc $product->desc $product->desc</p>
+                            <h1 class="name">{{ $item->user_id }}</h1>
+                            <p class="desc">{{ $item->user_id }}</p>
                         </div>
                     </div>
                     <div class="product-pay">
-                        <p class="product__price">$product->price</p>
+                        <p class="product__price">{{ $item->price }}</p>
                         <div class="product__quantity">
                             <button class="product__quantity-descrease">-</button>
                             <input class="product__quantity-number" type="text" value="1">
                             <button class="product__quantity-increase">+</button>
                         </div>
-                        <p class="product__money">$product->money
+                        <p class="product__money">{{ $item->user_id }}
                             <sup>₫</sup>
                         </p>
                         <a href="#"><i class="fa-solid fa-trash-can"></i></a>
                     </div>
-                </div>
-                <div class="product">
-                    <div class="product-infor">
-                        <input type="checkbox">
-                        <img class="product-infor__img" src="assets/img/AcerNitro5.jpg" alt="">
-                        <div class="name-desc">
-                            <h1 class="name">$product->name</h1>
-                            <p class="desc">$product->desc</p>
-                        </div>
-                    </div>
-                    <div class="product-pay">
-                        <p class="product__price">$product->price</p>
-                        <div class="product__quantity">
-                            <button class="product__quantity-descrease">-</button>
-                            <input class="product__quantity-number" type="text" value="1">
-                            <button class="product__quantity-increase">+</button>
-                        </div>
-                        <p class="product__money">$product->money
-                            <sup>₫</sup>
-                        </p>
-                        <a href="#"><i class="fa-solid fa-trash-can"></i></a>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="product-infor">
-                        <input type="checkbox">
-                        <img class="product-infor__img" src="assets/img/AcerNitro5.jpg" alt="">
-                        <div class="name-desc">
-                            <h1 class="name">$product->name</h1>
-                            <p class="desc">$product->desc</p>
-                        </div>
-                    </div>
-                    <div class="product-pay">
-                        <p class="product__price">$product->price</p>
-                        <div class="product__quantity">
-                            <button class="product__quantity-descrease">-</button>
-                            <input class="product__quantity-number" type="text" value="1">
-                            <button class="product__quantity-increase">+</button>
-                        </div>
-                        <p class="product__money">$product->money
-                            <sup>₫</sup>
-                        </p>
-                        <a href="#"><i class="fa-solid fa-trash-can"></i></a>
-                    </div>
-                </div>
+                </div>  
+                @endforeach
+
             </div>
         </div>
         <div class="col l-3">

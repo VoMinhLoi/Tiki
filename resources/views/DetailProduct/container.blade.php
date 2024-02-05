@@ -321,7 +321,10 @@
                                             <sup>₫</sup>
                                         </div>
                                     </div>
-                                    <div class="action">
+                                    <form class="action" action="{{ route('addCart') }}" method="POST">
+                                        @csrf
+                                        <input type="text" name="product_id" value="{{ $product->id }}">
+                                        <input type="text" name="user_id" value="{{ Auth::user()->id }}">
                                         <?php
                                             if(Auth::check()){
                                                 echo
@@ -337,15 +340,15 @@
                                                 '<button class="action__pay" onclick="showLogin()">
                                                     Mua ngay
                                                 </button>
-                                                <button class="action__cart" onclick="showLogin()">
+                                                <a href="" class="action__cart" onclick="showLogin()">
                                                     Thêm vào giỏ
-                                                </button>';
+                                                </a>';
                                             }
                                         ?>
                                         {{-- <button class="action__buy"  onclick="showLogin()">
                                             Mua trả góp - trả sau
                                         </button> --}}
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->text('desc');
             $table->integer('status');
-            $table->string("img");
+            $table->string("img")->nullable();
             $table->timestamps();
         });
     }
