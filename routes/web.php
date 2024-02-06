@@ -74,5 +74,4 @@ Route::group(['prefix'=> '/admin'],function(){
     Route::get('/update/{brand}',[ManageController::class,'updateFormBrand'])->name('updateFormBrand');
     Route::post('/update/{brand}',[ManageController::class,'updateBrand'])->name('updateBrand');
     Route::get('/{brand}',[ManageController::class,'deleteBrand'])->name('deleteBrand');
-    
 });

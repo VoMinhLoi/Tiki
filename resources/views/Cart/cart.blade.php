@@ -16,7 +16,7 @@
         <div class="col l-9">
             <div class="all-product">
                 <div class="all-product__first">
-                    <input type="checkbox">
+                    <input type="checkbox" id="all-product" onclick="checkedAll()">
                     <h1 class="all-product__title">Tất cả ($allproduct)</h1>
                 </div>
                 <div class="all-product__second">
@@ -27,34 +27,40 @@
                 </div>
             </div>
             <div class="all-product-detail">
-                @foreach ($cart as $item)
-                <?php 
-                    // $product = Product::where('id', $item->product__id)->firstOrFail();
+            <?php
+                if(empty($products)){
+                    echo    '<p>Hiện chưa có sản phẩm nào trong giỏ hàng.</p>';
+                }
+                else {
+                    foreach ($products as $item){
+                        echo    '
+                                    <div class="product">
+                                        <div class="product-infor">
+                                            <input type="checkbox">
+                                            <img class="product-infor__img" src="assets/img/'. $item->image .'" alt="img">
+                                            <div class="name-desc">
+                                                <h1 class="name">'. $item->name .'</h1>
+                                                <p class="desc">'. $item->desc .'</p>
+                                            </div>
+                                        </div>
+                                        <div class="product-pay">
+                                            <p class="product__price">'. $item->price .'</p>
+                                            <div class="product__quantity">
+                                                <button class="product__quantity-descrease">-</button>
+                                                <input class="product__quantity-number" type="text" value="1">
+                                                <button class="product__quantity-increase">+</button>
+                                            </div>
+                                            <p class="product__money">'. $item->price .'
+                                                <sup>₫</sup>
+                                            </p>
+                                            <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                                        </div>
+                                    </div>
+                                    ';
+                                }
+                            }
+                            
                 ?>
-                <div class="product">
-                    <div class="product-infor">
-                        <input type="checkbox">
-                        <img class="product-infor__img" src="assets/img/AcerNitro5.jpg" alt="">
-                        <div class="name-desc">
-                            <h1 class="name">{{ $item->user_id }}</h1>
-                            <p class="desc">{{ $item->user_id }}</p>
-                        </div>
-                    </div>
-                    <div class="product-pay">
-                        <p class="product__price">{{ $item->price }}</p>
-                        <div class="product__quantity">
-                            <button class="product__quantity-descrease">-</button>
-                            <input class="product__quantity-number" type="text" value="1">
-                            <button class="product__quantity-increase">+</button>
-                        </div>
-                        <p class="product__money">{{ $item->user_id }}
-                            <sup>₫</sup>
-                        </p>
-                        <a href="#"><i class="fa-solid fa-trash-can"></i></a>
-                    </div>
-                </div>  
-                @endforeach
-
             </div>
         </div>
         <div class="col l-3">
