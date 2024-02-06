@@ -14,13 +14,19 @@ class CartController extends Controller
     //
     public function cart(){
         $cart = Cart::where('user_id', Auth::user()->id)->get();
+        
         $products = [];
+        // $pay = 0;
         foreach ($cart as $item){
             $product = Product::where('id', $item->product_id)->first();
             // Check if the product is found before appending to the array
             if ($product) {
                 $products[] = $product;
             }
+            // $quantity = $item->quantity;
+            // $price = (float)str_replace('.', '', $product->price);
+            // $pay += $quantity * $price;
+
         }
         return view('Cart.cart',['products' => $products]);
     }
