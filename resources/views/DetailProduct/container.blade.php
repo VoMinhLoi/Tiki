@@ -105,7 +105,7 @@
                                         </li>
                                         <li class="item-product-infor-evaluate__saled">Đã bán 999</li>
                                     </ul>
-                                    <p class="product__price product__price-has-discount">{{ $product->price }}
+                                    <p class="product__price product__price-has-discount" style="display: inline-block">{{ $product->price }}
                                     </p>
                                     <sup>₫</sup>
                                 </div>
@@ -298,6 +298,8 @@
                                     </div>
                                 </div>
                                 <form class="trade-action"  action="{{ route('addCart') }}" method="POST">
+                                    @csrf
+
                                     <div class="trade-action__name">
                                         <img class="trade-action__name-img" src="assets/img/iphone15Promax.png" alt="iphone15">
                                         Titan Xanh, 256GB
@@ -326,7 +328,6 @@
                                         </div>
                                     </div>
                                     <div class="action">
-                                        @csrf
                                         <input type="text" name="product_id" value="{{ $product->id }}">
                                         <input type="text" name="user_id" value="{{ Auth::user()->id }}">
                                         <?php

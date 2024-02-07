@@ -17,8 +17,7 @@ function hiddenLogin(){
 function decreasingQuantity(item){
     var quantity = document.querySelector('.quantity__button-number');
     var price = document.querySelector('.product__price');
-    var priceValue = Number(price.innerHTML);
-
+    var priceValue = parseFloat(price.innerHTML.replace(/\./g, ''));
     var quantityValue = Number(quantity.value);
     if(quantityValue  == 1){
         item.classList.add('button--disable');
@@ -39,7 +38,7 @@ function increasingQuantity(){
     quantityValue++;
     quantity.value = quantityValue;
     var price = document.querySelector('.product__price');
-    var priceValue = Number(price.innerHTML);
+    var priceValue = parseFloat(price.innerHTML.replace(/\./g, ''));
     var priceTotal = document.querySelector('.price__total');
     priceTotal.innerHTML = quantityValue * priceValue;
 }
