@@ -105,7 +105,9 @@
                                         </li>
                                         <li class="item-product-infor-evaluate__saled">Đã bán 999</li>
                                     </ul>
-                                    <p class="product__price product__price-has-discount">{{ $product->price }}<sup>₫</sup></p>
+                                    <p class="product__price product__price-has-discount">{{ $product->price }}
+                                    </p>
+                                    <sup>₫</sup>
                                 </div>
                                 <div class="address">
                                     <h1 class="address-title">Thông tin vận chuyển</h1>
@@ -295,7 +297,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="trade-action">
+                                <form class="trade-action"  action="{{ route('addCart') }}" method="POST">
                                     <div class="trade-action__name">
                                         <img class="trade-action__name-img" src="assets/img/iphone15Promax.png" alt="iphone15">
                                         Titan Xanh, 256GB
@@ -303,25 +305,27 @@
                                     <div class="quantity">
                                         <h1 class="quantity__title">Số lượng</h1>
                                         <div class="quantity__button">
-                                            <button class="quantity__button-descrease button--disable">
+                                            <p class="quantity__button-descrease" onclick="decreasingQuantity(this)">
                                                 -
-                                            </button>
-                                            <input class="quantity__button-number" value="1">
-                                            <button class="quantity__button-increase">
+                                            </p>
+                                            <input class="quantity__button-number" name="quantity" value="1">
+                                            <p class="quantity__button-increase" onclick="increasingQuantity()">
                                                 +
-                                            </button>
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="price">
                                         <h1 class="price__title">
                                             Tạm tính
                                         </h1>
-                                        <div class="price__total">
-                                            {{ $product->price }}
+                                        <div style="display: flex">
+                                            <p class="price__total">
+                                                {{$product->price}}
+                                            </p>
                                             <sup>₫</sup>
                                         </div>
                                     </div>
-                                    <form class="action" action="{{ route('addCart') }}" method="POST">
+                                    <div class="action">
                                         @csrf
                                         <input type="text" name="product_id" value="{{ $product->id }}">
                                         <input type="text" name="user_id" value="{{ Auth::user()->id }}">
@@ -348,8 +352,8 @@
                                         {{-- <button class="action__buy"  onclick="showLogin()">
                                             Mua trả góp - trả sau
                                         </button> --}}
-                                    </form>
-                                </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>

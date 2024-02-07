@@ -16,6 +16,7 @@ class CartController extends Controller
         $cart = Cart::where('user_id', Auth::user()->id)->get();
         
         $products = [];
+        $quantitys = [];
         // $pay = 0;
         foreach ($cart as $item){
             $product = Product::where('id', $item->product_id)->first();
@@ -23,12 +24,14 @@ class CartController extends Controller
             if ($product) {
                 $products[] = $product;
             }
+            $quantitys[] = $item->quantity;
+
             // $quantity = $item->quantity;
             // $price = (float)str_replace('.', '', $product->price);
             // $pay += $quantity * $price;
 
         }
-        return view('Cart.cart',['products' => $products]);
+        return view('Cart.cart',['products' => $products,'quantitys' => $quantitys]);
     }
 
     public function addCart(CartRequest $request){

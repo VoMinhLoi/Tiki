@@ -14,6 +14,16 @@
             productCheckboxes[i].checked = checkBox.checked;
         }
     }
+    function choosePay(){
+        var checkBoxs = document.querySelectorAll('product-checkbox');
+        console.log(checkBoxs);
+    }
+
+    function decreasingQuantity(){
+        var quantity = document.querySelector('.product__quantity-number');
+        console.log(quantity.textContent);
+
+}
 </script>
 @include('Home/header')
 <div class="grid wide">
@@ -27,7 +37,7 @@
             <div class="all-product">
                 <div class="all-product__first">
                     <input type="checkbox" id="checked-all-product" onclick="checkedAll()">
-                    <h1 class="all-product__title">Tất cả ($allproduct)</h1>
+                    <label class="all-product__title" for="checked-all-product">Tất cả</label>
                 </div>
                 <div class="all-product__second">
                     <p class="">Đơn giá</p>
@@ -43,11 +53,14 @@
                 }
                 else {
                     foreach ($products as $item){
-                        echo    '
+                        foreach ($quantitys as $quantity) {
+                            echo    '
                                     <div class="product">
-                                        <div class="product-infor">
-                                            <input type="checkbox" class="product-checkbox" onclick="checked()">
-                                            <img class="product-infor__img" src="assets/img/'. $item->image .'" alt="img">
+                                        <div class="product-infor">';
+                                            ?>
+                                            <input type="checkbox" class="product-checkbox" onclick="choosePay()">
+                                            <?php
+                                            echo '<img class="product-infor__img" src="assets/img/'. $item->image .'" alt="img">
                                             <div class="name-desc">
                                                 <h1 class="name">'. $item->name .'</h1>
                                                 <p class="desc">'. $item->desc .'</p>
@@ -56,9 +69,9 @@
                                         <div class="product-pay">
                                             <p class="product__price">'. $item->price .'</p>
                                             <div class="product__quantity">
-                                                <button class="product__quantity-descrease">-</button>
-                                                <input class="product__quantity-number" type="text" value="1">
-                                                <button class="product__quantity-increase">+</button>
+                                                <button class="product__quantity-descrease" onclick="decreasingQuantity()">-</button>
+                                                <input class="product__quantity-number" type="text" value="'.$quantity.'">
+                                                <button class="product__quantity-increase" onclick="increasingQuantity()">+</button>
                                             </div>
                                             <p class="product__money">'. $item->price .'
                                                 <sup>₫</sup>
@@ -67,8 +80,9 @@
                                         </div>
                                     </div>
                                     ';
-                                }
-                            }
+                        }
+                    }
+                }
                             
                 ?>
             </div>

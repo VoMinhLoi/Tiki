@@ -13,5 +13,33 @@ function hiddenLogin(){
     var wrapper =  document.querySelector('.wrapper');
     // wrapper.style.display = 'none'; css inline
     wrapper.classList.remove('display-flex');
+}
+function decreasingQuantity(item){
+    var quantity = document.querySelector('.quantity__button-number');
+    var price = document.querySelector('.product__price');
+    var priceValue = Number(price.innerHTML);
 
+    var quantityValue = Number(quantity.value);
+    if(quantityValue  == 1){
+        item.classList.add('button--disable');
+    }
+    else {
+        quantityValue--;
+        quantity.value = quantityValue;
+        var priceTotal = document.querySelector('.price__total');
+        priceTotal.innerHTML = quantityValue * priceValue;
+    }
+}
+
+function increasingQuantity(){
+    var quantity = document.querySelector('.quantity__button-number');
+    var decrease = document.querySelector('.quantity__button-descrease');
+    var quantityValue = Number(quantity.value);
+    decrease.classList.remove('button--disable');
+    quantityValue++;
+    quantity.value = quantityValue;
+    var price = document.querySelector('.product__price');
+    var priceValue = Number(price.innerHTML);
+    var priceTotal = document.querySelector('.price__total');
+    priceTotal.innerHTML = quantityValue * priceValue;
 }
