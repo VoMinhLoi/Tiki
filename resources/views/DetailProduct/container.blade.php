@@ -310,7 +310,7 @@
                                             <p class="quantity__button-descrease" onclick="decreasingQuantity(this)">
                                                 -
                                             </p>
-                                            <input class="quantity__button-number" name="quantity" value="1">
+                                            <input type="text" class="quantity__button-number" value="1" name="quantity">
                                             <p class="quantity__button-increase" onclick="increasingQuantity()">
                                                 +
                                             </p>

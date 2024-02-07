@@ -27,6 +27,7 @@ function decreasingQuantity(item){
         quantity.value = quantityValue;
         var priceTotal = document.querySelector('.price__total');
         priceTotal.innerHTML = quantityValue * priceValue;
+        item.classList.remove('button--disable');
     }
 }
 

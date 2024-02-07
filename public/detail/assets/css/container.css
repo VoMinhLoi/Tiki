@@ -230,6 +230,7 @@
     border-radius: 4px;
     text-align: center;
     margin-left: 8px;
+    cursor: pointer;
   }
   
   .quantity__button button:nth-child(1) {
@@ -251,6 +252,7 @@
   .button--disable {
     border-color: rgba(196, 196, 207, 0.3);
     color: #d8d8d8;
+    cursor:not-allowed;
   }
   
   .price {
