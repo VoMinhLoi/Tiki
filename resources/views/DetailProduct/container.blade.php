@@ -328,12 +328,14 @@
                                         </div>
                                     </div>
                                     <div class="action">
-                                        <input type="text" name="product_id" value="{{ $product->id }}">
-                                        <input type="text" name="user_id" value="{{ Auth::user()->id }}">
+   
                                         <?php
                                             if(Auth::check()){
                                                 echo
-                                                    '<button class="action__pay" >
+                                                    '
+                                                    <input type="text" name="product_id" value="{{ $product->id }}" style="display: none">
+                                                    <input type="text" name="user_id" value="{{ Auth::user()->id }}" style="display: none">
+                                                    <button class="action__pay" >
                                                             Mua ngay
                                                     </button>
                                                     <button class="action__cart" >

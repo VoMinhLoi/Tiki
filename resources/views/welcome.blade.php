@@ -23,9 +23,14 @@
         </style>
         <link rel="stylesheet" href="assets/css/index.css">
         <link rel="icon" href="assets/img/tiki_trade.png" type="image/icon type">
-        
+        <script>
+            function showQuantity(quantity){
+                var cartQuantity = document.querySelector('.header-private-item__link-quantity::after');
+                alert(quantity);
+            }
+        </script>
     </head>
-    <body class="">
+<body>
         <div class="grid">
                 @include('Home.header')
                 {{-- Main: Contain + Footer --}}
@@ -33,6 +38,6 @@
         </div>
         {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> --}}
         @include('login')
-
     </body>
+    
 </html>

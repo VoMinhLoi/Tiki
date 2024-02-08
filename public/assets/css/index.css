@@ -212,19 +212,6 @@ body {
   transform: translateY(-50%);
   left: -16px;
 }
-.header .header__private .header-private__list .header-private__item .header-private-item__link-quantity::after {
-  content: "0";
-  width: 20px;
-  height: 20px;
-  background-color: red;
-  color: white;
-  position: absolute;
-  top: 4px;
-  right: 10px;
-  border-radius: 50%;
-  border: 1px solid white;
-  text-align: center;
-}
 .header .header__private .header-private__address .header-private-address__detail {
   font-size: 14px;
   color: #9c9ca3;

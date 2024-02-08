@@ -1,4 +1,4 @@
-    <header class="header">
+    <header class="header" >
         <a href="#" class="header__link">
             <img src="assets/img/logo_tiki.png" alt="logo" class="header-link__img">
         </a>
@@ -103,6 +103,7 @@
                             echo    '
                                 <a href="'.route('cart').'" class="header-private-item__link header-private-item__link--blue header-private-item__link-quantity margin-0">
                                     <i class="fa-solid fa-cart-shopping header-private-item-link__icon "></i>
+                                    <span class="header-private-item__link-detail" style=" width: 20px; height: 20px; background-color: red; color: white; position: absolute; top: 4px; right: 10px; border-radius: 50%; border: 1px solid white; text-align: center;">'.$cart.'</span>
                                 </a>   
                                 ';
                         }

@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Cart;
 use App\Models\Catalog;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CatalogController extends Controller
 {
@@ -19,7 +21,10 @@ class CatalogController extends Controller
     public function index(){
         $catalog = Catalog::all();
         $product = Product::all();
-
-        return view('welcome',['catalog'=>$catalog, 'product'=> $product]);
+        if(Auth::check()){
+            $cart = Cart::where('user_id', Auth::user()->id)->get()->count();
+            return view('welcome',['catalog'=>$catalog, 'product'=> $product, 'cart' => $cart]);
+        }
+        return view('welcome',['catalog'=>$catalog, 'product'=> $product, 'cart' => 0]);
     }
 }
