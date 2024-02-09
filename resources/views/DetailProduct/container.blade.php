@@ -333,8 +333,8 @@
                                             if(Auth::check()){
                                                 echo
                                                     '
-                                                    <input type="text" name="product_id" value="{{ $product->id }}" style="display: none">
-                                                    <input type="text" name="user_id" value="{{ Auth::user()->id }}" style="display: none">
+                                                    <input type="text" name="product_id" value="'. $product->id .'" style="display: none">
+                                                    <input type="text" name="user_id" value="'. Auth::user()->id .'" style="display: none">
                                                     <button class="action__pay" >
                                                             Mua ngay
                                                     </button>
