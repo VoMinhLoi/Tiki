@@ -42,11 +42,14 @@
                 <div class="all-product__second">
                     <p class="">Đơn giá</p>
                     <p class="">Số lượng</p>
-                    <p class="">Thành tiền</p>
+                    <p>Thành tiền </p>
                     <a href="#"><i class="fa-solid fa-trash-can"></i></a>
                 </div>
             </div>
             <div class="all-product-detail">
+            <?php
+                $totalPay = 0;
+            ?>
             @if (empty($carts))
                 <?php echo    '<p>Hiện chưa có sản phẩm nào trong giỏ hàng.</p>'; ?>
             @else
@@ -67,14 +70,21 @@
                     <div class="product-pay">
                         <p class="product__price">{{ $product->price }}</p>
                         <div class="product__quantity">
-                            <button class="product__quantity-descrease" onclick="decreasingQuantity()">-</button>
+                            {{-- <button class="product__quantity-descrease" onclick="decreasingQuantity()">-</button> --}}
                             <input class="product__quantity-number" type="text" value="{{ $item->quantity }}">
-                            <button class="product__quantity-increase" onclick="increasingQuantity()">+</button>
+                            {{-- <button class="product__quantity-increase" onclick="increasingQuantity()">+</button> --}}
                         </div>
-                        <p class="product__money">{{ $product->price }}<sup>₫</sup></p>
+                        @php   
+                            $numericPriceString = preg_replace("/[^0-9]/", "", $product->price);
+                            $totalPrice = intval($numericPriceString)*$item->quantity;
+                        @endphp
+                        <p class="product__money">{{ $totalPrice }}<sup>₫</sup></p>
                         <a href="#"><i class="fa-solid fa-trash-can"></i></a>
                     </div>
                 </div>
+                <?php 
+                $totalPay += $totalPrice
+                ?>
                 @endforeach
             @endif
             </div>
@@ -87,7 +97,7 @@
                             Tạm tính
                         </h1>
                         <div class="price__total">
-                            0
+                            {{ $totalPay }}
                             <sup>₫</sup>
                         </div>
                     </div>
