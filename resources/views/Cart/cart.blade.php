@@ -36,7 +36,7 @@
         <div class="col l-9">
             <div class="all-product">
                 <div class="all-product__first">
-                    <input type="checkbox" id="checked-all-product" onclick="checkedAll()">
+                    {{-- <input type="checkbox" id="checked-all-product" onclick="checkedAll()"> --}}
                     <label class="all-product__title" for="checked-all-product">Tất cả</label>
                 </div>
                 <div class="all-product__second">
@@ -60,7 +60,7 @@
 
                 <div class="product">
                     <div class="product-infor">
-                        <input type="checkbox" class="product-checkbox" onclick="choosePay()">
+                        {{-- <input type="checkbox" class="product-checkbox" onclick="choosePay()"> --}}
                         <img class="product-infor__img" src="{{ asset('assets/img/' . $product->image) }}" alt="img">
                         <div class="name-desc">
                             <h1 class="name">{{ $product->name }}</h1>
@@ -79,7 +79,7 @@
                             $totalPrice = intval($numericPriceString)*$item->quantity;
                         @endphp
                         <p class="product__money">{{ $totalPrice }}<sup>₫</sup></p>
-                        <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                        <a href="{{ route('deleteCart',$item->id) }}"><i class="fa-solid fa-trash-can"></i></a>
                     </div>
                 </div>
                 <?php 

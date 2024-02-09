@@ -26,4 +26,9 @@ class CartController extends Controller
         }
         return redirect()->back()->with(['message'=>'Dang ky that bai']);
     }
+
+    public function deleteCart(Cart $cart){
+        $cart->delete();
+        return redirect()->route('cart');
+    }
 }

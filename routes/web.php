@@ -39,6 +39,7 @@ Route::post('/formLogin', [AuthController::class,'login'])->name('loginNoProduct
 Route::group(['middleware' => 'userLogin'], function() {
     Route::get('/cart',[CartController::class,'cart'])->name('cart');
     Route::post('/cart',[CartController::class,'addCart'])->name('addCart');
+    Route::get('/cart/{cart}',[CartController::class,'deleteCart'])->name('deleteCart');
 });
 
 
