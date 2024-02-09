@@ -47,44 +47,36 @@
                 </div>
             </div>
             <div class="all-product-detail">
-            <?php
-                if(empty($products)){
-                    echo    '<p>Hiện chưa có sản phẩm nào trong giỏ hàng.</p>';
-                }
-                else {
-                    foreach ($products as $item){
-                        foreach ($quantitys as $quantity) {
-                            echo    '
-                                    <div class="product">
-                                        <div class="product-infor">';
-                                            ?>
-                                            <input type="checkbox" class="product-checkbox" onclick="choosePay()">
-                                            <?php
-                                            echo '<img class="product-infor__img" src="assets/img/'. $item->image .'" alt="img">
-                                            <div class="name-desc">
-                                                <h1 class="name">'. $item->name .'</h1>
-                                                <p class="desc">'. $item->desc .'</p>
-                                            </div>
-                                        </div>
-                                        <div class="product-pay">
-                                            <p class="product__price">'. $item->price .'</p>
-                                            <div class="product__quantity">
-                                                <button class="product__quantity-descrease" onclick="decreasingQuantity()">-</button>
-                                                <input class="product__quantity-number" type="text" value="'.$quantity.'">
-                                                <button class="product__quantity-increase" onclick="increasingQuantity()">+</button>
-                                            </div>
-                                            <p class="product__money">'. $item->price .'
-                                                <sup>₫</sup>
-                                            </p>
-                                            <a href="#"><i class="fa-solid fa-trash-can"></i></a>
-                                        </div>
-                                    </div>
-                                    ';
-                        }
-                    }
-                }
-                            
-                ?>
+            @if (empty($carts))
+                <?php echo    '<p>Hiện chưa có sản phẩm nào trong giỏ hàng.</p>'; ?>
+            @else
+                @foreach ($carts as $item)
+                @php
+                    $product = \App\Models\Product::where('id', $item->product_id)->first();
+                @endphp
+
+                <div class="product">
+                    <div class="product-infor">
+                        <input type="checkbox" class="product-checkbox" onclick="choosePay()">
+                        <img class="product-infor__img" src="{{ asset('assets/img/' . $product->image) }}" alt="img">
+                        <div class="name-desc">
+                            <h1 class="name">{{ $product->name }}</h1>
+                            <p class="desc">{{ $product->desc }}</p>
+                        </div>
+                    </div>
+                    <div class="product-pay">
+                        <p class="product__price">{{ $product->price }}</p>
+                        <div class="product__quantity">
+                            <button class="product__quantity-descrease" onclick="decreasingQuantity()">-</button>
+                            <input class="product__quantity-number" type="text" value="{{ $item->quantity }}">
+                            <button class="product__quantity-increase" onclick="increasingQuantity()">+</button>
+                        </div>
+                        <p class="product__money">{{ $product->price }}<sup>₫</sup></p>
+                        <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                    </div>
+                </div>
+                @endforeach
+            @endif
             </div>
         </div>
         <div class="col l-3">
