@@ -23,10 +23,6 @@ class ProductController extends Controller
     public function detail(Product $product){
 
         $brand = Brand::where('id', $product->brand_id)->get();
-        if(Auth::check()){
-            $cart = Cart::where('user_id', Auth::user()->id)->get()->count();
-            return view('DetailProduct.container',['product'=> $product, 'brandName'=> $brand->toArray()[0]['name'], 'cart' => $cart]);
-        }
-        return view('DetailProduct.container',['product'=> $product, 'brandName'=> $brand->toArray()[0]['name'], 'cart' => 0]);
+        return view('DetailProduct.container',['product'=> $product, 'brandName'=> $brand->toArray()[0]['name']]);
     }
 }

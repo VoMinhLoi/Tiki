@@ -21,10 +21,6 @@ class CatalogController extends Controller
     public function index(){
         $catalog = Catalog::all();
         $product = Product::all();
-        if(Auth::check()){
-            $cart = Cart::where('user_id', Auth::user()->id)->get()->count();
-            return view('welcome',['catalog'=>$catalog, 'product'=> $product, 'cart' => $cart]);
-        }
-        return view('welcome',['catalog'=>$catalog, 'product'=> $product, 'cart' => 0]);
+        return view('welcome',['catalog'=>$catalog, 'product'=> $product]);
     }
 }

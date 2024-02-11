@@ -16,7 +16,7 @@ class CartController extends Controller
         $cart = Cart::where('user_id', Auth::user()->id)->get();
         // $pay = 0;
 
-        return view('Cart.cart',['carts' => $cart, 'cart'=> $cart->count()]);
+        return view('Cart.cart',['carts' => $cart]);
     }
 
     public function addCart(CartRequest $request){
@@ -36,5 +36,9 @@ class CartController extends Controller
     public function deleteCart(Cart $cart){
         $cart->delete();
         return redirect()->route('cart');
+    }
+
+    public function deliveryForm(){
+        return view('Cart.Delivery');
     }
 }

@@ -98,6 +98,10 @@
                      ?>
                 </li>
                 <li class="header-private__item d-none-c">
+                    @php
+                        $cart = \App\Models\Cart::where('user_id', Auth::user()->id)->get()->count();
+                        // $cart = App/Model/Cart::where('user_id', Auth::user()->id)->get()->count(); / sai
+                    @endphp
                      <?php 
                         if(Auth::check()){
                             echo    '
