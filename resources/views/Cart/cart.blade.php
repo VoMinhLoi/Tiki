@@ -76,8 +76,8 @@
                         
                             <div class="product__quantity">
                                 {{-- You can include hidden input fields for other data if needed --}}
-                                <input type="hidden" name="some_additional_field" value="some_value">
-                        
+                                <input type="hidden" name="product_id" value="{{ $product->id }}">
+                                <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
                                 {{-- Input field for quantity --}}
                                 <input class="product__quantity-number" type="text" name="quantity" value="{{ $item->quantity }}">
                             </div>

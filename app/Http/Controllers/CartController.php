@@ -28,8 +28,8 @@ class CartController extends Controller
     }
 
     public function updateCart(Cart $cart, CartRequest $request){
-        dd($request);
-        $cart->update($request->validated);
+        // dd($cart, $request->validated());
+        $cart->update($request->validated());
         return redirect()->route('cart');
     }
 
