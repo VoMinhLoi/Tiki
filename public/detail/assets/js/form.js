@@ -26,7 +26,7 @@ function decreasingQuantity(item){
         quantityValue--;
         quantity.value = quantityValue;
         var priceTotal = document.querySelector('.price__total');
-        priceTotal.innerHTML = quantityValue * priceValue;
+        priceTotal.innerHTML = (quantityValue * priceValue).toLocaleString('en-US');
         item.classList.remove('button--disable');
     }
 }
@@ -41,5 +41,5 @@ function increasingQuantity(){
     var price = document.querySelector('.product__price');
     var priceValue = parseFloat(price.innerHTML.replace(/\./g, ''));
     var priceTotal = document.querySelector('.price__total');
-    priceTotal.innerHTML = quantityValue * priceValue;
+    priceTotal.innerHTML = (quantityValue * priceValue).toLocaleString('en-US');
 }

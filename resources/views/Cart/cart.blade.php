@@ -68,17 +68,26 @@
                         </div>
                     </div>
                     <div class="product-pay">
-                        <p class="product__price">{{ $product->price }}</p>
-                        <div class="product__quantity">
-                            {{-- <button class="product__quantity-descrease" onclick="decreasingQuantity()">-</button> --}}
-                            <input class="product__quantity-number" type="text" value="{{ $item->quantity }}">
-                            {{-- <button class="product__quantity-increase" onclick="increasingQuantity()">+</button> --}}
-                        </div>
+                        {{-- <p class="product__price">{{ number_format( intval($product->price), 0, ',', '.') }}</p> --}}
+                        <p class="product__price">{{$product->price}}</p>
+                        <form id="updateCartForm" action="{{ route('updateCart', ['cart' => $item->id]) }}" method="POST">
+                            @csrf
+                            @method('PUT')
+                        
+                            <div class="product__quantity">
+                                {{-- You can include hidden input fields for other data if needed --}}
+                                <input type="hidden" name="some_additional_field" value="some_value">
+                        
+                                {{-- Input field for quantity --}}
+                                <input class="product__quantity-number" type="text" name="quantity" value="{{ $item->quantity }}">
+                            </div>
+                        </form>
                         @php   
                             $numericPriceString = preg_replace("/[^0-9]/", "", $product->price);
                             $totalPrice = intval($numericPriceString)*$item->quantity;
                         @endphp
-                        <p class="product__money">{{ $totalPrice }}<sup>₫</sup></p>
+                        <p class="product__money">{{ number_format($totalPrice, 0, ',', '.') }}<sup>₫</sup></p>
+                        
                         <a href="{{ route('deleteCart',$item->id) }}"><i class="fa-solid fa-trash-can"></i></a>
                     </div>
                 </div>
@@ -97,7 +106,7 @@
                             Tạm tính
                         </h1>
                         <div class="price__total">
-                            {{ $totalPay }}
+                            {{ number_format($totalPay, 0, ',', '.') }}
                             <sup>₫</sup>
                         </div>
                     </div>
