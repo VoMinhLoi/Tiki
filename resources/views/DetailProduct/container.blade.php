@@ -344,10 +344,10 @@
                                             }
                                             else {
                                                 echo
-                                                '<button class="action__pay" onclick="showLogin()">
+                                                '<a class="action__pay" onclick="showLogin()" style="text-align:center;">
                                                     Mua ngay
-                                                </button>
-                                                <a href="" class="action__cart" onclick="showLogin()">
+                                                </a>
+                                                 <a class="action__cart" onclick="showLogin()" style="text-align:center;">
                                                     Thêm vào giỏ
                                                 </a>';
                                             }
