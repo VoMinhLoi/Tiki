@@ -8,6 +8,7 @@ use App\Http\Requests\BrandRequest;
 use App\Http\Requests\CatalogRequest;
 use App\Http\Requests\ProductRequest;
 use App\Models\Brand;
+use App\Models\Cart;
 use App\Models\Catalog;
 use App\Models\Product;
 use App\Models\User;
@@ -102,5 +103,9 @@ class ManageController extends Controller
     public function deleteUser(User $user){
         $user->delete();
         return redirect()->route('user');
+    }
+    public function order(){
+        $order = Cart::whereNotNull('phone')->get();
+        return view('Admin.order',['order' => $order]);
     }
 }
