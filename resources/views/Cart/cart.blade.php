@@ -44,6 +44,7 @@
                     <p class="">Số lượng</p>
                     <p>Thành tiền </p>
                     <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                    <p>Hành động</p>
                 </div>
             </div>
             <div class="all-product-detail">
@@ -59,7 +60,7 @@
                 @endphp
 
                 <div class="product">
-                    <a href="{{ route('deliveryForm',$item->id) }}" class="product-infor">
+                    <a href="{{ route('product.detail',$item->id) }}" class="product-infor">
                         {{-- <input type="checkbox" class="product-checkbox" onclick="choosePay()"> --}}
                         <img class="product-infor__img" src="{{ asset('assets/img/' . $product->image) }}" alt="img">
                         <div class="name-desc" style="margin-left: 8px">
@@ -88,6 +89,7 @@
                         <p class="product__money">{{ number_format($totalPrice, 0, ',', '.') }}<sup>₫</sup></p>
                         
                         <a href="{{ route('deleteCart',$item->id) }}"><i class="fa-solid fa-trash-can"></i></a>
+                        <a href="{{ route('deliveryForm',$item->id) }}" style="background: red; padding: 8px 12px; font-size: 10px; cursor: pointer; color: white;">Đặt</a>
                     </div>
                 </div>
                 <?php 
