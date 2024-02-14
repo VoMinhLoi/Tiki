@@ -42,6 +42,7 @@ class CartController extends Controller
     }
     
     public function updateCart2(Cart $cart, CartRequest $request){
+        // dd($request->validated());
         $cart->update($request->validated());
         session()->flash('success', 'Đặt hàng thành công');
         return redirect()->route('home');

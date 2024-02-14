@@ -26,7 +26,9 @@ class CartRequest extends FormRequest
             'user_id' => 'required',
             'quantity' => 'nullable',
             'address' => 'nullable',
-            'phone' => 'nullable'
+            'phone' => 'nullable',
+            'totalPrice' => 'nullable',
+            'payingMethod' =>'nullable'
         ];
     }
 }

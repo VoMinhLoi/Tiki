@@ -15,7 +15,10 @@ class Cart extends Model
         'address',
         'phone',
         'totalPrice',
-        'status'
+        'status',
+        'totalPrice',
+        'payingMethod'
+
     ];
     protected $primaryKey = 'id';
     public $timestamps = true;
