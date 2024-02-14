@@ -46,4 +46,15 @@ class CartController extends Controller
         session()->flash('success', 'Đặt hàng thành công');
         return redirect()->route('home');
     }
+
+    public function orderInterface(){
+        $carts = Cart::where('user_id', Auth::user()->id)->where('phone', '<>', null)->get();
+        // $carts = Cart::where('user_id', Auth::user()->id)->whereNotNull('phone')->get(); C2
+        return view('Cart.order', ['carts'=> $carts]);
+    }
+    public function received(Cart $cart){
+        // dd($cart);
+        $cart->update(['status' => 'Đã nhận']);
+        return redirect()->route('orderInterface');
+    }
 }

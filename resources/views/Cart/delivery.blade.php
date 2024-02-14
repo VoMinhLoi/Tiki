@@ -963,7 +963,7 @@
                             <label for="direct">Thanh toán trực tiếp khi nhận hàng.</label>
                         </p>
                     </div>
-                    <input type="submit" value="Mua" style="background: #ef4444; padding: 8px; border-radius: 4px; color:white;">
+                    <input type="submit" value="Đặt" style="background: #ef4444; padding: 8px; border-radius: 4px; color:white;">
                 </form>
             </div>
         </div>

@@ -87,9 +87,7 @@
                                     <li class="menu-user__item">
                                         <a href="#" class="menu-user__item-link">Thông tin tài khoản</a></li>
                                     <li class="menu-user__item">
-                                        <a href="#" class="menu-user__item-link">Đơn hàng của tôi</a></li>
-                                    <li class="menu-user__item">
-                                        <a href="#" class="menu-user__item-link">Trung tâm hỗ trợ</a></li>
+                                        <a href="'. route('orderInterface') .'" class="menu-user__item-link">Đơn hàng của tôi</a></li>
                                     <li class="menu-user__item">
                                         <a href="'. route('logout') .'" class="menu-user__item-link">Đăng xuất</a></li>
                                 </ul>

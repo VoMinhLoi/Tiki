@@ -80,3 +80,5 @@ Route::group(['prefix'=> '/admin'],function(){
 
 Route::get('/deliveryForm/{cart}',[CartController::class,'deliveryForm'])->name('deliveryForm');
 Route::put('/deliveryForm/{cart}',[CartController::class,'updateCart2'])->name('updateCart2');
+Route::get('/orderInterface',[CartController::class,'orderInterface'])->name('orderInterface');
+Route::get('/orderInterface/{cart}',[CartController::class,'received'])->name('received');
