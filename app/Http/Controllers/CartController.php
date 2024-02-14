@@ -13,7 +13,7 @@ class CartController extends Controller
 {
     //
     public function cart(){
-        $cart = Cart::where('user_id', Auth::user()->id)->get();
+        $cart = Cart::where('user_id', Auth::user()->id)->whereNull('phone')->get();
         // $pay = 0;
 
         return view('Cart.cart',['carts' => $cart]);
@@ -28,7 +28,6 @@ class CartController extends Controller
     }
 
     public function updateCart(Cart $cart, CartRequest $request){
-        // dd($cart, $request->validated());
         $cart->update($request->validated());
         return redirect()->route('cart');
     }
@@ -38,7 +37,13 @@ class CartController extends Controller
         return redirect()->route('cart');
     }
 
-    public function deliveryForm(){
-        return view('Cart.Delivery');
+    public function deliveryForm(Cart $cart){
+        return view('Cart.Delivery',['cart'=> $cart]);
+    }
+    
+    public function updateCart2(Cart $cart, CartRequest $request){
+        $cart->update($request->validated());
+        session()->flash('success', 'Đặt hàng thành công');
+        return redirect()->route('home');
     }
 }
