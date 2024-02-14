@@ -26,7 +26,7 @@
 }
 </script>
 @include('Home/header')
-<div class="grid wide">
+<div class="grid wide" >
     <div class="breadcrumb">
         <h1 class="breadcrumb__title">
             Giỏ hàng
@@ -59,21 +59,20 @@
                 @endphp
 
                 <div class="product">
-                    <div class="product-infor">
+                    <a href="{{ route('deliveryForm',$item->id) }}" class="product-infor">
                         {{-- <input type="checkbox" class="product-checkbox" onclick="choosePay()"> --}}
                         <img class="product-infor__img" src="{{ asset('assets/img/' . $product->image) }}" alt="img">
-                        <div class="name-desc">
+                        <div class="name-desc" style="margin-left: 8px">
                             <h1 class="name">{{ $product->name }}</h1>
                             <p class="desc">{{ $product->desc }}</p>
                         </div>
-                    </div>
+                    </a>
                     <div class="product-pay">
                         {{-- <p class="product__price">{{ number_format( intval($product->price), 0, ',', '.') }}</p> --}}
                         <p class="product__price">{{$product->price}}</p>
                         <form id="updateCartForm" action="{{ route('updateCart', ['cart' => $item->id]) }}" method="POST">
                             @csrf
                             @method('PUT')
-                        
                             <div class="product__quantity">
                                 {{-- You can include hidden input fields for other data if needed --}}
                                 <input type="hidden" name="product_id" value="{{ $product->id }}">
@@ -111,16 +110,15 @@
                         </div>
                     </div>
                     <div class="action">
-                        <a class="action__pay" href="{{ route('deliveryForm') }}">
+                        {{-- <a class="action__pay" href="{{ route('deliveryForm') }}">
                             Mua ngay
-                        </a>
+                        </a> --}}
                         {{-- <button class="action__buy"  onclick="showLogin()">
                             Mua trả góp - trả sau
                         </button> --}}
                     </div>
                 </div>
             </div>
-            
         </div>
     </div>
 </div>

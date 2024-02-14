@@ -78,4 +78,5 @@ Route::group(['prefix'=> '/admin'],function(){
     Route::get('/{brand}',[ManageController::class,'deleteBrand'])->name('deleteBrand');
 });
 
-Route::get('/deliveryForm',[CartController::class,'deliveryForm'])->name('deliveryForm');
+Route::get('/deliveryForm/{cart}',[CartController::class,'deliveryForm'])->name('deliveryForm');
+Route::put('/deliveryForm/{cart}',[CartController::class,'updateCart2'])->name('updateCart2');
