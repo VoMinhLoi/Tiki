@@ -71,6 +71,11 @@
                     <div class="product-pay">
                         {{-- <p class="product__price">{{ number_format( intval($product->price), 0, ',', '.') }}</p> --}}
                         <p class="product__price">{{$product->price}}</p>
+                        
+                        @php   
+                            $numericPriceString = preg_replace("/[^0-9]/", "", $product->price);
+                            $totalPrice = intval($numericPriceString)*$item->quantity;
+                        @endphp
                         <form id="updateCartForm" action="{{ route('updateCart', ['cart' => $item->id]) }}" method="POST">
                             @csrf
                             @method('PUT')
@@ -82,10 +87,6 @@
                                 <input class="product__quantity-number" type="text" name="quantity" value="{{ $item->quantity }}">
                             </div>
                         </form>
-                        @php   
-                            $numericPriceString = preg_replace("/[^0-9]/", "", $product->price);
-                            $totalPrice = intval($numericPriceString)*$item->quantity;
-                        @endphp
                         <p class="product__money">{{ number_format($totalPrice, 0, ',', '.') }}<sup>₫</sup></p>
                         
                         <a href="{{ route('deleteCart',$item->id) }}"><i class="fa-solid fa-trash-can"></i></a>

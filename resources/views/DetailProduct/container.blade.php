@@ -321,9 +321,7 @@
                                             Tạm tính
                                         </h1>
                                         <div style="display: flex">
-                                            <p class="price__total">
-                                                {{$product->price}}
-                                            </p>
+                                            <input type="text" name="totalPrice" value="{{$product->price}}" style="outline: none;" class="price__total" >
                                             <sup>₫</sup>
                                         </div>
                                     </div>
@@ -335,6 +333,7 @@
                                                     '
                                                     <input type="text" name="product_id" value="'. $product->id .'" style="display: none">
                                                     <input type="text" name="user_id" value="'. Auth::user()->id .'" style="display: none">
+
                                                     <button class="action__pay" >
                                                             Mua ngay
                                                     </button>

@@ -28,6 +28,12 @@ class CartController extends Controller
     }
 
     public function updateCart(Cart $cart, CartRequest $request){
+        $quantity = intval($request->validated()['quantity']);
+        //  Update quantity so total price is also updated
+        $product = Product::where('id', $cart->product_id)->first();
+        $stringPrice = preg_replace("/[^0-9]/", "", $product->price);
+        $totalPrice = $quantity * intval($stringPrice);
+        $cart->totalPrice = $totalPrice;
         $cart->update($request->validated());
         return redirect()->route('cart');
     }
