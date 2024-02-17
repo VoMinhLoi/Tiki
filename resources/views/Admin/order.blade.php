@@ -6,6 +6,13 @@
     }
 </style>
 <div class="container">
+    <div class="add">
+        <h1 class="add-title">
+            Thống kê:
+        </h1>
+        <p>Doanh thu: {{ number_format($revenue, 0, ',', '.') }}<sup>₫</sup></p>
+        <p>Đã thu: {{ number_format($received, 0, ',', '.') }}<sup>₫</sup></p>
+    </div>
     <div class="show-list">
         <h1 class="show-list__title">danh sách đơn hàng</h1>
         <table class="show-list__table">

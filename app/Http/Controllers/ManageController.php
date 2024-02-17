@@ -106,6 +106,17 @@ class ManageController extends Controller
     }
     public function order(){
         $order = Cart::whereNotNull('phone')->get();
-        return view('Admin.order',['order' => $order]);
+        $noPayingCarts = Cart::where('status','=','Chưa thanh toán')->get();
+        // $cartsNoPay = Cart::where(['status' => 'Chưa thanh toán'])->get(); dùng cho nhiều điều kiện
+        $paidCarts = Cart::where('status','<>','Chưa thanh toán')->get();
+        $revenue = 0;
+        foreach($noPayingCarts as $tiem){
+            $revenue += intval($tiem->totalPrice);
+        }
+        $received = 0;
+        foreach($paidCarts as $tiem){
+            $received += intval($tiem->totalPrice);
+        }
+        return view('Admin.order',['order' => $order, 'revenue' => $revenue, 'received' => $received]);
     }
 }
