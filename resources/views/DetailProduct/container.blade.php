@@ -301,7 +301,7 @@
                                     @csrf
 
                                     <div class="trade-action__name">
-                                        <img class="trade-action__name-img" src="assets/img/iphone15Promax.png" alt="iphone15">
+                                        <img class="trade-action__name-img" src="assets/img/{{ $product->image }}" alt="iphone15">
                                         Titan Xanh, 256GB
                                     </div>
                                     <div class="quantity">
