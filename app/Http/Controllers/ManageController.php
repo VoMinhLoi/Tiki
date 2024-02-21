@@ -106,9 +106,9 @@ class ManageController extends Controller
     }
     public function order(){
         $order = Cart::whereNotNull('phone')->get();
-        $noPayingCarts = Cart::where('status','=','Chưa thanh toán')->get();
+        $noPayingCarts = Cart::whereNotNull('phone')->get();
         // $cartsNoPay = Cart::where(['status' => 'Chưa thanh toán'])->get(); dùng cho nhiều điều kiện
-        $paidCarts = Cart::where('status','<>','Chưa thanh toán')->get();
+        $paidCarts = Cart::where('status','<>','Chưa thanh toán')->whereNotNull('phone')->get();
         $revenue = 0;
         foreach($noPayingCarts as $tiem){
             $revenue += intval($tiem->totalPrice);
