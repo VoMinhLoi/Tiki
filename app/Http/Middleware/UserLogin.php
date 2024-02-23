@@ -16,7 +16,7 @@ class UserLogin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(Auth::check() ){
+        if(Auth::check() and Auth::user()->role == 'user'){
             return $next($request);
         }
         // $currentViewName = $request->route()->getName();

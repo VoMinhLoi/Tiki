@@ -84,6 +84,11 @@ class AuthController extends Controller
         session()->flashInput([]);
         return redirect()->route('home');
     }
+    public function logoutAdmin(){
+        Auth::logout();
+        session()->flashInput([]);
+        return redirect()->route('formLogin');
+    }
     public function redirectToGoogle()
     {
         return Socialite::driver('google')->redirect();

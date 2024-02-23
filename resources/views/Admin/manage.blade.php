@@ -217,7 +217,7 @@
                 </li>
                 <li class="side-bar__item">
                     {{-- <a onclick="choosingItem(this)" href="#" class="side-bar__item-link">đăng xuất</a>    --}}
-                    <a href="{{ route('logout') }}" class="side-bar__item-link">đăng xuất</a>   
+                    <a href="{{ route('logoutAdmin') }}" class="side-bar__item-link">đăng xuất</a>   
                 </li>
             </ul>
         </div>

@@ -26,6 +26,7 @@ Route::group(['prefix'=>'/'],function(){
     Route::get('', [CatalogController::class,'index'])->name('home');
     // Route::get('', [ProductController::class,'index']); không thể 
     Route::get('logout',[AuthController::class,'logout'])->name('logout');
+    Route::get('logoutAdmin',[AuthController::class,'logoutAdmin'])->name('logoutAdmin');
 });
 
 Route::group(['prefix'=>'/detail/{product}'],function(){

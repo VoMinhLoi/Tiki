@@ -328,7 +328,7 @@
                                     <div class="action">
    
                                         <?php
-                                            if(Auth::check()){
+                                            if(Auth::check() and Auth::user()->role == 'user'){
                                                 echo
                                                     '
                                                     <input type="text" name="product_id" value="'. $product->id .'" style="display: none">

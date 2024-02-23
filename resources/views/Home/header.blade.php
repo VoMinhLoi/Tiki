@@ -82,7 +82,7 @@
                         Tài khoản
                     </a>
                     <?php
-                    if (Auth::check()) {
+                    if (Auth::check() and Auth::user()->role == 'user') {
                         echo    '<ul class="menu-user">
                                     <li class="menu-user__item">
                                         <a href="#" class="menu-user__item-link">Thông tin tài khoản</a></li>
@@ -97,13 +97,13 @@
                 </li>
                 <li class="header-private__item d-none-c">
                     @php
-                        if (Auth::check()) {
+                        if (Auth::check() and Auth::user()->role == 'user') {
                             $cart = \App\Models\Cart::where('user_id', Auth::user()->id)->whereNull('phone')->get()->count();
                         }
                         // $cart = App/Models/Cart::where('user_id', Auth::user()->id)->get()->count(); / sai
                     @endphp
                      <?php 
-                        if(Auth::check()){
+                        if(Auth::check() and Auth::user()->role == 'user'){
                             echo    '
                                 <a href="'.route('cart').'" class="header-private-item__link header-private-item__link--blue header-private-item__link-quantity margin-0">
                                     <i class="fa-solid fa-cart-shopping header-private-item-link__icon "></i>
