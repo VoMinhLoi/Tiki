@@ -32,7 +32,7 @@
                         {{-- <label class="over-layer" for="show-login"></label> --}}
                         <button class="over-layer" onclick="hiddenLogin()">
                         </button>
-                        <form class="login"  action="'. route('loginNoProduct') .'" method="post">
+                        <form class="login"  action="'. route('loginAdmin') .'" method="post">
                         
                 ';
     }
@@ -44,17 +44,20 @@
                             <h1 class="auth__hello">Xin chào,</h1>
                             <p class="auth__title">Đăng nhập hoặc Tạo tài khoản</p>
                             {{-- <label for="">Số điện thoại</label> --}}
-                            <input type="text" name="email" class="auth__input" placeholder="Số điện thoại" value="{{ old('email', cookie('remember_email')) }}" required>
+                            {{-- <input type="text" name="email" class="auth__input" placeholder="Số điện thoại" value="{{ old('email', cookie('remember_email')) }}" required> --}}
+                            <input type="text" name="email" class="auth__input" placeholder="Số điện thoại" value="" required>
                             @error('email')
                                 <div class="alert-danger">{{ $message }}</div>
                             @enderror
                             {{-- <label for="">Mật khẩu</label> --}}
-                            <input type="password" name="password" class="auth__input" placeholder="Mật khẩu" value="{{ old('password', cookie('remember_password')) }}" required>
+                            {{-- <input type="password" name="password" class="auth__input" placeholder="Mật khẩu" value="{{ old('password', cookie('remember_password')) }}" required> --}}
+                            <input type="password" name="password" class="auth__input" placeholder="Mật khẩu" value="" required>
                             @error('password')
                                 <div class="alert-danger">{{ $message }}</div>
                             @enderror
                             <div class="remember" style="    margin-top: 12px; display: flex; justify-content: center;">
-                                <input class="remember__checkbox" type="checkbox" id="remember"  name="remember" {{ old('remember', cookie('remember_remember')) ? 'checked' : '' }}>
+                                {{-- <input class="remember__checkbox" type="checkbox" id="remember"  name="remember" {{ old('remember', cookie('remember_remember')) ? 'checked' : '' }}> --}}
+                                <input class="remember__checkbox" type="checkbox" id="remember"  name="remember" >
                                 <label class="remember__label" for="remember"> Nhớ mật khẩu</label>
                             </div>
                             <button class="auth__button-login">Đăng nhập</button>

@@ -24,6 +24,13 @@
                 <label class="add-ingredient__name-label" for="password">mật khẩu:</label>
                 <input class="add-ingredient__name-input" name="password"  type="text" id="password" required>
             </div>
+            <div class="add-ingredient__name">
+                <label class="add-ingredient__name-label" for="role">vai trò:</label>
+                <select class="add-ingredient__name-input"  name="role" id="role">
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
             <input class="add-ingredient__submit" type="submit" value="Thêm" style="color: white;">
         </form>
     </div>
@@ -36,6 +43,7 @@
                     <th>id</th>
                     <th>tên</th>
                     <th>email</th>
+                    <th>vai trò</th>
                     <th>hành động</th>
                 </tr>
             </thead>
@@ -46,6 +54,7 @@
                     <td style="text-align: center"> {{ $item->id }} </td>
                     <td style="text-align: center"> {{ $item->name }}</td>
                     <td style="text-align: center"> {{ $item->email }}</td>
+                    <td style="text-align: center"> {{ $item->role }}</td>
                     <td style="text-align: center">
                         <a href="{{ route('updateFormBrand', $item->id) }} " style="display: block; background-color:green; color:white; border-radius: 4px">Cập nhật</a>
                         <a href="{{ route('deleteUser', $item->id) }}" style="margin-top: 4px; display: block; background-color:red; color:white; border-radius: 4px">Xóa</a>

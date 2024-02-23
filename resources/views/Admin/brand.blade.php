@@ -45,18 +45,20 @@
             </thead>
         
             <tbody>
-                @foreach ($brand as $item)
-                <tr>
-                    <td style="text-align: center"> {{ $item->id }} </td>
-                    <td style="text-align: center"> {{ $item->name }}</td>
-                    <td> {{ $item->desc }}</td>
-                    <td style="text-align: center"> {{ $item->status }}</td>
-                    <td style="text-align: center">
-                        <a href="{{ route('updateFormBrand', $item->id) }} " style="display: block; background-color:green; color:white; border-radius: 4px">Cập nhật</a>
-                        <a href="{{ route('deleteBrand', $item->id) }}" style="margin-top: 4px; display: block; background-color:red; color:white; border-radius: 4px">Xóa</a>
-                    </td>
-                </tr>
-                @endforeach
+                @if(isset($brand))
+                    @foreach ($brand as $item)
+                    <tr>
+                        <td style="text-align: center"> {{ $item->id }} </td>
+                        <td style="text-align: center"> {{ $item->name }}</td>
+                        <td> {{ $item->desc }}</td>
+                        <td style="text-align: center"> {{ $item->status }}</td>
+                        <td style="text-align: center">
+                            <a href="{{ route('updateFormBrand', $item->id) }} " style="display: block; background-color:green; color:white; border-radius: 4px">Cập nhật</a>
+                            <a href="{{ route('deleteBrand', $item->id) }}" style="margin-top: 4px; display: block; background-color:red; color:white; border-radius: 4px">Xóa</a>
+                        </td>
+                    </tr>
+                    @endforeach
+                @endif
             </tbody>
         </table>
     </div>

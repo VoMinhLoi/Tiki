@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
-class UserLogin
+class AdminLogin
 {
     /**
      * Handle an incoming request.
@@ -16,11 +16,11 @@ class UserLogin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(Auth::check() ){
+        if(Auth::check() and Auth::user()->role == 'admin'){
             return $next($request);
         }
         // $currentViewName = $request->route()->getName();
         // return view($currentViewName);
-        return redirect()->route('home');
+        return redirect()->route('formLogin');
     }
 }

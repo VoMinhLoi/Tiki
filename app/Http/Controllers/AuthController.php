@@ -19,20 +19,25 @@ class AuthController extends Controller
         $remember = $request->has('remember');
         // if (Auth::attempt($request->validated(),$remember)) {
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password],$remember)) {
-            $request->session()->regenerate();
-            //Dùng cookie lưu mật khẩu
-            $email = $request->input('email');
-            $password = $request->input('password');
-            $remember = $request->input('remember');
-            Cookie::queue('remember_email', $email, 60 * 24 * 30); // Thời gian sống: 30 ngày
-            Cookie::queue('remember_password', $password, 60 * 24 * 30);
-            Cookie::queue('remember_remember', $remember, 60 * 24 * 30);
-            // Intend chuyển trang đang đứng.
-            echo '<script>';
-            echo 'alert("Đăng nhập thành công.");';
-            echo '</script>';
-            redirect()->intended('/dashboard');
-            // return redirect()->route('cart');
+            if(Auth::user()->role != 'admin'){
+                $request->session()->regenerate();
+                // if(Auth::user()->role == "admin" and $request->route()->getName()=='formLogin'){
+                //     return view('Admin.brand');
+                // }
+                //Dùng cookie lưu mật khẩu
+                // $email = $request->input('email');
+                // $password = $request->input('password');
+                // $remember = $request->input('remember');
+                // Cookie::queue('remember_email', $email, 60 * 24 * 30); // Thời gian sống: 30 ngày
+                // Cookie::queue('remember_password', $password, 60 * 24 * 30);
+                // Cookie::queue('remember_remember', $remember, 60 * 24 * 30);
+                // Intend chuyển trang đang đứng.
+                echo '<script>';
+                echo 'alert("Đăng nhập thành công.");';
+                echo '</script>';
+                redirect()->intended('/dashboard');
+                // return redirect()->route('cart');
+            }
         }
         echo '<script>';
         echo 'alert("Đăng nhập thất bại.");';
@@ -43,8 +48,19 @@ class AuthController extends Controller
         ]);
     }
 
+    public function loginAdmin(AuthRequest $request){
+        if(Auth::attempt($request->validated())){
+            if(Auth::user()->role == 'admin'){
+                $request->session()->regenerate();
+                return view('Admin.brand');
+            }
+        }
+        return redirect()->back()->with([
+            'fail' => 'Sai password hoac email'
+        ]);
+    }
+
     public function formLogin(Request $request){
-        if($request->route()->getName()=='formLogin'){}
         return view('login');
     }
 
