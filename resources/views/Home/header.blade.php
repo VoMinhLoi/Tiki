@@ -85,7 +85,7 @@
                     if (Auth::check() and Auth::user()->role == 'user') {
                         echo    '<ul class="menu-user">
                                     <li class="menu-user__item">
-                                        <a href="#" class="menu-user__item-link">Thông tin tài khoản</a></li>
+                                        <a href="'. route('profile').'" class="menu-user__item-link">Thông tin tài khoản</a></li>
                                     <li class="menu-user__item">
                                         <a href="'. route('orderInterface') .'" class="menu-user__item-link">Đơn hàng của tôi</a></li>
                                     <li class="menu-user__item">

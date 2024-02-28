@@ -6,6 +6,7 @@ use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\CatalogProductController;
 use App\Http\Controllers\ManageController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserController;
 use App\Models\Catalog;
 use Illuminate\Support\Facades\Route;
 
@@ -52,8 +53,18 @@ Route::get('/auth/google/callback', [AuthController::class,'handleGoogleCallback
 Route::group(['middleware' => 'userLogin'], function() {
     Route::get('/cart',[CartController::class,'cart'])->name('cart');
     Route::post('/cart',[CartController::class,'addCart'])->name('addCart');
+    Route::post('/deliveryForm',[CartController::class,'addCartToDelivery'])->name('addCartToDelivery');
     Route::put('/cart/{cart}',[CartController::class,'updateCart'])->name('updateCart');
     Route::get('/cart/{cart}',[CartController::class,'deleteCart'])->name('deleteCart');
+
+    
+    Route::get('/deliveryForm/{cart}',[CartController::class,'deliveryForm'])->name('deliveryForm');
+    Route::put('/deliveryForm/{cart}',[CartController::class,'updateCart2'])->name('updateCart2');
+    Route::get('/orderInterface',[CartController::class,'orderInterface'])->name('orderInterface');
+    Route::get('/orderInterface/{cart}',[CartController::class,'received'])->name('received');
+
+    Route::get('/profile', [UserController::class, 'profile'])->name('profile');
+    Route::put('/profile/{user}', [UserController::class, 'updateProfile'])->name('updateProfile');
 });
 
 //Admin
@@ -84,8 +95,3 @@ Route::group(['middleware'=> 'adminLogin'], function () {
 });
 
 
-
-Route::get('/deliveryForm/{cart}',[CartController::class,'deliveryForm'])->name('deliveryForm');
-Route::put('/deliveryForm/{cart}',[CartController::class,'updateCart2'])->name('updateCart2');
-Route::get('/orderInterface',[CartController::class,'orderInterface'])->name('orderInterface');
-Route::get('/orderInterface/{cart}',[CartController::class,'received'])->name('received');
