@@ -19,10 +19,12 @@
                     @method('PUT')
                     <label for="name">Họ và tên:</label>
                     <input type="text" name="name" value="{{ Auth::user()->name }}" id="name" style="padding: 10px;  border: 1px solid; border-radius: 4px;" >
-                    {{-- <label for="name">Mật khẩu:</label>
-                    <input type="text" name="name" value="{{ Auth::user()->name }}" id="name" style="padding: 10px;  border: 1px solid; border-radius: 4px;">
-                    <label for="name">Lại mật khẩu:</label>
-                    <input type="text" name="name" value="{{ Auth::user()->name }}" id="name" style="padding: 10px;  border: 1px solid; border-radius: 4px;"> --}}
+                    </br>
+                    <h1 style="margin-top: 16px; font-weight: bold">Thông tin giao hàng:</h1>
+                    <label for="address">Địa chỉ:</label>
+                    <input type="text" name="address" value="{{ Auth::user()->address }}" id="address" style="padding: 10px;  border: 1px solid; border-radius: 4px; margin-top: 4px">
+                    <label for="phone">Số điện thoại:</label>
+                    <input type="text" name="phone" value="{{ Auth::user()->phone }}" id="phone" style="padding: 10px;  border: 1px solid; border-radius: 4px;">
                     </br>
                     <input type="submit" value="Cập nhật" style="background: green; padding: 8px; border-radius: 4px; color:white; margin-top: 12px">
                 </form>
