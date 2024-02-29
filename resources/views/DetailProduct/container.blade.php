@@ -334,21 +334,21 @@
                                                     <input type="text" name="product_id" value="'. $product->id .'" style="display: none">
                                                     <input type="text" name="user_id" value="'. Auth::user()->id .'" style="display: none">
 
-                                                    <button class="action__pay" >
-                                                            Mua ngay
-                                                    </button>
+                                                    
                                                     <button class="action__cart" >
                                                         Thêm vào giỏ
                                                     </button>';
                                             }
                                             else {
                                                 echo
-                                                '<a class="action__pay" onclick="showLogin()" style="text-align:center;">
+                                                '
+                                                <a class="action__cart" onclick="showLogin()" style="text-align:center;">
+                                                   Thêm vào giỏ
+                                               </a>
+                                                <a class="action__pay" onclick="showLogin()" style="text-align:center;">
                                                     Mua ngay
                                                 </a>
-                                                 <a class="action__cart" onclick="showLogin()" style="text-align:center;">
-                                                    Thêm vào giỏ
-                                                </a>';
+                                                ';
                                             }
                                         ?>
                                         {{-- <button class="action__buy"  onclick="showLogin()">
@@ -356,6 +356,16 @@
                                         </button> --}}
                                     </div>
                                 </form>
+                                @if(Auth::check() and Auth::user()->role == 'user')
+                                    <form  action="{{ route('addCartToDelivery') }}" method="POST">
+                                        @csrf
+                                        <input type="hidden" name="product_id" value=" {{ $product->id  }}">
+                                        <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+                                        <input type="hidden" name="totalPrice" value="{{ $product->price  }}">
+                                        <input type="hidden" class="quantity__button-number" value="1" name="quantity">
+                                        <input class="action__pay" type="submit" value="Mua ngay" style="text-align:center; width: 100%">
+                                    </form>
+                                @endif
                             </div>
                         </div>
                     </div>

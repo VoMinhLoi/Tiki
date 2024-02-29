@@ -32,6 +32,20 @@ class CartController extends Controller
         return redirect()->back()->with(['message'=>'Dang ky that bai']);
     }
 
+    public function addCartToDelivery(CartRequest $request){
+        $validatedData = $request->validated();
+        $formatTotalPriceString = preg_replace("/[^0-9]/", "", $validatedData['totalPrice']);
+        $validatedData['totalPrice'] = $formatTotalPriceString;
+        // dd($request->validated());
+        // $data = Cart::create($request->validated()); Nếu dùng biến $validateData thì biến $validateData sẽ thay đổi còn $request sẽ khác bởi vì validateData tạo bản sao của $request->validated() chứ không phải trỏ tới biến $request->validated().
+        $data = Cart::create($validatedData);
+        $idCart = $data->toArray()['id'];
+        if($data){
+            return redirect()->route('deliveryForm', $idCart);
+        }
+        return redirect()->back()->with(['message'=>'Dang ky that bai']);
+    }
+
     public function updateCart(Cart $cart, CartRequest $request){
         $quantity = intval($request->validated()['quantity']);
         //  Update quantity so total price is also updated
