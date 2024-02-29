@@ -953,9 +953,9 @@
                     <input type="hidden" name="product_id" value="{{ $cart->product_id }}">
                     <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
                     <label for="address">Địa chỉ nhận:</label>
-                    <input id="address" name="address" type="text" class="contain__form-input">
+                    <input id="address" name="address" type="text" class="contain__form-input" value="{{ Auth::user()->address }}" style="width: 350px;">
                     <label for="phone">Số diện thoại:</label>
-                    <input id="phone" name="phone" type="text" class="contain__form-input">
+                    <input id="phone" name="phone" type="text" class="contain__form-input" value="{{ Auth::user()->phone }}">
                     <div>
                         <p for="">Phương thức thanh toán</p>
                         <p class="">

@@ -22,7 +22,7 @@
                     </br>
                     <h1 style="margin-top: 16px; font-weight: bold">Thông tin giao hàng:</h1>
                     <label for="address">Địa chỉ:</label>
-                    <input type="text" name="address" value="{{ Auth::user()->address }}" id="address" style="padding: 10px;  border: 1px solid; border-radius: 4px; margin-top: 4px">
+                    <input type="text" name="address" value="{{ Auth::user()->address }}" id="address" style="padding: 10px;  border: 1px solid; border-radius: 4px; margin-top: 4px; width: 350px;">
                     <label for="phone">Số điện thoại:</label>
                     <input type="text" name="phone" value="{{ Auth::user()->phone }}" id="phone" style="padding: 10px;  border: 1px solid; border-radius: 4px;">
                     </br>
