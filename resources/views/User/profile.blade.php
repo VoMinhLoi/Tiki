@@ -18,7 +18,7 @@
                     @csrf
                     @method('PUT')
                     <label for="name">Họ và tên:</label>
-                    <input type="text" name="name" value="{{ Auth::user()->name }}" id="name" style="padding: 10px;  border: 1px solid; border-radius: 4px;" >
+                    <input type="text" name="name" value="{{ Auth::user()->name }}" id="name" style="padding: 10px;  border: 1px solid; border-radius: 4px;">
                     </br>
                     <h1 style="margin-top: 16px; font-weight: bold">Thông tin giao hàng:</h1>
                     <label for="address">Địa chỉ:</label>
