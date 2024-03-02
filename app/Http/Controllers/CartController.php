@@ -23,13 +23,18 @@ class CartController extends Controller
         $validatedData = $request->validated();
         $formatTotalPriceString = preg_replace("/[^0-9]/", "", $validatedData['totalPrice']);
         $validatedData['totalPrice'] = $formatTotalPriceString;
-        // dd($request->validated());
-        // $data = Cart::create($request->validated()); Nếu dùng biến $validateData thì biến $validateData sẽ thay đổi còn $request sẽ khác bởi vì validateData tạo bản sao của $request->validated() chứ không phải trỏ tới biến $request->validated().
-        $data = Cart::create($validatedData);
-        if($data){
-            return redirect()->route('cart');
+        $existCart = Cart::where('product_id', $validatedData['product_id'])->first();
+        if($existCart){
+            $existCart->update  (
+                                ['quantity' => $existCart->quantity + $validatedData['quantity']],
+                                ['totalPrice' => $existCart->totalPrice + $validatedData['totalPrice']]
+            );
         }
-        return redirect()->back()->with(['message'=>'Dang ky that bai']);
+        else {
+            //Cart::create($request->validated()); Nếu dùng biến $validateData thì biến $validateData sẽ thay đổi còn $request sẽ khác bởi vì validateData tạo bản sao của $request->validated() chứ không phải trỏ tới biến $request->validated().
+            Cart::create($validatedData);
+        }
+        return redirect()->route('cart');
     }
 
     public function addCartToDelivery(CartRequest $request){
