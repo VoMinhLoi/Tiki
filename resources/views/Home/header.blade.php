@@ -3,10 +3,11 @@
             <img src="assets/img/logo_tiki.png" alt="logo" class="header-link__img">
         </a>
         <div class="header__search d-none-c">
-            <div class="header-search__bar">
+            <form action="{{ route('search') }}" class="header-search__bar" method="post">
+                @csrf
                 {{-- <i class="fa-solid fa-magnifying-glass"></i> --}}
-                <img src="assets/img/icon_search.png" alt="iconSearch" class="header-search-bar__icon">
-                <input type="text" class="header-search-bar__input flex-grow-1 d-none-c" placeholder="Điện tử">
+                <img src="assets/img/icon_search.png" alt="iconSearch"class="header-search-bar__icon">
+                <input type="text" class="header-search-bar__input flex-grow-1 d-none-c" name="name" placeholder="Điện tử">
 
                 <div class="search">
                     <h1 class="search__header">Tìm kiếm mới nhất</h1>
@@ -36,7 +37,7 @@
                         Tìm kiếm
                     </span>
                 </button>
-            </div>
+            </form>
             <nav class="header__nav d-none-c-m-l-low">
                 <ul class="header-nav__list">
                     <li class="header-nav__item">
