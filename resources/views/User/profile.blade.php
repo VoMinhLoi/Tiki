@@ -37,7 +37,7 @@
 <link rel="stylesheet" href="assets/css/login.css">
 @include('Home.footer')
 <div class="wrapper">
-    <button class="over-layer" onclick=""></button>
+    <button class="over-layer"  onclick="showLogin()"></button>
     <form class="login"  action="{{ route('updateProfile', Auth::user()->id) }}" method="post"> 
                 {{-- Đảm bảo rằng bạn đã bao gồm CSRF token trong mọi yêu cầu POST của bạn. Token này cần được gửi đi như một trường ẩn trong mẫu HTML hoặc thông qua các tiêu đề HTTP. --}}
             {{-- <form class="login"  action="'. route('loginNoProduct') .'" method="post"> --}}

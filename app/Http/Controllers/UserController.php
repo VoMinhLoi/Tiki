@@ -31,7 +31,7 @@ class UserController extends Controller
                     dd('Mật khẩu không trùng');
             }
             else
-                dd('Sai');
+                dd('Mật khẩu cũ sai!!!');
         }
         
         $user->update($request->validated());
