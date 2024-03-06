@@ -33,8 +33,8 @@ Route::group(['prefix'=>'/'],function(){
 
 Route::group(['prefix'=>'/detail/{product}'],function(){
     Route::get('', [ProductController::class,'detail'])->name('product.detail');
-    Route::post('/login', [AuthController::class,'login'])->name('login');
 });
+Route::post('/login', [AuthController::class,'login'])->name('login');
 
 Route::get('/formLogin', [AuthController::class,'formLogin'])->name('formLogin');
 Route::post('/formLogin', [AuthController::class,'loginAdmin'])->name('loginAdmin');

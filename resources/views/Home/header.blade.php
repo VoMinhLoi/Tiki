@@ -1,3 +1,4 @@
+
     <header class="header" >
         <a href="#" class="header__link">
             <img src="assets/img/logo_tiki.png" alt="logo" class="header-link__img">
@@ -13,21 +14,21 @@
                     <h1 class="search__header">Tìm kiếm mới nhất</h1>
                     <ul class="search__list">
                         <li class="search__item">
-                            <a href="#" class="search-item__link">
+                            <a href="{{ route('product.detail',18) }}" class="search-item__link">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                                 iPhone 15 Pro max
                             </a>
                         </li>
                         <li class="search__item">
-                            <a href="#" class="search-item__link">
+                            <a href="{{ route('product.detail',26) }}" class="search-item__link">
                                 <i class="fa-solid fa-magnifying-glass"></i>
-                                Máy giặt SamSungGT LG6300
+                                Acer Nitro 5
                             </a>
                         </li>
                         <li class="search__item">
-                            <a href="#" class="search-item__link">
+                            <a href="{{ route('product.detail',28) }}" class="search-item__link">
                                 <i class="fa-solid fa-magnifying-glass"></i>
-                                LapTop Gaming
+                                Gấu bông
                             </a>
                         </li>
                     </ul>
@@ -158,3 +159,9 @@
             </li>
         </ul>
     </header>
+<script>
+        var searchList = document.querySelector('.search__list');
+        searchList.onmousedown = function(e) {
+            e.preventDefault();
+        }
+</script>
