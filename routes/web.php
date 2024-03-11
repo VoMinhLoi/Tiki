@@ -26,6 +26,7 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix'=>'/'],function(){
     Route::get('', [CatalogController::class,'index'])->name('home');
     Route::post('', [CatalogController::class,'search'])->name('search');
+    Route::put('', [ProductController::class,'filter'])->name('filter');
     // Route::get('', [ProductController::class,'index']); không thể 
     Route::get('logout',[AuthController::class,'logout'])->name('logout');
     Route::get('logoutAdmin',[AuthController::class,'logoutAdmin'])->name('logoutAdmin');
