@@ -99,16 +99,13 @@ class AuthController extends Controller
         try {
       
             $user = Socialite::driver('google')->user();
-       
-            $finduser = User::where('google_id', $user->google_id)->first();
+            // dd($user->id);
+            $finduser = User::where('google_id', $user->id)->first();
             // $finduser = User::where('google_id', $user->google_id)->first();
        
             if($finduser){
-       
                 Auth::login($finduser);
-      
-                return redirect()->intended('dashboard');
-       
+                // dd(1);
             }else{
                 $newUser = User::create([
                     'name' => $user->name,
@@ -116,11 +113,11 @@ class AuthController extends Controller
                     'google_id'=> $user->id,
                     'password' => encrypt('123456789')
                 ]);
-      
                 Auth::login($newUser);
-      
-                return redirect()->intended('dashboard');
+                // dd(0);
             }
+      
+            return redirect()->route('home');
       
         } catch (Exception $e) {
             dd($e->getMessage());
