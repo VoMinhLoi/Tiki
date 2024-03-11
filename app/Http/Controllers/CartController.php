@@ -23,7 +23,7 @@ class CartController extends Controller
         $validatedData = $request->validated();
         $formatTotalPriceString = preg_replace("/[^0-9]/", "", $validatedData['totalPrice']);
         $validatedData['totalPrice'] = $formatTotalPriceString;
-        $existCart = Cart::where('product_id', $validatedData['product_id'])->first();
+        $existCart = Cart::where('product_id', $validatedData['product_id'] )->where('user_id', auth()->user()->id)->first();
         if($existCart){
             $existCart->update  (
                                 ['quantity' => $existCart->quantity + $validatedData['quantity']],
