@@ -24,6 +24,7 @@ class CartController extends Controller
         $formatTotalPriceString = preg_replace("/[^0-9]/", "", $validatedData['totalPrice']);
         $validatedData['totalPrice'] = $formatTotalPriceString;
         $existCart = Cart::where('product_id', $validatedData['product_id'] )->where('user_id', auth()->user()->id)->first();
+        // Cập nhật số lượng nếu sản phẩm đã có trong giỏ hàng
         if($existCart){
             $existCart->update  (
                                 ['quantity' => $existCart->quantity + $validatedData['quantity']],
@@ -31,6 +32,7 @@ class CartController extends Controller
             );
         }
         else {
+            // Tạo sản phẩm mới trong giỏ hàng
             //Cart::create($request->validated()); Nếu dùng biến $validateData thì biến $validateData sẽ thay đổi còn $request sẽ khác bởi vì validateData tạo bản sao của $request->validated() chứ không phải trỏ tới biến $request->validated().
             Cart::create($validatedData);
         }
