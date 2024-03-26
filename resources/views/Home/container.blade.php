@@ -1,3 +1,8 @@
+        <style>
+            .item-product__img {
+                max-height: 183px;
+            }
+        </style>
 <?php
                     // Tìm sản phẩm cuối cùng
                     $dem = 0;
@@ -15,7 +20,7 @@
                                     <div class="row">
                                         <div class="col l-2 m-4 c-12">
                                             <a href="'. route('product.detail',  $item->id) .'" class="item-product">
-                                                <img src="assets/img/' . $item->image . '" alt="" class="item-product__img">
+                                                <div style="width: 183px; height: 183px; display: flex; justify-content: center; align-items: center;">                      <img src="assets/img/' . $item->image . '" alt="" class="item-product__img"></div>
                                                 {{-- <img src="" alt="" class="item-product__img"> --}}
                                                 <div class="item-product__infor">
                                                     <p class="item-product-infor__auth text-center">
@@ -63,7 +68,7 @@
                             echo    '
                                         <div class="col l-2 m-4 c-12">
                                             <a href="'. route('product.detail',$item->id) .'" class="item-product">
-                                                <img src="assets/img/' . $item->image . '" alt="" class="item-product__img">
+                                                <div style="width: 183px; height: 183px; display: flex; justify-content:center; align-items: center;"><img src="assets/img/' . $item->image . '" alt="" class="item-product__img"></div>
                                                 {{-- <img src="" alt="" class="item-product__img"> --}}
                                                 <div class="item-product__infor">
                                                     <p class="item-product-infor__auth text-center">
