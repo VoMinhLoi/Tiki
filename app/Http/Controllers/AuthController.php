@@ -15,28 +15,14 @@ use Laravel\Socialite\Facades\Socialite;
 class AuthController extends Controller
 {
 
-    public function login(AuthRequest $request){
-        $remember = $request->has('remember');
-        // if (Auth::attempt($request->validated(),$remember)) {
-        if (Auth::attempt(['email' => $request->email, 'password' => $request->password],$remember)) {
-            if(Auth::user()->role != 'admin'){
+    public function login(AuthRequest $request)
+    {
+        // $remember = $request->has('remember');
+        if (Auth::attempt($request->validated())) {
+            // if (Auth::attempt(['email' => $request->email, 'password' => $request->password],$remember)) {
+            if (Auth::user()->role != 'admin') {
                 $request->session()->regenerate();
-                // if(Auth::user()->role == "admin" and $request->route()->getName()=='formLogin'){
-                //     return view('Admin.brand');
-                // }
-                //Dùng cookie lưu mật khẩu
-                // $email = $request->input('email');
-                // $password = $request->input('password');
-                // $remember = $request->input('remember');
-                // Cookie::queue('remember_email', $email, 60 * 24 * 30); // Thời gian sống: 30 ngày
-                // Cookie::queue('remember_password', $password, 60 * 24 * 30);
-                // Cookie::queue('remember_remember', $remember, 60 * 24 * 30);
-                // Intend chuyển trang đang đứng.
-                echo '<script>';
-                echo 'alert("Đăng nhập thành công.");';
-                echo '</script>';
                 redirect()->intended('/dashboard');
-                // return redirect()->route('cart');
             }
         }
         echo '<script>';
@@ -48,9 +34,10 @@ class AuthController extends Controller
         ]);
     }
 
-    public function loginAdmin(AuthRequest $request){
-        if(Auth::attempt($request->validated())){
-            if(Auth::user()->role == 'admin'){
+    public function loginAdmin(AuthRequest $request)
+    {
+        if (Auth::attempt($request->validated())) {
+            if (Auth::user()->role == 'admin') {
                 $request->session()->regenerate();
                 return view('Admin.brand');
             }
@@ -60,31 +47,36 @@ class AuthController extends Controller
         ]);
     }
 
-    public function formLogin(Request $request){
+    public function formLogin(Request $request)
+    {
         return view('login');
     }
 
-    public function formRegister(){
+    public function formRegister()
+    {
         return view('register');
     }
 
-    public function register(RegisterRequest $request){
+    public function register(RegisterRequest $request)
+    {
         $data = $request->validated();
         $data['password'] = bcrypt($data['password']);
         $dataShow = User::create($data);
-        if($dataShow){
+        if ($dataShow) {
             // return view('welcome');
             return redirect()->intended('/dashboard');
         }
-        return redirect()->back()->with(['message'=>'Dang ky that bai']);
+        return redirect()->back()->with(['message' => 'Dang ky that bai']);
     }
 
-    public function logout(){
+    public function logout()
+    {
         Auth::logout();
         session()->flashInput([]);
         return redirect()->route('home');
     }
-    public function logoutAdmin(){
+    public function logoutAdmin()
+    {
         Auth::logout();
         session()->flashInput([]);
         return redirect()->route('formLogin');
@@ -97,28 +89,27 @@ class AuthController extends Controller
     public function handleGoogleCallback()
     {
         try {
-      
+
             $user = Socialite::driver('google')->user();
             // dd($user->id);
             $finduser = User::where('google_id', $user->id)->first();
             // $finduser = User::where('google_id', $user->google_id)->first();
-       
-            if($finduser){
+
+            if ($finduser) {
                 Auth::login($finduser);
                 // dd(1);
-            }else{
+            } else {
                 $newUser = User::create([
                     'name' => $user->name,
                     'email' => $user->email,
-                    'google_id'=> $user->id,
+                    'google_id' => $user->id,
                     'password' => encrypt('123456789')
                 ]);
                 Auth::login($newUser);
                 // dd(0);
             }
-      
+
             return redirect()->route('home');
-      
         } catch (Exception $e) {
             dd($e->getMessage());
         }

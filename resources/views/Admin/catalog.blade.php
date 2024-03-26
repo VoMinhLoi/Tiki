@@ -10,8 +10,8 @@
         <h1 class="add-title">
             Thêm mục lục:
         </h1>
-        {{-- <form  action="{{ route('addCatalog') }}" class="add-ingredient" enctype="multipart/form-data" method="post"> hiển thị đường dẫn --}} 
-        <form  action="{{ route('addCatalog') }}" class="add-ingredient"method="post">
+        <form  action="{{ route('addCatalog') }}" class="add-ingredient"  method="post" enctype="multipart/form-data">
+        {{-- <form  action="{{ route('addCatalog') }}" class="add-ingredient"method="post"> --}}
             @csrf
             <div class="add-ingredient__name">
                 <label class="add-ingredient__name-label" for="name">tên mục lục</label>
@@ -22,8 +22,8 @@
                 <input class="add-ingredient__name-input" name="desc"  type="text" id="desc" required>
             </div>
             <div class="add-ingredient__name">
-                <label class="add-ingredient__name-label" for="img">hình ảnh:</label>
-                <input class="" name="img"  type="file" id="img" required>
+                <label class="add-ingredient__name-label" for="image">hình ảnh:</label>
+                <input class="" name="img"  type="file" id="image" required>
             </div>
             <div class="add-ingredient__name">
                 <label class="add-ingredient__name-label" for="status">trạng thái:</label>

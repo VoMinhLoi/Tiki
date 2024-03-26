@@ -63,11 +63,25 @@ class ManageController extends Controller
 
     public function insertCatalog(CatalogRequest $request)
     {
-        $data = Catalog::create($request->validated());
-        if ($data) {
+        if ($request->hasFile('img')) {
+            $imageSRC = $request->file('img');
+            // $imageName = time() . '.' . $imageSRC->getClientOriginalExtension();
+            // $imageName = time() . '.' . $imageSRC->getClientOriginalName();
+            $imageName = $imageSRC->getClientOriginalName();
+            try {
+                // $imageSRC->storeAs('public/assets/img', $imageName);
+                $imageSRC->move(public_path('assets/img'), $imageName);
+            } catch (\Exception $e) {
+                dd($e->getMessage());
+            }
+            Catalog::create(array_merge($request->except('img'), ['img' => $imageName]));
+            return redirect()->route('catalog');
+        } else {
+            Catalog::create($request->validated());
             return redirect()->route('catalog');
         }
-        return redirect()->back()->with(['message' => 'Dang ky that bai']);
+
+        return redirect()->back()->with(['message' => 'Đăng ký thất bại']);
     }
     public function deleteCatalog(Catalog $catalog)
     {
