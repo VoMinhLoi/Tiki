@@ -39,4 +39,10 @@
         {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> --}}
         @include('login')
     </body>
+    {{-- <script>
+        fetch('http://127.0.0.1:8000').then(response => response.json())
+        .then((data)=>{
+            console.log(data)
+        })
+    </script> --}}
 </html>

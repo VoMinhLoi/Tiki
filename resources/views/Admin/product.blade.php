@@ -10,7 +10,7 @@
         <h1 class="add-title">
             Thêm sản phẩm:
         </h1>
-        <form  action="{{ route('addProduct') }}" class="add-ingredient" method="post">
+        <form  action="{{ route('addProduct') }}" class="add-ingredient" method="post" enctype="multipart/form-data">
             @csrf
             <div class="add-ingredient__name">
                 <label class="add-ingredient__name-label" for="catalog_id">id mục lục:</label>
