@@ -70,7 +70,7 @@
                     </a>
                     <div class="product-pay">
                         {{-- <p class="product__price">{{ number_format( intval($product->price), 0, ',', '.') }}</p> --}}
-                        <p class="product__price">{{$product->price}}</p>
+                        <p class="product__price">{{number_format($product->price, 0, ',', '.')}}</p>
                         
                         @php   
                             $numericPriceString = preg_replace("/[^0-9]/", "", $product->price);

@@ -50,7 +50,7 @@
                                                             <li class="item-product-infor-evaluate__saled flex-grow-1">Đã bán 999</li>
                                                         </ul>
                                                     </div>
-                                                    <p class="item-product-infor__price item-product-infor__price-has-discount">' . $item->price . '<sup>₫</sup></p>
+                                                    <p class="item-product-infor__price item-product-infor__price-has-discount">' . number_format($item->price, 0, ',', '.') . '<sup>₫</sup></p>
                                                     <p class="item-product-infor__receiving-date">Giao thứ 2, 12/12</p>
                                                 </div>
                                             </a>
@@ -98,7 +98,7 @@
                                                             <li class="item-product-infor-evaluate__saled">Đã bán 999</li>
                                                         </ul>
                                                     </div>
-                                                    <p class="item-product-infor__price item-product-infor__price-has-discount">' . $item->price . '<sup>₫</sup></p>
+                                                    <p class="item-product-infor__price item-product-infor__price-has-discount">' . number_format($item->price, 0, ',', '.') . '<sup>₫</sup></p>
                                                     <p class="item-product-infor__receiving-date">Giao thứ 2, 12/12</p>
                                                 </div>
                                             </a>

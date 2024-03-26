@@ -19,15 +19,18 @@ class CatalogController extends Controller
         $this->catalog = $catalogs;
     }
     //
-    public function index(){
+    public function index()
+    {
         $catalog = Catalog::all();
         $product = Product::all();
-        return view('welcome',['catalog'=>$catalog, 'product'=> $product]);
+        return view('welcome', ['catalog' => $catalog, 'product' => $product]);
+        // return (['catalog' => $catalog, 'product' => $product]);
     }
-    public function search(ProductRequest $request){
+    public function search(ProductRequest $request)
+    {
         $keyWord = $request->validated()['name'];
         $catalogs = Catalog::all();
         $products = Product::where('name', 'LIKE', "%$keyWord%")->get();
-        return view('welcome',['catalog'=>$catalogs, 'product'=> $products]);
+        return view('welcome', ['catalog' => $catalogs, 'product' => $products]);
     }
 }
