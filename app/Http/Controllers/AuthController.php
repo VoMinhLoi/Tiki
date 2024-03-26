@@ -22,16 +22,13 @@ class AuthController extends Controller
             // if (Auth::attempt(['email' => $request->email, 'password' => $request->password],$remember)) {
             if (Auth::user()->role != 'admin') {
                 $request->session()->regenerate();
-                redirect()->intended('/dashboard');
+                return redirect()->back()->with([
+                    'mess' => 'thanh cong'
+                ]);
             }
-        }
-        echo '<script>';
-        echo 'alert("Đăng nhập thất bại.");';
-        echo '</script>';
-        back()->withInput($request->only('email', 'password', 'remember'))->withErrors(['password' => 'Thông tin đăng nhập không đúng']);
-        return redirect()->back()->with([
-            'fail' => 'Sai password hoac email'
-        ]);
+        } else
+            // back()->withInput($request->only('email', 'password', 'remember'))->withErrors(['password' => 'Thông tin đăng nhập không đúng']);
+            return response()->json(['mess' => "Login Fail"]);
     }
 
     public function loginAdmin(AuthRequest $request)

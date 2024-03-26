@@ -45,13 +45,13 @@
                             <p class="auth__title">Đăng nhập hoặc Tạo tài khoản</p>
                             {{-- <label for="">Số điện thoại</label> --}}
                             {{-- <input type="text" name="email" class="auth__input" placeholder="Số điện thoại" value="{{ old('email', cookie('remember_email')) }}" required> --}}
-                            <input type="text" name="email" class="auth__input" placeholder="Số điện thoại" value="" required>
+                            <input type="text" id="email" name="email" class="auth__input" placeholder="Số điện thoại" value="" required>
                             @error('email')
                                 <div class="alert-danger">{{ $message }}</div>
                             @enderror
                             {{-- <label for="">Mật khẩu</label> --}}
                             {{-- <input type="password" name="password" class="auth__input" placeholder="Mật khẩu" value="{{ old('password', cookie('remember_password')) }}" required> --}}
-                            <input type="password" name="password" class="auth__input" placeholder="Mật khẩu" value="" required>
+                            <input type="password" id="password" name="password" class="auth__input" placeholder="Mật khẩu" value="" required>
                             @error('password')
                                 <div class="alert-danger">{{ $message }}</div>
                             @enderror
@@ -77,3 +77,46 @@
                     </div>
                     
 <script src="assets/js/form.js"></script>
+<script>
+    var menuUser = document.querySelector('.menu-user')
+    // Nếu menuUser tồn tại trả về true còn không thì null - false thì hiện thị login để đăng nhập mới được vào cart
+    if(!menuUser){
+        var cartButton = document.querySelector('.header-private-item__link.header-private-item__link--blue.header-private-item__link-quantity')
+        cartButton.onclick = () => {
+            var wrapper = document.querySelector(".wrapper")
+            wrapper.classList.toggle('display-flex')
+            var loginButton = wrapper.querySelector(".auth__button-login")
+            loginButton.onclick = ()=>{
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                function getCsrfToken() {
+                    const cookies = document.cookie.split(';');
+                    for (let cookie of cookies) {
+                        const [name, value] = cookie.trim().split('=');
+                        if (name === 'XSRF-TOKEN') {
+                            return decodeURIComponent(value);
+                        }
+                    }
+                    return null;
+                }
+                console.log(getCsrfToken())
+                const data = {
+                    email,
+                    password
+                }
+                // fetch('/login', {
+                //     method: 'POST',
+                //     headers: {
+                //         'Content-Type': 'application/json',
+                //         'X-CSRF-TOKEN': getCsrfToken()
+                //     },
+                //     body: JSON.stringify(data)
+                // })
+                // .then(response => console.log(1))
+                // .catch((response) => {
+                //     console.log(0)
+                // })
+            }
+        }
+    }
+</script>
