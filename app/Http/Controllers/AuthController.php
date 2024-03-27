@@ -8,6 +8,7 @@ use App\Http\Requests\Auth\RegisterRequest;
 use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cookie;
 use Laravel\Socialite\Facades\Socialite;
@@ -20,15 +21,17 @@ class AuthController extends Controller
         // $remember = $request->has('remember');
         if (Auth::attempt($request->validated())) {
             // if (Auth::attempt(['email' => $request->email, 'password' => $request->password],$remember)) {
-            if (Auth::user()->role != 'admin') {
+            if (Auth::user()->role == 'user') {
                 $request->session()->regenerate();
-                return redirect()->back()->with([
-                    'mess' => 'thanh cong'
-                ]);
+                session()->flash('json_message', 'Đăng nhập thành công');
+                return redirect()->back();
             }
         } else
             // back()->withInput($request->only('email', 'password', 'remember'))->withErrors(['password' => 'Thông tin đăng nhập không đúng']);
-            return response()->json(['mess' => "Login Fail"]);
+            // return response()->json([
+            //     'message' => 'Không thể đăng nhập!!!',
+            // ], Response::HTTP_NOT_FOUND);
+            return redirect()->back()->withErrors(['message' => 'Thông tin đăng nhập không đúng']);
     }
 
     public function loginAdmin(AuthRequest $request)
