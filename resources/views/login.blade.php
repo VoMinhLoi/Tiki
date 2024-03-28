@@ -108,7 +108,28 @@
     color: rgba(0, 0, 0, 0.3);
     cursor: pointer;
     }
-
+    .toast__time {
+        width: 100%;
+        position: absolute;
+        height: 4px;
+        bottom: 0;
+        left: 0;
+        animation: scale ease 3.3s forwards
+    }
+    .toast--error .toast__time {
+        background: #ff623d;
+    }
+    .toast--success .toast__time {
+        background: #47d864;
+    }
+    @keyframes scale {
+        from {
+            width: 100%;
+        }
+        to {
+            width: 0%
+        }
+    }
 </style>
 <?php
     //Kiểm tra nếu có id product thì đăng nhập để thêm sản phẩm vào
@@ -155,13 +176,13 @@
                             <p class="auth__title">Đăng nhập hoặc Tạo tài khoản</p>
                             {{-- <label for="">Số điện thoại</label> --}}
                             {{-- <input type="text" name="email" class="auth__input" placeholder="Số điện thoại" value="{{ old('email', cookie('remember_email')) }}" required> --}}
-                            <input type="text" id="email" name="email" class="auth__input" placeholder="Số điện thoại" value="" required>
+                            <input type="text" id="email" name="email" class="auth__input" placeholder="Số điện thoại" value="" >
                             @error('email')
                                 <div class="alert-danger">{{ $message }}</div>
                             @enderror
                             {{-- <label for="">Mật khẩu</label> --}}
-                            {{-- <input type="password" name="password" class="auth__input" placeholder="Mật khẩu" value="{{ old('password', cookie('remember_password')) }}" required> --}}
-                            <input type="password" id="password" name="password" class="auth__input" placeholder="Mật khẩu" value="" required>
+                            {{-- <input type="password" name="password" class="auth__input" placeholder="Mật khẩu" value="{{ old('password', cookie('remember_password')) }}" > --}}
+                            <input type="password" id="password" name="password" class="auth__input" placeholder="Mật khẩu" value="" >
                             @error('password')
                                 <div class="alert-danger">{{ $message }}</div>
                             @enderror
@@ -198,19 +219,20 @@
                 <i class="fas fa-exclamation-circle"></i>
             </div>
             <div class="toast__body">
-                <h3 class="toast__title">Lỗi người dùng</h3>
+                <h3 class="toast__title" >Lỗi người dùng</h3>
                 <p class="toast__msg">{{ $errors->all()['0'] }}</p>
             </div>
             <div class="toast__close">
                 <i class="fas fa-times"></i>
             </div>
+            <div class="toast__time"></div>
         </div>
     </div>
 @else
 {{-- Ngược lại thông báo đăng nhập thành công --}}
     @if (session('json_message'))
     <div id="toast">
-        <div class="toast toast--success">
+        <div class="toast toast--success" >
             <div class="toast__icon">
                 <i class="fas fa-check-circle"></i>
             </div>
@@ -221,6 +243,7 @@
             <div class="toast__close">
                 <i class="fas fa-times"></i>
             </div>
+            <div class="toast__time"></div>
         </div>
     </div>
     @endif
