@@ -26,7 +26,7 @@ class AuthRequest extends FormRequest
             // 'password'=>'required'
             'email' => ['required', 'exists:users,email'],
             // 'email' => ['required', 'exists:users, email'], email không viết cách ra, PHP phân biệt hoa, thường và dấu cách.
-            'password' =>'required',
+            'password' => 'nullable',
             'role' => 'nullable'
         ];
     }

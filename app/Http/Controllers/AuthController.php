@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\AuthRequest;
 use App\Http\Requests\Auth\RegisterRequest;
+use App\Mail\ForgotPasswordEmail;
 use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
@@ -12,6 +13,10 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cookie;
 use Laravel\Socialite\Facades\Socialite;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Mail;
 
 class AuthController extends Controller
 {
@@ -52,6 +57,43 @@ class AuthController extends Controller
         return view('login');
     }
 
+    public function formForgotPassword()
+    {
+        return view('forgot');
+    }
+
+    public function forgotPassword(AuthRequest $request)
+    {
+        $user = User::where('email', $request->validated()['email'])->first();
+        if ($user) {
+            //tạo token có độ dài 64 ký tự 
+            $token = Str::random(64);
+
+            //thêm dữ liệu vào bảng password_reset_tokens
+            DB::table('reset_passwords')->insert([
+                'email' => $request->email, //lưu địa chỉ mail từ request
+                'token' => $token, //lưu token đc tạo ra ở trên
+                'created_at' => Carbon::now() //lưu thời điểm tạo token
+            ]);
+            //gửi email thông báo đặt lại mk 
+            //fe.email-forgot-password và token sẽ được chuyển đến view
+            //trong URL đc gửi đến email, có token được truyền qua URL
+            //sau đó sẽ so sánh token trong url có trùng khớp với token trong database ko
+            //có thì sẽ cho phép đổi mật khẩu
+            Mail::send('buttonreset', ['token' => $token], function ($message) use ($request) {
+                $message->to($request->email);
+                $message->subject("Reset Password");
+            });
+            session()->flash('json_message', 'Gửi email thành công và có hiệu lực trong 60 phút.');
+            return redirect()->back();
+        } else
+            return redirect()->back()->withErrors(['message' => 'Email không tồn tại']);
+    }
+
+    public function formResetPassword()
+    {
+        return view('reset');
+    }
     public function formRegister()
     {
         return view('register');

@@ -1,0 +1,1 @@
+<a href="{{ route('formResetPassword') }}" style="background: black; padding: 8px">Reset mật khẩu</a>

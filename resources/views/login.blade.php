@@ -191,6 +191,7 @@
                                 <input class="remember__checkbox" type="checkbox" id="remember"  name="remember" >
                                 <label class="remember__label" for="remember"> Nhớ mật khẩu</label>
                             </div>
+                            <a href="{{ route('formForgotPassword') }}" >Quên mật khẩu</a>
                             <button class="auth__button-login">Đăng nhập</button>
                             {{-- <input type="submit" class="auth__button-login" value = 'Đăng nhập'> --}}
                             <a href="{{ route('formRegister') }}" class ="auth__button-login">Đăng ký</a>
