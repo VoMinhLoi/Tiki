@@ -186,12 +186,12 @@
                             @error('password')
                                 <div class="alert-danger">{{ $message }}</div>
                             @enderror
-                            <div class="remember" style="    margin-top: 12px; display: flex; justify-content: center;">
+                            <div class="remember" style="    margin-top: 12px; display: flex; justify-content: center; align-items:center">
                                 {{-- <input class="remember__checkbox" type="checkbox" id="remember"  name="remember" {{ old('remember', cookie('remember_remember')) ? 'checked' : '' }}> --}}
                                 <input class="remember__checkbox" type="checkbox" id="remember"  name="remember" >
                                 <label class="remember__label" for="remember"> Nhớ mật khẩu</label>
+                                <a href="{{ route('formForgotPassword') }}" style="margin-left:4px; font-size:10px; color:red">Quên mật khẩu</a>
                             </div>
-                            <a href="{{ route('formForgotPassword') }}" >Quên mật khẩu</a>
                             <button class="auth__button-login">Đăng nhập</button>
                             {{-- <input type="submit" class="auth__button-login" value = 'Đăng nhập'> --}}
                             <a href="{{ route('formRegister') }}" class ="auth__button-login">Đăng ký</a>

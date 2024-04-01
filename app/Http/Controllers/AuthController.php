@@ -80,20 +80,46 @@ class AuthController extends Controller
             //trong URL đc gửi đến email, có token được truyền qua URL
             //sau đó sẽ so sánh token trong url có trùng khớp với token trong database ko
             //có thì sẽ cho phép đổi mật khẩu
+            // buttonreset là tên giao diện
+            // Token và email được gửi đi
             Mail::send('buttonreset', ['token' => $token], function ($message) use ($request) {
                 $message->to($request->email);
                 $message->subject("Reset Password");
             });
-            session()->flash('json_message', 'Gửi email thành công và có hiệu lực trong 60 phút.');
+            session()->flash('json_message', 'Gửi email thành công và có hiệu lực trong 10 phút.');
             return redirect()->back();
         } else
             return redirect()->back()->withErrors(['message' => 'Email không tồn tại']);
     }
 
-    public function formResetPassword()
+    public function formResetPassword($token)
     {
-        return view('reset');
+        return view('reset', compact('token'));
     }
+
+    public function resetPassword(Request $request)
+    {
+        //Kiểm tra xem email và token có tồn tại trong bảng reset_passwords hay không
+        $updatePassword = DB::table('reset_passwords')
+            ->where([
+                'token' => $request->token,
+            ])->first();
+
+        //ko tồn tại thì hiển thị lỗi
+        if (!$updatePassword) {
+            return redirect()->to(route("reset.password"))->withErrors("error", "Invalid");
+        }
+        // dd();
+        // cập nhật mật khẩu mới trong bảng users
+        User::where("email", $updatePassword->email)
+            ->update(["password" => bcrypt($request->password)]);
+
+        //xóa token khỏi bảng reset_passwords
+        DB::table("reset_passwords")->where(["token" => $request->token])->delete();
+        //chuyển hướng đến trang login
+        return redirect()->to(route("formLogin"))->with("success", "mat khau da reset");
+    }
+
     public function formRegister()
     {
         return view('register');

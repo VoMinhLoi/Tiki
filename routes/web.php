@@ -39,8 +39,9 @@ Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 Route::get('/formLogin', [AuthController::class, 'formLogin'])->name('formLogin');
 Route::get('/formForgotPassword', [AuthController::class, 'formForgotPassword'])->name('formForgotPassword');
-Route::get('/formResetPassword', [AuthController::class, 'formResetPassword'])->name('formResetPassword');
 Route::post('/formForgotPassword', [AuthController::class, 'forgotPassword'])->name('forgotPassword');
+Route::get('/formResetPassword/{token}', [AuthController::class, 'formResetPassword'])->name('formResetPassword');
+Route::post('/formResetPassword', [AuthController::class, 'resetPassword'])->name('resetPassword');
 Route::post('/formLogin', [AuthController::class, 'loginAdmin'])->name('loginAdmin');
 
 

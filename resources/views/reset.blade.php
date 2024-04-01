@@ -405,13 +405,11 @@
   </head>
   <body>
     <div class="main">
-      <form action="" method="POST" class="form" id="form-1">
+      <form action="{{ route('resetPassword',['token'=> $token]) }}" method="POST" class="form" id="form-1">
         @csrf
-        <h3 class="heading">Reset mật khẩu</h3>
-
-
+        <h3 class="heading">Cài lại mật khẩu</h3>
         <div class="form-group">
-          <label for="email" class="form-label">Mật khẩu: </label>
+          <label for="password" class="form-label">Mật khẩu: </label>
           <input
             id="password"
             name="password"
@@ -419,7 +417,9 @@
             class="form-control"
           />
           <span class="form-message"></span>
-          <label for="email" class="form-label">Nhập lại mật khẩu: </label>
+        </div>
+        <div class="form-group">        
+          <label for="password_confirmation" class="form-label">Nhập lại mật khẩu: </label>
           <input
             id="password_confirmation"
             name="password_confirmation"
@@ -428,8 +428,7 @@
           />
           <span class="form-message"></span>
         </div>
-
-        <button class="form-submit">Gửi xác minh</button>
+        <button class="form-submit">Cập nhật</button>
       </form>
     </div>
     <script>
@@ -438,7 +437,9 @@
           form: "#form-1",
           rules: [
             Validator.isRequired("#password"),
+            Validator.minLength("#password",7),
             Validator.isRequired("#password_confirmation"),
+            Validator.isConfirm("#password_confirmation", 'Mật khẩu không trùng khớp'),
 
           ],
           errorSelector: ".form-message",
