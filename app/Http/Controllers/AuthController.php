@@ -159,22 +159,24 @@ class AuthController extends Controller
         try {
 
             $user = Socialite::driver('google')->user();
-            // dd($user->id);
             $finduser = User::where('google_id', $user->id)->first();
-            // $finduser = User::where('google_id', $user->google_id)->first();
 
             if ($finduser) {
                 Auth::login($finduser);
-                // dd(1);
             } else {
-                $newUser = User::create([
-                    'name' => $user->name,
-                    'email' => $user->email,
-                    'google_id' => $user->id,
-                    'password' => encrypt('123456789')
-                ]);
-                Auth::login($newUser);
-                // dd(0);
+                $oldUserHasEmailLikeGmail = User::where('email', $user->email)->first();
+                if ($oldUserHasEmailLikeGmail) {
+                    $oldUserHasEmailLikeGmail->update(['google_id' => $user->id]);
+                    Auth::login($oldUserHasEmailLikeGmail);
+                } else {
+                    $newUser = User::create([
+                        'name' => $user->name,
+                        'email' => $user->email,
+                        'google_id' => $user->id,
+                        'password' => encrypt('123456789')
+                    ]);
+                    Auth::login($newUser);
+                }
             }
 
             return redirect()->route('home');
